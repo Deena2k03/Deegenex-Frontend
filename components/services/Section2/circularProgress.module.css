@@ -1,0 +1,26 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progressSvg {
+  transform: rotate(-90deg);
+}
+
+.bg {
+  stroke: #e6e6e6;
+}
+
+.progress {
+  stroke: #0033ff;
+  stroke-linecap: round;
+}
+
+.text {
+  position: absolute;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #0033ff;
+}

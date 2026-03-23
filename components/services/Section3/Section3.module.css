@@ -1,0 +1,1399 @@
+/*DESKTOP*/
+@media (min-width: 1921px){
+.sec1{
+    margin-top: 5rem;
+    width: 100%;
+    height: 52rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.revealZoom {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.5s ease;
+}
+
+.active {
+  opacity: 1;
+  transform: scale(1);
+}
+.content{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 2rem;
+}
+.titlebadge{
+    width: 15rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0px 10px rgba(0, 102, 255, 0.3);
+    backdrop-filter: blur(5px);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    color: rgb(52, 0, 9);
+}
+
+/* 🔥 Lift + Glow */
+.titlebadge:hover{
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 0px 20px rgba(0, 102, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+/* ✨ Shine Effect */
+.titlebadge::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -70%;
+    width: 40%;
+    height: 100%;
+    background: rgba(255,255,255,0.4);
+    transform: skewX(-10deg);
+    transition: 0.6s;
+}
+
+.titlebadge:hover::after{
+    left: 130%;
+}
+
+.titletxt{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.titletxt2{
+    font-size: 1rem;
+    font-weight: 500;
+    width: 60%;
+    text-align: center;
+}
+.design{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    gap: 2rem;
+}
+.blk1{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.blkesec1{
+    height: 30%;
+    width: 100%;
+    border-radius: 1rem;
+    background-color: rgb(255, 255, 255,0.5);
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0px 10px rgba(0, 102, 255, 0.3);
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+.blksec1img{
+    width: 3rem;
+}
+.blkesec1txt1{
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: .5rem;
+}
+.blkesec1txt2{
+    font-size: .8rem;
+    font-weight: 600;
+    margin-top: .5rem;
+}
+/* Add transition */
+.blkesec1{
+    transition: all 0.35s ease;
+    backdrop-filter: blur(5px);
+}
+
+/* Hover Effect */
+.blkesec1:hover{
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 102, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+/* Image animation */
+.blkesec1:hover .blksec1img{
+    transform: scale(1.15);
+    transition: transform 0.35s ease;
+}
+
+/* Text slight move */
+.blkesec1:hover .blkesec1txt1{
+    transform: translateY(-2px);
+    transition: transform 0.35s ease;
+}
+
+.blkesec1:hover .blkesec1txt2{
+    transform: translateY(-2px);
+    transition: transform 0.35s ease;
+}
+
+
+.blk2{
+    width: 34%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* IMAGE */
+.blk2mg{
+    width: 80%;
+    border-radius: 2rem;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    animation: floatImage 4s ease-in-out infinite;
+    border: 2px solid rgb(255, 255, 255,0.5);
+    box-shadow: 0 0px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔥 Floating Animation */
+@keyframes floatImage {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-12px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/* ✨ Hover Zoom + Glow */
+.blk2mg:hover{
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 102, 255, 0.4);
+}
+
+.blk3{
+    width: 33%;
+    height: 100%;
+    background-color: blue;
+}
+.btn{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* BUTTON */
+.btn1{
+    width: 10rem;
+    height: 3rem;
+    border-radius: 2rem;
+    background: linear-gradient(135deg, #0011ff, #0055ff);
+    border: 2px solid white;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* 🔥 Hover Lift Effect */
+.btn1:hover{
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 85, 255, 0.6);
+}
+
+/* 💡 Glow Border Animation */
+.btn1::before{
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 2rem;
+    background: linear-gradient(90deg, #00f2ff, #0055ff, #00f2ff);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.btn1:hover::before{
+    opacity: 1;
+}
+
+/* ✨ Shine Effect */
+.btn1::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    transform: skewX(-20deg);
+    transition: 0.6s;
+}
+
+.btn1:hover::after{
+    left: 130%;
+}
+}
+
+/*LAPTOP*/
+@media (min-width: 1281px) and (max-width: 1920px){
+.sec1{
+    margin-top: 5rem;
+    width: 100%;
+    height: 52rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.revealZoom {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.5s ease;
+}
+
+.active {
+  opacity: 1;
+  transform: scale(1);
+}
+.content{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+.titlebadge{
+    width: 15rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0px 10px rgba(0, 102, 255, 0.3);
+    backdrop-filter: blur(5px);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    color: rgb(52, 0, 9);
+}
+
+/* 🔥 Lift + Glow */
+.titlebadge:hover{
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 0px 20px rgba(0, 102, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+/* ✨ Shine Effect */
+.titlebadge::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -70%;
+    width: 40%;
+    height: 100%;
+    background: rgba(255,255,255,0.4);
+    transform: skewX(-10deg);
+    transition: 0.6s;
+}
+
+.titlebadge:hover::after{
+    left: 130%;
+}
+
+.titletxt{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.titletxt2{
+    font-size: 1rem;
+    font-weight: 500;
+    width: 60%;
+    text-align: center;
+}
+.design{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    gap: 2rem;
+}
+.blk1{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.blkesec1{
+    height: 30%;
+    width: 100%;
+    border-radius: 1rem;
+    background-color: rgb(255, 255, 255,0.5);
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0px 10px rgba(0, 102, 255, 0.3);
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+.blksec1img{
+    width: 3rem;
+}
+.blkesec1txt1{
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: .5rem;
+}
+.blkesec1txt2{
+    font-size: .8rem;
+    font-weight: 600;
+    margin-top: .5rem;
+}
+/* Add transition */
+.blkesec1{
+    transition: all 0.35s ease;
+    backdrop-filter: blur(5px);
+}
+
+/* Hover Effect */
+.blkesec1:hover{
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 102, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+/* Image animation */
+.blkesec1:hover .blksec1img{
+    transform: scale(1.15);
+    transition: transform 0.35s ease;
+}
+
+/* Text slight move */
+.blkesec1:hover .blkesec1txt1{
+    transform: translateY(-2px);
+    transition: transform 0.35s ease;
+}
+
+.blkesec1:hover .blkesec1txt2{
+    transform: translateY(-2px);
+    transition: transform 0.35s ease;
+}
+
+
+.blk2{
+    width: 34%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* IMAGE */
+.blk2mg{
+    width: 100%;
+    border-radius: 2rem;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    animation: floatImage 4s ease-in-out infinite;
+    border: 2px solid rgb(255, 255, 255,0.5);
+    box-shadow: 0 0px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔥 Floating Animation */
+@keyframes floatImage {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-12px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/* ✨ Hover Zoom + Glow */
+.blk2mg:hover{
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 102, 255, 0.4);
+}
+
+.blk3{
+    width: 33%;
+    height: 100%;
+    background-color: blue;
+}
+.btn{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* BUTTON */
+.btn1{
+    width: 10rem;
+    height: 3rem;
+    border-radius: 2rem;
+    background: linear-gradient(135deg, #0011ff, #0055ff);
+    border: 2px solid white;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* 🔥 Hover Lift Effect */
+.btn1:hover{
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 85, 255, 0.6);
+}
+
+/* 💡 Glow Border Animation */
+.btn1::before{
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 2rem;
+    background: linear-gradient(90deg, #00f2ff, #0055ff, #00f2ff);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.btn1:hover::before{
+    opacity: 1;
+}
+
+/* ✨ Shine Effect */
+.btn1::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    transform: skewX(-20deg);
+    transition: 0.6s;
+}
+
+.btn1:hover::after{
+    left: 130%;
+}
+}
+
+
+/*MAX-TABLET*/
+@media (min-width: 1025px) and (max-width: 1280px){
+.sec1{
+    margin-top: 5rem;
+    width: 100%;
+    height: 52rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.revealZoom {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.5s ease;
+}
+
+.active {
+  opacity: 1;
+  transform: scale(1);
+}
+.content{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+.titlebadge{
+    width: 15rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0px 10px rgba(0, 102, 255, 0.3);
+    backdrop-filter: blur(5px);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    color: rgb(52, 0, 9);
+}
+
+/* 🔥 Lift + Glow */
+.titlebadge:hover{
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 0px 20px rgba(0, 102, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+/* ✨ Shine Effect */
+.titlebadge::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -70%;
+    width: 40%;
+    height: 100%;
+    background: rgba(255,255,255,0.4);
+    transform: skewX(-10deg);
+    transition: 0.6s;
+}
+
+.titlebadge:hover::after{
+    left: 130%;
+}
+
+.titletxt{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.titletxt2{
+    font-size: 1rem;
+    font-weight: 500;
+    width: 60%;
+    text-align: center;
+}
+.design{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    gap: 2rem;
+}
+.blk1{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.blkesec1{
+    height: 30%;
+    width: 100%;
+    border-radius: 1rem;
+    background-color: rgb(255, 255, 255,0.5);
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0px 10px rgba(0, 102, 255, 0.3);
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+.blksec1img{
+    width: 3rem;
+}
+.blkesec1txt1{
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: .5rem;
+}
+.blkesec1txt2{
+    font-size: .8rem;
+    font-weight: 600;
+    margin-top: .5rem;
+}
+/* Add transition */
+.blkesec1{
+    transition: all 0.35s ease;
+    backdrop-filter: blur(5px);
+}
+
+/* Hover Effect */
+.blkesec1:hover{
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 102, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+/* Image animation */
+.blkesec1:hover .blksec1img{
+    transform: scale(1.15);
+    transition: transform 0.35s ease;
+}
+
+/* Text slight move */
+.blkesec1:hover .blkesec1txt1{
+    transform: translateY(-2px);
+    transition: transform 0.35s ease;
+}
+
+.blkesec1:hover .blkesec1txt2{
+    transform: translateY(-2px);
+    transition: transform 0.35s ease;
+}
+
+
+.blk2{
+    width: 34%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* IMAGE */
+.blk2mg{
+    width: 100%;
+    border-radius: 2rem;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    animation: floatImage 4s ease-in-out infinite;
+    border: 2px solid rgb(255, 255, 255,0.5);
+    box-shadow: 0 0px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔥 Floating Animation */
+@keyframes floatImage {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-12px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/* ✨ Hover Zoom + Glow */
+.blk2mg:hover{
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 102, 255, 0.4);
+}
+
+.blk3{
+    width: 33%;
+    height: 100%;
+    background-color: blue;
+}
+.btn{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* BUTTON */
+.btn1{
+    width: 10rem;
+    height: 3rem;
+    border-radius: 2rem;
+    background: linear-gradient(135deg, #0011ff, #0055ff);
+    border: 2px solid white;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* 🔥 Hover Lift Effect */
+.btn1:hover{
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 85, 255, 0.6);
+}
+
+/* 💡 Glow Border Animation */
+.btn1::before{
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 2rem;
+    background: linear-gradient(90deg, #00f2ff, #0055ff, #00f2ff);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.btn1:hover::before{
+    opacity: 1;
+}
+
+/* ✨ Shine Effect */
+.btn1::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    transform: skewX(-20deg);
+    transition: 0.6s;
+}
+
+.btn1:hover::after{
+    left: 130%;
+}
+}
+
+/*TABLET*/
+@media (min-width: 769px) and (max-width: 1024px){
+.sec1{
+    margin-top: 5rem;
+    width: 100%;
+    height: 52rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.revealZoom {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.5s ease;
+}
+
+.active {
+  opacity: 1;
+  transform: scale(1);
+}
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+.titlebadge{
+    width: 15rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0px 10px rgba(0, 102, 255, 0.3);
+    backdrop-filter: blur(5px);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    color: rgb(52, 0, 9);
+}
+
+/* 🔥 Lift + Glow */
+.titlebadge:hover{
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 0px 20px rgba(0, 102, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+/* ✨ Shine Effect */
+.titlebadge::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -70%;
+    width: 40%;
+    height: 100%;
+    background: rgba(255,255,255,0.4);
+    transform: skewX(-10deg);
+    transition: 0.6s;
+}
+
+.titlebadge:hover::after{
+    left: 130%;
+}
+
+.titletxt{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.titletxt2{
+    font-size: 1rem;
+    font-weight: 500;
+    width: 60%;
+    text-align: center;
+}
+.design{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    gap: 2rem;
+}
+.blk1{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.blkesec1{
+    height: 30%;
+    width: 100%;
+    border-radius: 1rem;
+    background-color: rgb(255, 255, 255,0.5);
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0px 10px rgba(0, 102, 255, 0.3);
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+.blksec1img{
+    width: 3rem;
+}
+.blkesec1txt1{
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: .5rem;
+}
+.blkesec1txt2{
+    font-size: .8rem;
+    font-weight: 600;
+    margin-top: .5rem;
+}
+/* Add transition */
+.blkesec1{
+    transition: all 0.35s ease;
+    backdrop-filter: blur(5px);
+}
+
+/* Hover Effect */
+.blkesec1:hover{
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 102, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+/* Image animation */
+.blkesec1:hover .blksec1img{
+    transform: scale(1.15);
+    transition: transform 0.35s ease;
+}
+
+/* Text slight move */
+.blkesec1:hover .blkesec1txt1{
+    transform: translateY(-2px);
+    transition: transform 0.35s ease;
+}
+
+.blkesec1:hover .blkesec1txt2{
+    transform: translateY(-2px);
+    transition: transform 0.35s ease;
+}
+
+
+.blk2{
+    width: 34%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* IMAGE */
+.blk2mg{
+    width: 100%;
+    border-radius: 2rem;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    animation: floatImage 4s ease-in-out infinite;
+    border: 2px solid rgb(255, 255, 255,0.5);
+    box-shadow: 0 0px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔥 Floating Animation */
+@keyframes floatImage {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-12px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/* ✨ Hover Zoom + Glow */
+.blk2mg:hover{
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 102, 255, 0.4);
+}
+
+.blk3{
+    width: 33%;
+    height: 100%;
+    background-color: blue;
+}
+.btn{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* BUTTON */
+.btn1{
+    width: 10rem;
+    height: 3rem;
+    border-radius: 2rem;
+    background: linear-gradient(135deg, #0011ff, #0055ff);
+    border: 2px solid white;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* 🔥 Hover Lift Effect */
+.btn1:hover{
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 85, 255, 0.6);
+}
+
+/* 💡 Glow Border Animation */
+.btn1::before{
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 2rem;
+    background: linear-gradient(90deg, #00f2ff, #0055ff, #00f2ff);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.btn1:hover::before{
+    opacity: 1;
+}
+
+/* ✨ Shine Effect */
+.btn1::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    transform: skewX(-20deg);
+    transition: 0.6s;
+}
+
+.btn1:hover::after{
+    left: 130%;
+}
+}
+
+/*PHONE*/
+@media (max-width: 769px){
+.sec1{
+    margin-top: 5rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+.revealZoom {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.5s ease;
+}
+
+.active {
+  opacity: 1;
+  transform: scale(1);
+}
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.title{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 2rem;
+}
+.titlebadge{
+    width: 10rem;
+    height: 2.2rem;
+    border-radius: 2rem;
+    font-size: .8rem;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0px 10px rgba(0, 102, 255, 0.3);
+    backdrop-filter: blur(5px);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    color: rgb(52, 0, 9);
+    margin-bottom: .5rem;
+}
+
+/* 🔥 Lift + Glow */
+.titlebadge:hover{
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 0px 20px rgba(0, 102, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+/* ✨ Shine Effect */
+.titlebadge::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -70%;
+    width: 40%;
+    height: 100%;
+    background: rgba(255,255,255,0.4);
+    transform: skewX(-10deg);
+    transition: 0.6s;
+}
+
+.titlebadge:hover::after{
+    left: 130%;
+}
+
+.titletxt{
+    font-size: 2rem;
+    font-weight: 700;
+    width: 100%;
+}
+.titletxt2{
+    font-size: .8rem;
+    font-weight: 500;
+    width: 90%;
+    text-align: center;
+}
+.design{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.blk1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: .5rem;
+    padding-bottom: 0;
+}
+.blkesec1{
+    height: auto;
+    width: 100%;
+    border-radius: 1rem;
+    background-color: rgb(255, 255, 255,0.5);
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0px 10px rgba(0, 102, 255, 0.3);
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+
+}
+.blksec1img{
+    width: 3rem;
+    margin: 0 auto;
+}
+.blkesec1txt1{
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: .5rem;
+}
+.blkesec1txt2{
+    font-size: .8rem;
+    font-weight: 600;
+    margin-top: .5rem;
+}
+/* Add transition */
+.blkesec1{
+    transition: all 0.35s ease;
+    backdrop-filter: blur(5px);
+}
+
+/* Hover Effect */
+.blkesec1:hover{
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0px 10px rgba(0, 102, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+/* Image animation */
+.blkesec1:hover .blksec1img{
+    transform: scale(1.15);
+    transition: transform 0.35s ease;
+}
+
+/* Text slight move */
+.blkesec1:hover .blkesec1txt1{
+    transform: translateY(-2px);
+    transition: transform 0.35s ease;
+}
+
+.blkesec1:hover .blkesec1txt2{
+    transform: translateY(-2px);
+    transition: transform 0.35s ease;
+}
+
+
+.blk2{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+/* IMAGE */
+.blk2mg{
+    width: 90%;
+    border-radius: 2rem;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    animation: floatImage 4s ease-in-out infinite;
+    border: 2px solid rgb(255, 255, 255,0.5);
+    box-shadow: 0 0px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔥 Floating Animation */
+@keyframes floatImage {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-12px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/* ✨ Hover Zoom + Glow */
+.blk2mg:hover{
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 102, 255, 0.4);
+}
+
+.blk3{
+    width: 33%;
+    height: 100%;
+    background-color: blue;
+}
+.btn{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* BUTTON */
+.btn1{
+    width: 10rem;
+    height: 3rem;
+    border-radius: 2rem;
+    background: linear-gradient(135deg, #0011ff, #0055ff);
+    border: 2px solid white;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* 🔥 Hover Lift Effect */
+.btn1:hover{
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 85, 255, 0.6);
+}
+
+/* 💡 Glow Border Animation */
+.btn1::before{
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 2rem;
+    background: linear-gradient(90deg, #00f2ff, #0055ff, #00f2ff);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.btn1:hover::before{
+    opacity: 1;
+}
+
+/* ✨ Shine Effect */
+.btn1::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    transform: skewX(-20deg);
+    transition: 0.6s;
+}
+
+.btn1:hover::after{
+    left: 130%;
+}
+}

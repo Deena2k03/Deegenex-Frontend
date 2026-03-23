@@ -1,0 +1,830 @@
+/*DESKTOP*/
+@media (min-width: 1921px){
+    .cont{
+    width: 80%;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+}
+.sec1{
+    width: 90%;
+    height: 100%;
+    display: flex;
+}
+.sec1img{
+    width: 50%;
+    height: 100%;
+    background-image: url('/carbg.png');
+    background-position: center;
+    object-fit: cover;
+}
+.leftimg{
+    width: 100%;
+}
+.content{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+}
+.content1{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 1rem;
+}
+.contxt1{
+    font-size: .8rem;
+    font-weight: 500;
+    margin-left: 5rem;
+}
+.sec2blk1parapoint{
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 1rem 0 .5rem 2rem;  
+  transition: transform 0.5s ease, text-shadow 0.3s ease;
+}
+
+.tick {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0px 10px rgba(0,0,0,0.2);
+  margin: 0 1rem 0 0;
+   transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.tick::before {
+  content: "✓";
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  transition: color 0.3s ease;
+}
+.sec2blk1parapoint:hover {
+  transform: translateY(-3px);
+  color: blue;
+}
+
+.sec2blk1parapoint:hover .tick {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.sec2blk1parapoint:hover .tick::before {
+  color: rgb(255, 255, 255);
+}
+.sec2blk1parapoint:hover .tick {
+  background: blue;
+}
+.sec2{
+    width: 30rem;
+    height: 25rem;
+    background-color: rgb(9, 0, 95);
+    position: absolute;
+    padding: 2rem;
+    left: 40%;
+}
+.sec2txt1{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 1rem;
+}
+.sec2txt2{
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: white;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.sec2txt3{
+    font-size: .9rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 1rem;
+}
+.sec2btn {
+    width: 12rem;
+    height: 2.8rem;
+    background-color: transparent;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.sec2btn a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+    transition: 0.4s ease;
+}
+
+/* Sliding background */
+.sec2btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: 0.4s ease;
+    z-index: 1;
+}
+
+/* Hover effect */
+.sec2btn:hover::before {
+    left: 0;
+}
+
+.sec2btn:hover a {
+    color: black;
+}
+}
+
+
+/*LAPTOP*/
+@media (min-width: 1281px) and (max-width: 1920px){
+    .cont{
+    width: 100%;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.sec1{
+    width: 90%;
+    height: 100%;
+    display: flex;
+}
+.sec1img{
+    width: 50%;
+    height: 100%;
+    background-image: url('/carbg.png');
+    background-position: center;
+    object-fit: cover;
+}
+.leftimg{
+    width: 100%;
+}
+.content{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+}
+.content1{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 1rem;
+}
+.contxt1{
+    font-size: .8rem;
+    font-weight: 500;
+    margin-left: 5rem;
+}
+.sec2blk1parapoint{
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 1rem 0 .5rem 2rem;  
+  transition: transform 0.5s ease, text-shadow 0.3s ease;
+}
+
+.tick {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0px 10px rgba(0,0,0,0.2);
+  margin: 0 1rem 0 0;
+   transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.tick::before {
+  content: "✓";
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  transition: color 0.3s ease;
+}
+.sec2blk1parapoint:hover {
+  transform: translateY(-3px);
+  color: blue;
+}
+
+.sec2blk1parapoint:hover .tick {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.sec2blk1parapoint:hover .tick::before {
+  color: rgb(255, 255, 255);
+}
+.sec2blk1parapoint:hover .tick {
+  background: blue;
+}
+.sec2{
+    width: 30rem;
+    height: 25rem;
+    background-color: rgb(9, 0, 95);
+    position: absolute;
+    padding: 2rem;
+    left: 30%;
+}
+.sec2txt1{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 1rem;
+}
+.sec2txt2{
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: white;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.sec2txt3{
+    font-size: .9rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 1rem;
+}
+.sec2btn {
+    width: 12rem;
+    height: 2.8rem;
+    background-color: transparent;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.sec2btn a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+    transition: 0.4s ease;
+}
+
+/* Sliding background */
+.sec2btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: 0.4s ease;
+    z-index: 1;
+}
+
+/* Hover effect */
+.sec2btn:hover::before {
+    left: 0;
+}
+
+.sec2btn:hover a {
+    color: black;
+}
+}
+
+
+/*MAX-TABLET*/
+@media (min-width: 1025px) and (max-width: 1280px){
+    .cont{
+    width: 100%;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.sec1{
+    width: 90%;
+    height: 100%;
+    display: flex;
+}
+.sec1img{
+    width: 50%;
+    height: 100%;
+    background-image: url('/carbg.png');
+    background-position: center;
+    object-fit: cover;
+}
+.leftimg{
+    width: 100%;
+}
+.content{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+}
+.content1{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 1rem;
+}
+.contxt1{
+    font-size: .8rem;
+    font-weight: 500;
+    margin-left: 4rem;
+}
+.sec2blk1parapoint{
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 1rem 0 .5rem 1rem;  
+  transition: transform 0.5s ease, text-shadow 0.3s ease;
+}
+
+.tick {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0px 10px rgba(0,0,0,0.2);
+  margin: 0 1rem 0 0;
+   transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.tick::before {
+  content: "✓";
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  transition: color 0.3s ease;
+}
+.sec2blk1parapoint:hover {
+  transform: translateY(-3px);
+  color: blue;
+}
+
+.sec2blk1parapoint:hover .tick {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.sec2blk1parapoint:hover .tick::before {
+  color: rgb(255, 255, 255);
+}
+.sec2blk1parapoint:hover .tick {
+  background: blue;
+}
+.sec2{
+    width: 25rem;
+    height: 22rem;
+    background-color: rgb(9, 0, 95);
+    position: absolute;
+    padding: 2rem;
+    left: 30%;
+}
+.sec2txt1{
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 1rem;
+}
+.sec2txt2{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.sec2txt3{
+    font-size: .9rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 1rem;
+}
+.sec2btn {
+    width: 12rem;
+    height: 2.8rem;
+    background-color: transparent;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.sec2btn a {
+    font-size: .8rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+    transition: 0.4s ease;
+}
+
+/* Sliding background */
+.sec2btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: 0.4s ease;
+    z-index: 1;
+}
+
+/* Hover effect */
+.sec2btn:hover::before {
+    left: 0;
+}
+
+.sec2btn:hover a {
+    color: black;
+}
+}
+
+
+/*TABLET*/
+@media (min-width: 769px) and (max-width: 1024px){
+    .cont{
+    width: 100%;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.sec1{
+    width: 95%;
+    height: 100%;
+    display: flex;
+}
+.sec1img{
+    width: 50%;
+    height: 90%;
+    background-image: url('/carbg.png');
+    background-position: center;
+    object-fit: cover;
+    display: none;
+}
+.leftimg{
+    width: 90%;
+}
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+}
+.content1{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 1rem;
+}
+.contxt1{
+    font-size: .8rem;
+    font-weight: 500;
+    margin-left: 5rem;
+}
+.sec2blk1parapoint{
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 1rem 0 .5rem 2rem;  
+  transition: transform 0.5s ease, text-shadow 0.3s ease;
+}
+
+.tick {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0px 10px rgba(0,0,0,0.2);
+  margin: 0 1rem 0 0;
+   transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.tick::before {
+  content: "✓";
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  transition: color 0.3s ease;
+}
+.sec2blk1parapoint:hover {
+  transform: translateY(-3px);
+  color: blue;
+}
+
+.sec2blk1parapoint:hover .tick {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.sec2blk1parapoint:hover .tick::before {
+  color: rgb(255, 255, 255);
+}
+.sec2blk1parapoint:hover .tick {
+  background: blue;
+}
+.sec2{
+    width: 30rem;
+    height: 25rem;
+    background-color: rgb(9, 0, 95);
+    position: absolute;
+    padding: 2rem;
+    left: 5%;
+}
+.sec2txt1{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 1rem;
+}
+.sec2txt2{
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: white;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.sec2txt3{
+    font-size: .9rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 1rem;
+}
+.sec2btn {
+    width: 12rem;
+    height: 2.8rem;
+    background-color: transparent;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.sec2btn a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+    transition: 0.4s ease;
+}
+
+/* Sliding background */
+.sec2btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: 0.4s ease;
+    z-index: 1;
+}
+
+/* Hover effect */
+.sec2btn:hover::before {
+    left: 0;
+}
+
+.sec2btn:hover a {
+    color: black;
+}
+}
+
+
+/*PHONE*/
+@media (max-width: 769px){
+    .cont{
+    width: 100%;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.sec1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.sec1img{
+    width: 100%;
+    height: 35rem;
+    background-image: url('/carbg.png');
+    background-position: center;
+    object-fit: cover;
+    display: none;
+}
+.content{
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+}
+.content1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 1rem;
+}
+.contxt1{
+    font-size: .8rem;
+    font-weight: 400;
+    margin-left: 4rem;
+}
+.sec2blk1parapoint{
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 1rem 0 .5rem 1rem;  
+  transition: transform 0.5s ease, text-shadow 0.3s ease;
+}
+
+.tick {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0px 10px rgba(0,0,0,0.2);
+  margin: 0 1rem 0 0;
+   transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.tick::before {
+  content: "✓";
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  transition: color 0.3s ease;
+}
+.sec2blk1parapoint:hover {
+  transform: translateY(-3px);
+  color: blue;
+}
+
+.sec2blk1parapoint:hover .tick {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.sec2blk1parapoint:hover .tick::before {
+  color: rgb(255, 255, 255);
+}
+.sec2blk1parapoint:hover .tick {
+  background: blue;
+}
+.sec2{
+    width: 90%;
+    height: 22rem;
+    background-color: rgb(9, 0, 95);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    order: -1;
+}
+.sec2txt1{
+    font-size: .8rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 1rem;
+}
+.sec2txt2{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.sec2txt3{
+    font-size: .8rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 1rem;
+}
+.sec2btn {
+    width: 10rem;
+    height: 2.8rem;
+    background-color: transparent;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.sec2btn a {
+    font-size: .8rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+    transition: 0.4s ease;
+}
+
+/* Sliding background */
+.sec2btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: 0.4s ease;
+    z-index: 1;
+}
+
+/* Hover effect */
+.sec2btn:hover::before {
+    left: 0;
+}
+
+.sec2btn:hover a {
+    color: black;
+}
+}

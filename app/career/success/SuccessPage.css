@@ -1,0 +1,115 @@
+/* Main Wrapper */
+.success-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* Soft gradient for a more premium look */
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  font-family: 'Inter', -apple-system, sans-serif;
+  padding: 20px; /* Ensures padding on mobile screens */
+  box-sizing: border-box;
+}
+
+/* The Card with "Popper" Entrance */
+.success-card {
+  background: white;
+  width: 100%;
+  max-width: 440px; /* Limits width on desktop */
+  padding: 40px 30px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  
+  /* Entrance Animation */
+  animation: cardPopper 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 480px) {
+  .success-card {
+    padding: 32px 20px;
+    border-radius: 20px;
+  }
+  
+  .success-card h2 {
+    font-size: 22px;
+  }
+}
+
+/* Animated Green Circle */
+.icon-box {
+  width: 72px;
+  height: 72px;
+  background: #10b981;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+  /* Pops in slightly after the card */
+  animation: iconScale 0.5s 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+.success-card h2 {
+  color: #1f2937;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.success-card p {
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.company-accent {
+  color: #111827;
+  font-weight: 600;
+}
+
+/* Button with Hover/Touch Effects */
+.btn-return {
+  display: block; /* Full width on mobile if container is small */
+  width: fit-content;
+  margin: 0 auto;
+  background: #2563eb;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.btn-return:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+.btn-return:active {
+  transform: translateY(0);
+}
+
+/* Keyframe Animations */
+@keyframes cardPopper {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes iconScale {
+  0% { transform: scale(0) rotate(-45deg); }
+  100% { transform: scale(1) rotate(0); }
+}

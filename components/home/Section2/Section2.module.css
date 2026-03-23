@@ -1,0 +1,634 @@
+/*DESKTOP*/
+@media (min-width: 1921px){
+  .main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+.sec1{
+    width: 100%;
+    height: 14rem;
+    background-color: rgb(225, 250, 255);
+    padding: 1rem;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+.sec1txt1{
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.sec1txt2{
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    width: 70%;
+}
+
+.wrapper {
+  position: relative;
+  width: 70%;
+  padding: 2rem;
+  padding-left: 8.8rem;
+  top: 5rem;
+}
+
+.section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-bottom: 10rem;
+  position: relative;
+}
+
+.left h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  margin-left: 27rem;
+  background: #0000ff;
+
+  background-clip: text;          /* Standard property */
+  -webkit-background-clip: text;  /* Safari / Chrome */
+  
+  color: transparent;             /* Standard */
+  -webkit-text-fill-color: transparent;
+}
+
+.right {
+  max-width: 600px;
+}
+
+.tag {
+  background: #0000ff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.right h2 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+}
+
+.right p {
+  margin-top: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+/* Vertical Line */
+.progressContainer {
+  position: absolute;
+  left: 30%;
+  top: 0;
+  width: 4px;
+  height: 94%;
+  background: rgba(122, 0, 255, 0.1);
+}
+.progressLine {
+  width: 100%;
+  height: 100%;
+  background: #0000ff;
+  transform-origin: top;
+}
+
+.dot {
+  position: absolute;
+  left: 24.5rem; /* adjust to align perfectly on line */
+  top: 65px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #0000ff;
+  box-shadow: 0 0 0 6px rgba(12, 0, 118, 0.15);
+  z-index: 2;
+}
+}
+
+
+/*LAPTOP*/
+@media (min-width: 1281px) and (max-width: 1920px){
+  .main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+.sec1{
+    width: 100%;
+    height: 14rem;
+    background-color: rgb(225, 250, 255);
+    padding: 1rem;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+.sec1txt1{
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.sec1txt2{
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    width: 70%;
+}
+
+.wrapper {
+  position: relative;
+  width: 70%;
+  padding: 2rem;
+  padding-left: 8.8rem;
+  top: 5rem;
+}
+
+.section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+.left h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  background: #0000ff;
+
+  background-clip: text;          /* Standard property */
+  -webkit-background-clip: text;  /* Safari / Chrome */
+  
+  color: transparent;             /* Standard */
+  -webkit-text-fill-color: transparent;
+}
+
+.right {
+  max-width: 600px;
+}
+
+.tag {
+  background: #0000ff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.right h2 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+}
+
+.right p {
+  margin-top: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+/* Vertical Line */
+.progressContainer {
+  position: absolute;
+  left: 10.3%;
+  top: 0;
+  width: 4px;
+  height: 94%;
+  background: rgba(122, 0, 255, 0.1);
+}
+.progressLine {
+  width: 100%;
+  height: 100%;
+  background: #0000ff;
+  transform-origin: top;
+}
+
+.dot {
+  position: absolute;
+  left: -37px; /* adjust to align perfectly on line */
+  top: 65px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #0000ff;
+  box-shadow: 0 0 0 6px rgba(12, 0, 118, 0.15);
+  z-index: 2;
+}
+}
+
+
+/*MAX-TABLET*/
+@media (min-width: 1025px) and (max-width: 1280px){
+  .main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.sec1{
+    width: 100%;
+    height: 14rem;
+    background-color: rgb(225, 250, 255);
+    padding: 1rem;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+.sec1txt1{
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.sec1txt2{
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    width: 70%;
+}
+
+.wrapper {
+  position: relative;
+  width: 70%;
+  padding: 2rem;
+  padding-left: 8.8rem;
+  top: 5rem;
+}
+
+.section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+.left h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  background: #0000ff;
+
+  background-clip: text;          /* Standard property */
+  -webkit-background-clip: text;  /* Safari / Chrome */
+  
+  color: transparent;             /* Standard */
+  -webkit-text-fill-color: transparent;
+}
+
+.right {
+  max-width: 600px;
+}
+
+.tag {
+  background: #0000ff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.right h2 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+}
+
+.right p {
+  margin-top: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+/* Vertical Line */
+.progressContainer {
+  position: absolute;
+  left: 12.3%;
+  top: 0;
+  width: 4px;
+  height: 94%;
+  background: rgba(122, 0, 255, 0.1);
+}
+.progressLine {
+  width: 100%;
+  height: 100%;
+  background: #0000ff;
+  transform-origin: top;
+}
+
+.dot {
+  position: absolute;
+  left: -37px; /* adjust to align perfectly on line */
+  top: 65px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #0000ff;
+  box-shadow: 0 0 0 6px rgba(12, 0, 118, 0.15);
+  z-index: 2;
+}
+}
+
+
+/*TABLET*/
+@media (min-width: 769px) and (max-width: 1024px){
+  .main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.sec1{
+    width: 100%;
+    height: 14rem;
+    background-color: rgb(225, 250, 255);
+    padding: 1rem;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+.sec1txt1{
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.sec1txt2{
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    width: 80%;
+}
+
+.wrapper {
+  position: relative;
+  width: 70%;
+  padding: 2rem;
+  padding-left: 8.8rem;
+  top: 5rem;
+}
+
+.section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.left h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  background: #0000ff;
+
+  background-clip: text;          /* Standard property */
+  -webkit-background-clip: text;  /* Safari / Chrome */
+  
+  color: transparent;             /* Standard */
+  -webkit-text-fill-color: transparent;
+}
+
+.right {
+  max-width: 600px;
+}
+
+.tag {
+  background: #0000ff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.right h2 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+}
+
+.right p {
+  margin-top: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+/* Vertical Line */
+.progressContainer {
+  position: absolute;
+  left: 10.3%;
+  top: 0;
+  width: 4px;
+  height: 94%;
+  background: rgba(122, 0, 255, 0.1);
+}
+.progressLine {
+  width: 100%;
+  height: 100%;
+  background: #0000ff;
+  transform-origin: top;
+}
+
+.dot {
+  position: absolute;
+  left: -73px; /* adjust to align perfectly on line */
+  top: 65px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #0000ff;
+  box-shadow: 0 0 0 6px rgba(12, 0, 118, 0.15);
+  z-index: 2;
+}
+}
+
+
+/*PHONE*/
+@media (max-width: 769px){
+  .main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.sec1{
+    width: 100%;
+    height: 14rem;
+    background-color: rgb(225, 250, 255);
+    padding: 1rem;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+.sec1txt1{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.sec1txt2{
+    font-size: .8rem;
+    font-weight: 400;
+    text-align: center;
+    width: 90%;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  padding: 2rem;
+  padding-left: 8.8rem;
+  top: 5rem;
+}
+
+.section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-bottom: 5rem;
+  position: relative;
+  width: 100%;
+}
+
+.left h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  background: #0000ff;
+
+  background-clip: text;          /* Standard property */
+  -webkit-background-clip: text;  /* Safari / Chrome */
+  
+  color: transparent;             /* Standard */
+  -webkit-text-fill-color: transparent;
+  margin-top: 2.3rem;
+}
+
+.right {
+  max-width: 100%;
+}
+
+.tag {
+  background: #0000ff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.right h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
+.right p {
+  margin-top: .8rem;
+  font-size: .7rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+/* Vertical Line */
+.progressContainer {
+  position: absolute;
+  left: 10%;
+  top: 0;
+  width: 4px;
+  height: 94%;
+  background: rgba(122, 0, 255, 0.1);
+}
+.progressLine {
+  width: 100%;
+  height: 100%;
+  background: #0000ff;
+  transform-origin: top;
+}
+
+.dot {
+  position: absolute;
+  left: 10%; /* adjust to align perfectly on line */
+  top: 65px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #0000ff;
+  box-shadow: 0 0 0 6px rgba(12, 0, 118, 0.15);
+  z-index: 2;
+}
+
+
+
+
+
+/* FOR MDOT AND LINE */
+  .wrapper {
+    padding: 1.5rem;
+    padding-left: 4rem;   /* reduce left space */
+    top: 2rem;
+  }
+  /* Vertical Line */
+  .progressContainer {
+    left: 2rem;     /* fixed distance for all mobiles */
+    width: 3px;
+    height: 95%;
+  }
+
+  .progressLine {
+    width: 100%;
+  }
+
+  /* Dot aligned perfectly on line */
+  .dot {
+    left: -2.35rem;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 14px;
+  }
+}
+
+

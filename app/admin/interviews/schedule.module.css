@@ -1,0 +1,222 @@
+/* --- CONTAINER & CARD LAYOUT --- */
+.container {
+  padding: 60px 20px;
+  background-color: #f4f7fe;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1b254b;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+}
+
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  max-width: 500px;
+}
+
+/* --- FORM FIELDS --- */
+.field {
+  margin-bottom: 24px;
+}
+
+.label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #a3aed0;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1px solid #e9edf7;
+  font-size: 15px;
+  color: #1b254b;
+  background-color: #fff;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #4318ff;
+  box-shadow: 0 0 0 4px rgba(67, 24, 255, 0.08);
+}
+
+.input:disabled {
+  background-color: #f8faff;
+  color: #707eae;
+  border-color: #f0f3ff;
+  cursor: not-allowed;
+}
+
+/* --- PRIMARY BUTTON --- */
+.button {
+  width: 100%;
+  background: #4318ff;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  margin-top: 10px;
+}
+
+.button:hover:not(:disabled) {
+  background: #3311cc;
+  transform: translateY(-2px);
+}
+
+.button:disabled {
+  background: #a3aed0;
+  cursor: not-allowed;
+}
+
+/* --- FEEDBACK STATES --- */
+.error {
+  color: #ee5d50;
+  font-size: 14px;
+  margin-top: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.successBox {
+  margin-top: 30px;
+  padding: 25px;
+  background: #f0fdf4;
+  border-radius: 20px;
+  border: 1px solid #dcfce7;
+  text-align: center;
+}
+
+.successIcon {
+  width: 40px;
+  height: 40px;
+  background: #22c55e;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-size: 20px;
+}
+
+.meetLink {
+  display: inline-block;
+  background: #1b254b;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* --- GLOBAL DATEPICKER & TIME GRID OVERRIDES --- */
+/* These target the portal at the body level to fix the narrow column issue */
+
+:global(.react-datepicker-popper) {
+  z-index: 9999 !important;
+}
+
+:global(.react-datepicker) {
+  border: none !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) !important;
+  font-family: inherit !important;
+}
+
+/* Time Picker Container Width Fix */
+:global(.react-datepicker--time-only) {
+  width: 320px !important;
+  padding: 0 !important;
+}
+
+:global(.react-datepicker__time-container) {
+  width: 100% !important;
+  float: none !important;
+}
+
+:global(.react-datepicker__time-box) {
+  width: 100% !important;
+  margin: 0 !important;
+  border-radius: 16px !important;
+}
+
+/* Force 4-Column Grid Alignment */
+:global(.react-datepicker__time-list) {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 8px !important;
+  padding: 15px !important;
+  list-style: none !important;
+  height: auto !important;
+  max-height: 250px !important;
+}
+
+/* Style for Individual Time Rectangles */
+:global(.react-datepicker__time-list-item) {
+  height: 45px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 10px !important;
+  background: #f8faff !important;
+  border: 1px solid #e9edf7 !important;
+  margin: 0 !important;
+  font-weight: 600 !important;
+  font-size: 11px !important;
+  transition: 0.2s ease !important;
+}
+
+:global(.react-datepicker__time-list-item:hover) {
+  background: #f0f3ff !important;
+  border-color: #4318ff !important;
+  color: #4318ff !important;
+}
+
+:global(.react-datepicker__time-list-item--selected) {
+  background: #4318ff !important;
+  color: white !important;
+  border-color: #4318ff !important;
+}
+
+/* Calendar Header */
+:global(.react-datepicker__header) {
+  background-color: #f8faff !important;
+  border-bottom: 1px solid #e9edf7 !important;
+  padding: 15px 0 !important;
+}
+
+:global(.react-datepicker__header--time) {
+  background: white !important;
+  border-bottom: 1px solid #f0f3ff !important;
+}
+
+:global(.react-datepicker__day--selected) {
+  background-color: #4318ff !important;
+  border-radius: 10px !important;
+}

@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+.mainWrapper {
+  min-height: 100vh;
+  background: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.splitCard {
+  width: 100%;
+  max-width: 1200px;
+  height: 90vh;
+  background: #fff;
+  border-radius: 30px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* LEFT PANE - BRANDING */
+.leftPane {
+  flex: 0.35;
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 40px;
+  position: relative; /* Essential for bottom positioning */
+}
+.brandContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.logoContainer {
+  margin-bottom: 20px;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
+  transition: transform 0.3s ease;
+}
+
+.logoContainer:hover {
+  transform: scale(1.05);
+}
+
+.brandName {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin: 0;
+  text-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.brandTagline {
+  opacity: 0.9;
+  font-size: 0.95rem;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* Version text pinned to the bottom */
+.footerInfo {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+}
+
+/* RIGHT PANE - FORM */
+.rightPane {
+  flex: 0.65;
+  padding: 50px;
+  overflow-y: auto;
+  background: #ffffff;
+}
+
+.rightPane::-webkit-scrollbar { width: 5px; }
+.rightPane::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+
+.formHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.headerTxt h2 {
+  color: #1b254b;
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin: 0;
+  /* Stylish Gradient Title */
+  background: linear-gradient(to right, #1b254b, #3b82f6);
+  -webkit-background-clip: text;
+  background-clip: text; /* <--- Add this line */
+  -webkit-text-fill-color: transparent;
+}
+
+.headerTxt p {
+  color: #a3aed0;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.jobBadge {
+  background: #4318ff;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  box-shadow: 0 4px 14px rgba(67, 24, 255, 0.3);
+}
+
+/* SECTION TITLES */
+.sectionHeading {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #4318ff;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin: 35px 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.sectionHeading::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(to right, #e0e7ff, transparent);
+}
+
+/* INPUTS & ALIGNMENT */
+.inputGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.inputBox {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 2px solid #e2e8f0;
+  outline: none;
+  transition: 0.3s;
+  background: transparent;
+  font-weight: 400;
+  color: #1b254b;
+  font-size: .8rem;
+  margin-bottom: .5rem;
+
+}
+
+.inputBox label {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  color: #a3aed0;
+  pointer-events: none;
+  transition: 0.3s ease all;
+  font-size: 0.95rem;
+  margin-top: .5rem;
+}
+
+.input:focus ~ label,
+.input:not(:placeholder-shown) ~ label {
+  top: -15px;
+  font-size: 0.75rem;
+  color: #3975ff;
+  font-weight: 500;
+}
+
+.input:focus {
+  border-color: #4318ff;
+}
+
+/* PREFERENCES ROW */
+.preferenceGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 20px;
+  align-items: end;
+}
+
+.select, .customDate {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #f1f5f9;
+  border-radius: 12px;
+  background: #f8fafc;
+  color: #1b254b;
+  font-weight: 600;
+  outline: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.select:hover, .customDate:hover {
+  border-color: #4318ff;
+  background: #fff;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 15px;
+  border-radius: 15px;
+  background: #f8fafc;
+  border: 2px solid #f1f5f9;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.textarea:focus {
+  border-color: #4318ff;
+  outline: none;
+  background: #fff;
+}
+
+.fileCard {
+  background: #f0f7ff;
+  border: 2px dashed #4318ff;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.fileCard p {
+  margin: 0 0 10px;
+  font-weight: 800;
+  color: #1b254b;
+  font-size: 0.85rem;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 20px;
+  background: #4318ff;
+  color: white;
+  border: none;
+  border-radius: 18px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-top: 35px;
+  cursor: pointer;
+  transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.submitBtn:hover {
+  background: #3311db;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(67, 24, 255, 0.4);
+}
+/* ADD THIS TO apply.module.css */
+
+.submitBtnLoading {
+  width: 100%;
+  padding: 20px;
+  background: #3b82f6; /* Slightly lighter blue while loading */
+  color: white;
+  border: none;
+  border-radius: 18px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-top: 35px;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.loaderBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .splitCard { flex-direction: column; height: auto; }
+  .leftPane { padding: 60px 20px; }
+  .rightPane { padding: 40px 25px; }
+  .inputGrid, .preferenceGrid { grid-template-columns: 1fr; }
+  .headerTxt h2 { font-size: 1.8rem; }
+}

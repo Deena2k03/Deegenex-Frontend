@@ -1,0 +1,776 @@
+/* Large desktops & 4K */
+@media (min-width: 1921px){
+.sec6 {
+  width: 100%;
+  margin: 0rem 0 0rem 0;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.sec6_1{
+  height: 100%;
+  width: 100%;
+}
+.sec6cont{
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 1rem;
+}
+.sec6conttxt1{
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+}
+.sec6conttxt2{
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  color: grey;
+  width: 50%;
+}
+.sec6slide{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* SLIDER */
+.sliderWrapper {
+  overflow: hidden;
+  height: 100%;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* CARD WRAPPER */
+.reviewWrapper {
+  width: 560px;
+  text-align: left;
+  height: 100%;
+  padding: 2rem;
+}
+
+/* CARD */
+.card {
+  background: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  height: 15rem;
+  padding: 1rem;
+  padding-left: 2rem;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 0px 20px rgba(0, 128, 255, 0.2);
+
+  /* Triangle animation control */
+  --triangle-start: 25px;
+  --triangle-move: 25px;
+}
+
+/* TRIANGLE */
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: -18px;
+  left: var(--triangle-start);
+
+  border-left: 22px solid transparent;
+  border-right: 22px solid transparent;
+  border-top: 18px solid rgba(255, 255, 255, 0.85);
+  
+
+  animation: triangleMove 8s ease-in-out infinite;
+}
+
+/* TRIANGLE ANIMATION */
+@keyframes triangleMove {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(var(--triangle-move));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* STARS */
+.stars {
+  color: #ff9900;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.reviewText {
+  font-size: 15px;
+  height: 4rem;
+  line-height: 1.8;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* USER */
+.userBox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 35px;
+  margin-left: 35px;
+}
+
+.avatar {
+  width: 3rem;
+  height: 3rem; /* 👈 IMPORTANT: same as width */
+  border-radius: 50%;
+  object-fit: cover; /* 👈 crops image correctly */
+  border-bottom: 4px solid #2f6bff;
+}
+
+.userName {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0b1b2b;
+  line-height: 1rem;
+}
+
+.userRole {
+  font-size: .8rem;
+  color: #7a8a9e;
+}
+
+/* DOTS */
+.dots {
+  margin-top: 1rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #cfd8e3;
+  display: inline-block;
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.active {
+  background: #2f6bff;
+}
+}
+
+
+/* Laptops */
+@media (min-width: 1281px) and (max-width: 1920px){
+.sec6 {
+  width: 100%;
+  margin: 0 0 0rem 0;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.sec6_1{
+  height: 100%;
+  width: 90%;
+}
+.sec6cont{
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 1rem;
+}
+.sec6conttxt1{
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+}
+.sec6conttxt2{
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  color: grey;
+  width: 50%;
+}
+.sec6slide{
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* SLIDER */
+.sliderWrapper {
+  overflow: hidden;
+  height: 100%;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* CARD WRAPPER */
+.reviewWrapper {
+  width: 560px;
+  text-align: left;
+  height: 100%;
+  padding: 2rem;
+}
+
+/* CARD */
+.card {
+  background: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  height: 15rem;
+  padding: 1rem;
+  padding-left: 2rem;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 0px 20px rgba(0, 128, 255, 0.2);
+
+  /* Triangle animation control */
+  --triangle-start: 25px;
+  --triangle-move: 25px;
+}
+
+/* TRIANGLE */
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: -18px;
+  left: var(--triangle-start);
+
+  border-left: 22px solid transparent;
+  border-right: 22px solid transparent;
+  border-top: 18px solid rgba(255, 255, 255, 0.85);
+  
+
+  animation: triangleMove 8s ease-in-out infinite;
+}
+
+/* TRIANGLE ANIMATION */
+@keyframes triangleMove {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(var(--triangle-move));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* STARS */
+.stars {
+  color: #ff9900;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.reviewText {
+  font-size: 15px;
+  height: 4rem;
+  line-height: 1.8;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* USER */
+.userBox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 35px;
+  margin-left: 35px;
+}
+
+.avatar {
+  width: 3rem;
+  height: 3rem; /* 👈 IMPORTANT: same as width */
+  border-radius: 50%;
+  object-fit: cover; /* 👈 crops image correctly */
+  border-bottom: 4px solid #2f6bff;
+}
+
+.userName {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0b1b2b;
+  line-height: 1rem;
+}
+
+.userRole {
+  font-size: .8rem;
+  color: #7a8a9e;
+}
+
+/* DOTS */
+.dots {
+  margin-top: 0px;
+}
+
+.dot {
+  width: 10px;
+  height: 20px;
+  background: #cfd8e3;
+  display: inline-block;
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.active {
+  background: #2f6bff;
+}
+}
+
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1280px){
+.sec6 {
+  width: 100%;
+  margin: 0 0 0rem 0;
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.sec6_1{
+  height: 100%;
+  width: 100%;
+}
+.sec6cont{
+  height: 25%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 1rem;
+}
+.sec6conttxt1{
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+}
+.sec6conttxt2{
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  color: grey;
+  width: 50%;
+}
+.sec6slide{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* SLIDER */
+.sliderWrapper {
+  overflow: hidden;
+  height: 100%;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* CARD WRAPPER */
+.reviewWrapper {
+  width: 480px;
+  text-align: left;
+  height: 100%;
+  padding: 2rem;
+}
+
+/* CARD */
+.card {
+  background: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  height: 15rem;
+  padding: 1rem;
+  padding-left: 2rem;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 0px 20px rgba(0, 128, 255, 0.2);
+
+  /* Triangle animation control */
+  --triangle-start: 25px;
+  --triangle-move: 25px;
+}
+
+/* TRIANGLE */
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: -18px;
+  left: var(--triangle-start);
+
+  border-left: 22px solid transparent;
+  border-right: 22px solid transparent;
+  border-top: 18px solid rgba(255, 255, 255, 0.85);
+  
+
+  animation: triangleMove 8s ease-in-out infinite;
+}
+
+/* TRIANGLE ANIMATION */
+@keyframes triangleMove {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(var(--triangle-move));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* STARS */
+.stars {
+  color: #ff9900;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.reviewText {
+  font-size: 15px;
+  height: 4rem;
+  line-height: 1.8;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* USER */
+.userBox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 35px;
+  margin-left: 35px;
+}
+
+.avatar {
+  width: 3rem;
+  height: 3rem; /* 👈 IMPORTANT: same as width */
+  border-radius: 50%;
+  object-fit: cover; /* 👈 crops image correctly */
+  border-bottom: 4px solid #2f6bff;
+}
+
+.userName {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0b1b2b;
+  line-height: 1rem;
+}
+
+.userRole {
+  font-size: .8rem;
+  color: #7a8a9e;
+}
+
+/* DOTS */
+.dots {
+  margin-top: 0px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #cfd8e3;
+  display: inline-block;
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.active {
+  background: #2f6bff;
+}
+}
+
+
+/* Phones */
+@media (max-width: 768px){
+.sec6 {
+  width: 100%;
+  margin: 0 0 0rem 0;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.sec6_1{
+  height: 100%;
+  width: 100%;
+}
+.sec6cont{
+  height: 25%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 3rem;
+}
+.sec6conttxt1{
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+}
+.sec6conttxt2{
+  font-size: .8rem;
+  font-weight: 400;
+  text-align: center;
+  color: grey;
+  width: 90%;
+}
+.sec6slide{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* SLIDER */
+.sliderWrapper {
+  overflow: hidden;
+  height: 100%;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* CARD WRAPPER */
+.reviewWrapper {
+  width: 560px;
+  text-align: left;
+  height: 100%;
+  padding: 2rem;
+}
+
+/* CARD */
+.card {
+  background: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  height: 15rem;
+  padding: 1rem;
+  padding-left: 2rem;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 0px 20px rgba(0, 128, 255, 0.2);
+
+  /* Triangle animation control */
+  --triangle-start: 25px;
+  --triangle-move: 25px;
+}
+
+/* TRIANGLE */
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: -18px;
+  left: var(--triangle-start);
+
+  border-left: 22px solid transparent;
+  border-right: 22px solid transparent;
+  border-top: 18px solid rgba(255, 255, 255, 0.85);
+  
+
+  animation: triangleMove 8s ease-in-out infinite;
+}
+
+/* TRIANGLE ANIMATION */
+@keyframes triangleMove {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(var(--triangle-move));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* STARS */
+.stars {
+  color: #ff9900;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.reviewText {
+  font-size: 15px;
+  height: 4rem;
+  line-height: 1.8;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* USER */
+.userBox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 35px;
+  margin-left: 35px;
+}
+
+.avatar {
+  width: 3rem;
+  height: 3rem; /* 👈 IMPORTANT: same as width */
+  border-radius: 50%;
+  object-fit: cover; /* 👈 crops image correctly */
+  border-bottom: 4px solid #2f6bff;
+}
+
+.userName {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0b1b2b;
+  line-height: 1rem;
+}
+
+.userRole {
+  font-size: .8rem;
+  color: #7a8a9e;
+}
+
+/* DOTS */
+.dots {
+  margin-top: 0px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #cfd8e3;
+  display: inline-block;
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.active {
+  background: #2f6bff;
+}
+
+  .slide {
+    min-width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+
+.reviewWrapper {
+  width: 350px;
+  text-align: left;
+  height: 100%;
+  padding: 1rem;
+}
+  .card {
+    height: auto;
+  }
+
+  .reviewText {
+    height: auto;
+    font-size: .7rem;
+  }
+
+  .userBox {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .userName {
+  margin: 0;
+  font-size: .8rem;
+  font-weight: 700;
+  color: #0b1b2b;
+  line-height: 1rem;
+}
+.userRole {
+  font-size: .7rem;
+  color: #7a8a9e;
+}
+/* DOTS */
+.dots {
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #cfd8e3;
+  display: inline-block;
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.active {
+  background: #2f6bff;
+}
+
+}

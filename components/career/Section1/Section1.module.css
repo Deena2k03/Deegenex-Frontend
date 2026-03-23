@@ -1,0 +1,604 @@
+/*DESKTOP*/
+@media (min-width: 1921px){
+    .sec1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.sec1con{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    padding: 2rem;
+}
+.sec1img {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+/* Image */
+.carimg {
+    width: 80%;
+    animation: imgFloat 6s ease-in-out infinite;
+    filter: drop-shadow(0 10px 20px rgba(0, 110, 255, 0.25));
+}
+
+/* Animation */
+@keyframes imgFloat {
+
+    0% {
+        transform: translateY(0px) scale(1);
+    }
+
+    50% {
+        transform: translateY(-18px) scale(1.03);
+    }
+
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+}
+.sec1content{
+    width: 50%;
+    height: 100%;
+    padding: 1rem;
+}
+.sec1txt1{
+    font-size: 1rem;
+    font-weight: 500;
+    color: blue;
+}
+.sec1txt2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+.sec1txt3{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+.sec1btn1 {
+    width: 7rem;
+    height: 2.2rem;
+    border-radius: .5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 1rem;
+    cursor: pointer;
+
+    position: relative;
+    overflow: hidden;
+
+    background: rgb(2, 0, 131);
+
+    transition: all 0.3s ease;
+}
+
+/* Text */
+.sec1btn1 a {
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+/* Sliding background */
+.sec1btn1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: rgb(0, 221, 255);
+    z-index: 1;
+    transition: width 0.4s ease;
+}
+
+/* Hover */
+.sec1btn1:hover::before {
+    width: 100%;
+}
+
+.sec1btn1:hover a {
+    color: #000000; /* match your purple section */
+}
+}
+
+
+/*LAPTOP*/
+@media (min-width: 1281px) and (max-width: 1920px){
+    .sec1{
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec1con{
+    width: 80%;
+    height: 100%;
+    display: flex;
+}
+.sec1img {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Image */
+.carimg {
+    width: 90%;
+    animation: imgFloat 6s ease-in-out infinite;
+    filter: drop-shadow(0 10px 20px rgba(0, 110, 255, 0.25));
+}
+
+/* Animation */
+@keyframes imgFloat {
+
+    0% {
+        transform: translateY(0px) scale(1);
+    }
+
+    50% {
+        transform: translateY(-18px) scale(1.03);
+    }
+
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+}
+.sec1content{
+    width: 50%;
+    height: 100%;
+    padding: 2rem;
+}
+.sec1txt1{
+    font-size: 1rem;
+    font-weight: 500;
+    color: blue;
+}
+.sec1txt2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+.sec1txt3{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+.sec1btn1 {
+    width: 7rem;
+    height: 2.2rem;
+    border-radius: .5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 1rem;
+    cursor: pointer;
+
+    position: relative;
+    overflow: hidden;
+
+    background: rgb(2, 0, 131);
+
+    transition: all 0.3s ease;
+}
+
+/* Text */
+.sec1btn1 a {
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+/* Sliding background */
+.sec1btn1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: rgb(0, 221, 255);
+    z-index: 1;
+    transition: width 0.4s ease;
+}
+
+/* Hover */
+.sec1btn1:hover::before {
+    width: 100%;
+}
+
+.sec1btn1:hover a {
+    color: #000000; /* match your purple section */
+}
+}
+
+
+/*MAX-TABLET*/
+@media (min-width: 1025px) and (max-width: 1280px){
+    .sec1{
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec1con{
+    width: 80%;
+    height: 100%;
+    display: flex;
+}
+.sec1img {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Image */
+.carimg {
+    width: 90%;
+    animation: imgFloat 6s ease-in-out infinite;
+    filter: drop-shadow(0 10px 20px rgba(0, 110, 255, 0.25));
+}
+
+/* Animation */
+@keyframes imgFloat {
+
+    0% {
+        transform: translateY(0px) scale(1);
+    }
+
+    50% {
+        transform: translateY(-18px) scale(1.03);
+    }
+
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+}
+.sec1content{
+    width: 50%;
+    height: 100%;
+    padding: 2rem;
+}
+.sec1txt1{
+    font-size: 1rem;
+    font-weight: 500;
+    color: blue;
+}
+.sec1txt2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+.sec1txt3{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+.sec1btn1 {
+    width: 7rem;
+    height: 2.2rem;
+    border-radius: .5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 1rem;
+    cursor: pointer;
+
+    position: relative;
+    overflow: hidden;
+
+    background: rgb(2, 0, 131);
+
+    transition: all 0.3s ease;
+}
+
+/* Text */
+.sec1btn1 a {
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+/* Sliding background */
+.sec1btn1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: rgb(0, 221, 255);
+    z-index: 1;
+    transition: width 0.4s ease;
+}
+
+/* Hover */
+.sec1btn1:hover::before {
+    width: 100%;
+}
+
+.sec1btn1:hover a {
+    color: #000000; /* match your purple section */
+}
+}
+
+
+/*TABLET*/
+@media (min-width: 769px) and (max-width: 1024px){
+    .sec1{
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec1con{
+    width: 90%;
+    height: 100%;
+    display: flex;
+}
+.sec1img {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Image */
+.carimg {
+    width: 90%;
+    animation: imgFloat 6s ease-in-out infinite;
+    filter: drop-shadow(0 10px 20px rgba(0, 110, 255, 0.25));
+}
+
+/* Animation */
+@keyframes imgFloat {
+
+    0% {
+        transform: translateY(0px) scale(1);
+    }
+
+    50% {
+        transform: translateY(-18px) scale(1.03);
+    }
+
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+}
+.sec1content{
+    width: 50%;
+    height: 100%;
+    padding: 2rem;
+}
+.sec1txt1{
+    font-size: 1rem;
+    font-weight: 500;
+    color: blue;
+}
+.sec1txt2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+.sec1txt3{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+.sec1btn1 {
+    width: 7rem;
+    height: 2.2rem;
+    border-radius: .5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 1rem;
+    cursor: pointer;
+
+    position: relative;
+    overflow: hidden;
+
+    background: rgb(2, 0, 131);
+
+    transition: all 0.3s ease;
+}
+
+/* Text */
+.sec1btn1 a {
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+/* Sliding background */
+.sec1btn1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: rgb(0, 221, 255);
+    z-index: 1;
+    transition: width 0.4s ease;
+}
+
+/* Hover */
+.sec1btn1:hover::before {
+    width: 100%;
+}
+
+.sec1btn1:hover a {
+    color: #000000; /* match your purple section */
+}
+}
+
+
+/*PHONE*/
+@media (max-width: 769px){
+    .sec1{
+    width: 100%;
+    height: 42rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec1con{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.sec1img {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Image */
+.carimg {
+    width: 95%;
+    animation: imgFloat 6s ease-in-out infinite;
+    filter: drop-shadow(0 0px 10px rgba(0, 110, 255, 0.25));
+}
+
+/* Animation */
+@keyframes imgFloat {
+
+    0% {
+        transform: translateY(0px) scale(1);
+    }
+
+    50% {
+        transform: translateY(-18px) scale(1.03);
+    }
+
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+}
+.sec1content{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+
+}
+.sec1txt1{
+    font-size: .8rem;
+    font-weight: 500;
+    color: blue;
+}
+.sec1txt2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    text-align: left;
+}
+.sec1txt3{
+    font-size: .8rem;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 1rem;
+}
+.sec1btn1 {
+    width: 5rem;
+    height: 2rem;
+    border-radius: .5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 1rem;
+    cursor: pointer;
+
+    position: relative;
+    overflow: hidden;
+
+    background: rgb(2, 0, 131);
+
+    transition: all 0.3s ease;
+}
+
+/* Text */
+.sec1btn1 a {
+    font-size: .8rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+/* Sliding background */
+.sec1btn1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: rgb(0, 221, 255);
+    z-index: 1;
+    transition: width 0.4s ease;
+}
+
+/* Hover */
+.sec1btn1:hover::before {
+    width: 100%;
+}
+
+.sec1btn1:hover a {
+    color: #000000; /* match your purple section */
+}
+}
+
+
+

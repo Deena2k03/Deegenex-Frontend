@@ -1,0 +1,289 @@
+.container {
+  padding: 40px 20px;
+  padding-bottom: 40px;
+  background-color: #f4f7fe;
+  min-height: auto;
+  font-family: 'Inter', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 35px;
+}
+
+.titleArea h2 {
+  font-size: 26px;
+  color: #1b254b;
+  font-weight: 800;
+  margin: 0;
+}
+
+.titleArea p {
+  color: #a3aed0;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* --- View Toggle Buttons --- */
+.viewRejectedBtn {
+  background-color: #1b254b;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 12px rgba(27, 37, 75, 0.15);
+}
+
+.viewRejectedBtn:hover {
+  background-color: #4318ff;
+  transform: translateY(-2px);
+}
+
+.viewActiveBtn {
+  background-color: #ffffff;
+  color: #4318ff;
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: 2px solid #4318ff;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* --- Table Card --- */
+.card {
+  background: white;
+  padding: 20px 30px;
+  padding-bottom: 40px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.candidateTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Widths adjusted to sum to 100% */
+.colSno { width: 5%; text-align: center !important; }
+.colDetails { width: 25%; }
+.colJob { width: 20%; }
+.colDate { width: 12%; text-align: center !important; } /* Center Header */
+.colStatus { width: 12%; text-align: center !important; }
+.colMeet { width: 13%; text-align: center !important; }
+.colActions { width: 13%; text-align: center !important; }
+
+.candidateTable th {
+  padding: 15px 10px;
+  border-bottom: 1px solid #f0f3ff;
+  color: #a3aed0;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.candidateTable td {
+  padding: 20px 10px;
+  border-bottom: 1px solid #f0f3ff;
+  vertical-align: middle;
+}
+
+.centerText {
+  text-align: center;
+}
+
+/* --- Row Content --- */
+.snoCell {
+  color: #707eae;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.infoCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.nameCell {
+  color: #1b254b;
+  font-weight: 700;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.nameCell:hover {
+  color: #4318ff;
+}
+
+.emailSub {
+  font-size: 12px;
+  color: #a3aed0;
+}
+
+.jobBadge {
+  color: #2b3674;
+  font-weight: 600;
+  font-size: 13px;
+  background: #f4f7fe;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+/* --- Status Badges --- */
+.statusBadge {
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: capitalize;
+  display: inline-block;
+  min-width: 90px;
+}
+
+.status_applied { background: #eef2ff; color: #4318ff; }
+.status_interview { background: #fffbeb; color: #d97706; }
+.status_selected { background: #e2f9eb; color: #07a14e; }
+.status_rejected { background: #fff1f0; color: #f5222d; }
+
+/* --- Meeting Link Styles --- */
+.meetStatus {
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.scheduledBtn {
+  color: #4318ff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.scheduledBtn:hover {
+  text-decoration: underline;
+}
+
+/* --- Action Buttons (Schedule/Scheduled) --- */
+.joinLink {
+  background-color: #4318ff;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.joinLink:hover {
+  background-color: #3311cc;
+  box-shadow: 0 8px 16px rgba(67, 24, 255, 0.2);
+}
+
+.scheduledBtn {
+  background-color: #f4f7fe;
+  color: #a3aed0;
+  border: 1px solid #e9edf7;
+  padding: 10px 22px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: not-allowed;
+}
+.scheduleBtn {
+  background-color: #f4f7fe;
+  color: #a3aed0;
+  border: 1px solid #e9edf7;
+  padding: 10px 22px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+}
+.rejectedLabel {
+  color: #ee5d50;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* --- Pagination --- */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.pageBtn {
+  background-color: white;
+  border: 1px solid #e0e7ff;
+  color: #4318ff;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.pageBtn:disabled {
+  color: #a3aed0;
+  border-color: #f4f7fe;
+  cursor: not-allowed;
+}
+
+.pageNumber {
+  background: none;
+  border: none;
+  color: #a3aed0;
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.activePage {
+  background-color: #4318ff !important;
+  color: white !important;
+}
+
+.loadingState {
+  text-align: center;
+  padding: 50px;
+  color: #a3aed0;
+  font-weight: 600;
+}
+
+/* Column Header Style */
+.colDate {
+    text-align: center;
+    padding: 12px;
+    color: #a3aed0; /* Muted blue-grey like other headers */
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Date Text Style */
+.dateCell {
+    color: #39437f; /* Deep blue from your dashboard */
+    font-size: 12px;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+}

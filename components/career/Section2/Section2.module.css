@@ -1,0 +1,1137 @@
+/*DESKTOP*/
+@media (min-width: 1921px){
+    .sec1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.sec1_1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sec1_1txt{
+    width: 100%;
+    height: 7rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec1card {
+    width: 100%;
+    margin: 0 auto;   /* ✅ center the whole grid */
+
+    display: grid;
+    grid-template-columns: repeat(3, 320px); /* fixed card width */
+    gap: 4rem 2rem;   /* row gap | column gap */
+
+    justify-content: center;  /* ✅ center entire grid */
+}
+.cardsec1{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardsec2{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sec1_1txt1{
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.sec1_1txt2{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+.sec1_1txt3{
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: .5rem;
+}
+.card {
+    width: 100%;
+    height: 25rem;
+    border-radius: 2rem;
+    background-color: rgb(208, 237, 255);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border: 3px solid white;
+
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 102, 255, 0.35);
+}
+
+.cardsec1round {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    border: 2px solid white;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.4s ease;
+}
+
+.card:hover .cardsec1round {
+    transform: rotate(-8deg) scale(1.08);
+    box-shadow: 0 10px 25px rgba(0, 102, 255, 0.4);
+}
+
+.cardimg {
+    width: 100%;
+    height: 100%;       /* Add this */
+    object-fit: cover;  /* This ensures the aspect ratio is maintained while filling the circle */
+    display: block;     /* Removes any inline spacing */
+    transition: transform 0.5s ease;
+}
+
+.card:hover .cardimg {
+    transform: scale(1.15);
+}
+/* Shine Effect */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 1),
+        transparent
+    );
+    transform: skewX(-25deg);
+    transition: 0.7s;
+    pointer-events: none;
+}
+
+/* Animate shine on hover */
+.card:hover::before {
+    left: 150%;
+}
+
+.sec1_1btn {
+    width: 7rem;
+    height: 2.2rem;
+    border-radius: 2rem;
+    background-color: blue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.sec1_1btn a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    z-index: 2;
+    transition: 0.3s ease;
+}
+
+/* Sliding Glow */
+.sec1_1btn::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 100%;
+    top: 0;
+    left: -120%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.6),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.sec1_1btn:hover::before {
+    left: 120%;
+}
+
+.sec1_1btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 255, 0.4);
+}
+
+
+.card {
+    animation: cardFadeUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.3s; }
+.card:nth-child(3) { animation-delay: 0.5s; }
+.card:nth-child(4) { animation-delay: 0.7s; }
+
+@keyframes cardFadeUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+}
+
+
+/*LAPTOP*/
+@media (min-width: 1281px) and (max-width: 1920px){
+    .sec1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.sec1_1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sec1_1txt{
+    width: 100%;
+    height: 7rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec1card {
+    width: 100%;
+    margin: 0 auto;   /* ✅ center the whole grid */
+
+    display: grid;
+    grid-template-columns: repeat(3, 320px); /* fixed card width */
+    gap: 4rem 2rem;   /* row gap | column gap */
+
+    justify-content: center;  /* ✅ center entire grid */
+}
+.cardsec1{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardsec2{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sec1_1txt1{
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.sec1_1txt2{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+.sec1_1txt3{
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: .5rem;
+}
+.card {
+    width: 100%;
+    height: 25rem;
+    border-radius: 2rem;
+    background-color: rgb(208, 237, 255);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border: 3px solid white;
+
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 102, 255, 0.35);
+}
+
+.cardsec1round {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    border: 2px solid white;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.4s ease;
+}
+
+.card:hover .cardsec1round {
+    transform: rotate(-8deg) scale(1.08);
+    box-shadow: 0 10px 25px rgba(0, 102, 255, 0.4);
+}
+
+.cardimg {
+    width: 100%;
+    height: 100%;       /* Add this */
+    object-fit: cover;  /* This ensures the aspect ratio is maintained while filling the circle */
+    display: block;     /* Removes any inline spacing */
+    transition: transform 0.5s ease;
+}
+
+.card:hover .cardimg {
+    transform: scale(1.15);
+}
+/* Shine Effect */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 1),
+        transparent
+    );
+    transform: skewX(-25deg);
+    transition: 0.7s;
+    pointer-events: none;
+}
+
+/* Animate shine on hover */
+.card:hover::before {
+    left: 150%;
+}
+
+.sec1_1btn {
+    width: 7rem;
+    height: 2.2rem;
+    border-radius: 2rem;
+    background-color: blue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.sec1_1btn {
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    z-index: 2;
+    transition: 0.3s ease;
+}
+
+/* Sliding Glow */
+.sec1_1btn::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 100%;
+    top: 0;
+    left: -120%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.6),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.sec1_1btn:hover::before {
+    left: 120%;
+}
+
+.sec1_1btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 255, 0.4);
+}
+
+
+.card {
+    animation: cardFadeUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.3s; }
+.card:nth-child(3) { animation-delay: 0.5s; }
+.card:nth-child(4) { animation-delay: 0.7s; }
+
+@keyframes cardFadeUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+}
+
+
+/*MAX-TABLET*/
+@media (min-width: 1025px) and (max-width: 1280px){
+    .sec1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.sec1_1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sec1_1txt{
+    width: 100%;
+    height: 7rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec1card {
+    width: 100%;
+    margin: 0 auto;   /* ✅ center the whole grid */
+
+    display: grid;
+    grid-template-columns: repeat(3, 320px); /* fixed card width */
+    gap: 4rem 2rem;   /* row gap | column gap */
+
+    justify-content: center;  /* ✅ center entire grid */
+}
+.cardsec1{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardsec2{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sec1_1txt1{
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.sec1_1txt2{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+.sec1_1txt3{
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: .5rem;
+}
+.card {
+    width: 100%;
+    height: 25rem;
+    border-radius: 2rem;
+    background-color: rgb(208, 237, 255);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border: 3px solid white;
+
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 102, 255, 0.35);
+}
+
+.cardsec1round {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    border: 2px solid white;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.4s ease;
+}
+
+.card:hover .cardsec1round {
+    transform: rotate(-8deg) scale(1.08);
+    box-shadow: 0 10px 25px rgba(0, 102, 255, 0.4);
+}
+
+.cardimg {
+    width: 100%;
+    height: 100%;       /* Add this */
+    object-fit: cover;  /* This ensures the aspect ratio is maintained while filling the circle */
+    display: block;     /* Removes any inline spacing */
+    transition: transform 0.5s ease;
+}
+
+.card:hover .cardimg {
+    transform: scale(1.15);
+}
+/* Shine Effect */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 1),
+        transparent
+    );
+    transform: skewX(-25deg);
+    transition: 0.7s;
+    pointer-events: none;
+}
+
+/* Animate shine on hover */
+.card:hover::before {
+    left: 150%;
+}
+
+.sec1_1btn {
+    width: 7rem;
+    height: 2.2rem;
+    border-radius: 2rem;
+    background-color: blue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.sec1_1btn a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    z-index: 2;
+    transition: 0.3s ease;
+}
+
+/* Sliding Glow */
+.sec1_1btn::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 100%;
+    top: 0;
+    left: -120%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.6),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.sec1_1btn:hover::before {
+    left: 120%;
+}
+
+.sec1_1btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 255, 0.4);
+}
+
+
+.card {
+    animation: cardFadeUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.3s; }
+.card:nth-child(3) { animation-delay: 0.5s; }
+.card:nth-child(4) { animation-delay: 0.7s; }
+
+@keyframes cardFadeUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+}
+
+
+/*TABLET*/
+@media (min-width: 769px) and (max-width: 1024px){
+    .sec1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.sec1_1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sec1_1txt{
+    width: 100%;
+    height: 7rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec1card {
+    width: 100%;
+    margin: 0 auto;   /* ✅ center the whole grid */
+
+    display: grid;
+    grid-template-columns: repeat(3, 280px); /* fixed card width */
+    gap: 4rem 2rem;   /* row gap | column gap */
+
+    justify-content: center;  /* ✅ center entire grid */
+}
+.cardsec1{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardsec2{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sec1_1txt1{
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.sec1_1txt2{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+.sec1_1txt3{
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: .5rem;
+}
+.card {
+    width: 100%;
+    height: 25rem;
+    border-radius: 2rem;
+    background-color: rgb(208, 237, 255);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border: 3px solid white;
+
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 102, 255, 0.35);
+}
+
+.cardsec1round {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    border: 2px solid white;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.4s ease;
+}
+
+.card:hover .cardsec1round {
+    transform: rotate(-8deg) scale(1.08);
+    box-shadow: 0 10px 25px rgba(0, 102, 255, 0.4);
+}
+
+.cardimg {
+    width: 100%;
+    height: 100%;       /* Add this */
+    object-fit: cover;  /* This ensures the aspect ratio is maintained while filling the circle */
+    display: block;     /* Removes any inline spacing */
+    transition: transform 0.5s ease;
+}
+
+.card:hover .cardimg {
+    transform: scale(1.15);
+}
+/* Shine Effect */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 1),
+        transparent
+    );
+    transform: skewX(-25deg);
+    transition: 0.7s;
+    pointer-events: none;
+}
+
+/* Animate shine on hover */
+.card:hover::before {
+    left: 150%;
+}
+
+.sec1_1btn {
+    width: 7rem;
+    height: 2.2rem;
+    border-radius: 2rem;
+    background-color: blue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.sec1_1btn a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    z-index: 2;
+    transition: 0.3s ease;
+}
+
+/* Sliding Glow */
+.sec1_1btn::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 100%;
+    top: 0;
+    left: -120%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.6),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.sec1_1btn:hover::before {
+    left: 120%;
+}
+
+.sec1_1btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 255, 0.4);
+}
+
+
+.card {
+    animation: cardFadeUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.3s; }
+.card:nth-child(3) { animation-delay: 0.5s; }
+.card:nth-child(4) { animation-delay: 0.7s; }
+
+@keyframes cardFadeUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+}
+
+
+/*PHONE*/
+@media (max-width: 769px){
+    .sec1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.sec1_1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sec1_1txt{
+    width: 100%;
+    height: 7rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec1card {
+    width: 100%;
+    margin: 0 auto;   /* ✅ center the whole grid */
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    justify-content: center;  /* ✅ center entire grid */
+}
+.cardsec1{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardsec2{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sec1_1txt1{
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.sec1_1txt2{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+.sec1_1txt3{
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: .5rem;
+}
+.card {
+    width: 100%;
+    height: 25rem;
+    border-radius: 2rem;
+    background-color: rgb(208, 237, 255);
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
+    border: 3px solid white;
+
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 0px 10px rgba(0, 102, 255, 0.35);
+}
+
+.cardsec1round {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    border: 2px solid white;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.4s ease;
+}
+
+.card:hover .cardsec1round {
+    transform: rotate(-8deg) scale(1.08);
+    box-shadow: 0 10px 25px rgba(0, 102, 255, 0.4);
+}
+
+.cardimg {
+    width: 100%;
+    height: 100%;       /* Add this */
+    object-fit: cover;  /* This ensures the aspect ratio is maintained while filling the circle */
+    display: block;     /* Removes any inline spacing */
+    transition: transform 0.5s ease;
+}
+
+.card:hover .cardimg {
+    transform: scale(1.15);
+}
+/* Shine Effect */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 1),
+        transparent
+    );
+    transform: skewX(-25deg);
+    transition: 0.7s;
+    pointer-events: none;
+}
+
+/* Animate shine on hover */
+.card:hover::before {
+    left: 150%;
+}
+
+.sec1_1btn {
+    width: 7rem;
+    height: 2.2rem;
+    border-radius: 2rem;
+    background-color: blue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.sec1_1btn a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    z-index: 2;
+    transition: 0.3s ease;
+}
+
+/* Sliding Glow */
+.sec1_1btn::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 100%;
+    top: 0;
+    left: -120%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.6),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.sec1_1btn:hover::before {
+    left: 120%;
+}
+
+.sec1_1btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 255, 0.4);
+}
+
+
+.card {
+    animation: cardFadeUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.3s; }
+.card:nth-child(3) { animation-delay: 0.5s; }
+.card:nth-child(4) { animation-delay: 0.7s; }
+
+@keyframes cardFadeUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+}
+
+
+.noJobsHeadingWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  /* Adds space outside the section */
+  margin-top: 100px; 
+  margin-bottom: 100px;
+  
+  /* Adds space inside the section */
+  padding: 40px 0;
+  
+  text-align: center;
+  z-index: 1;
+}
+
+.noJobsIcon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  /* Optional shadow to make icon pop */
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+
+.glowBackground {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 80%);
+  filter: blur(50px);
+  z-index: -1;
+  pointer-events: none;
+}

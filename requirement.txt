@@ -1,0 +1,8 @@
+
+npm install react-icons
+npm install framer-motion
+npm install react-big-calendar date-fns
+npm install react-datepicker
+npm install chart.js react-chartjs-2
+npm install canvas-confetti
+npm install react-calendar

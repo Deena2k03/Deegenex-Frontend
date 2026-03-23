@@ -1,0 +1,407 @@
+.container {
+  padding: 30px;
+  background-color: #f4f7fe;
+  min-height: 100vh;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  color: #4318ff;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0px 18px 40px rgba(112, 144, 176, 0.12);
+}
+
+/* Header */
+.profileHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.candidateName {
+  font-size: 32px;
+  color: #2b3674;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.badgeRow {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.statusBadge {
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.status_interview { background: #e2f9eb; color: #07a14e; }
+.status_applied { background: #eeeaff; color: #4318ff; }
+
+.appliedFor {
+  color: #a3aed0;
+  font-size: 14px;
+}
+
+.aiScoreCard {
+  background: linear-gradient(135deg, #4318ff 0%, #5125ff 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  min-width: 120px;
+}
+
+.aiLabel { font-size: 10px; font-weight: 700; opacity: 0.8; }
+.aiScoreValue { font-size: 28px; font-weight: 800; display: block; }
+
+/* Grid System */
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0026ff;
+  margin: 30px 0 20px 0;
+  border-bottom: 1px solid #f4f7fe;
+  padding-bottom: 10px;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.infoGroup { display: flex; flex-direction: column; gap: 5px; }
+.label { font-size: 14px; font-weight: 500; color: #a3aed0; text-transform: uppercase; }
+.value { font-size: 16px; font-weight: 600; color: #2b3674; }
+.highlight { color: #4318ff; }
+.aiText { color: #4318ff; font-style: italic; }
+
+.fullWidthGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+/* Documents */
+.resumeLink {
+  color: #4318ff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* Interview Schedule */
+.interviewContainer { margin-top: 20px; }
+.interviewCard {
+  background: #f8faff;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.interviewData { display: flex; flex-direction: column; gap: 5px; }
+
+.rawLink {
+  font-size: 12px;
+  color: #707eae;
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.joinBtn {
+  background: #4318ff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.joinBtn:hover { background: #3311db; }
+
+.rescheduleBtn {
+  background: white;
+  border: 1px solid #e0e5f2;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: #2b3674;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Footer Actions */
+.actionFooter {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.btnMain {
+  background: #4318ff;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btnDanger {
+  background: #fff;
+  color: #ffffff;
+  border: 1px solid #ee5d50;
+  padding: 15px 30px;
+  border-radius: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: red;
+}
+
+.loading {
+  text-align: center;
+  padding: 100px;
+  color: #2b3674;
+}
+.actionFooter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.statusActions { display: flex; gap: 10px; }
+
+.btnSelect {
+  background: white;
+  border: 2px solid #01b574;
+  color: #01b574;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnSelectedActive {
+  background: #01b574;
+  color: white;
+  transform: scale(1.1);
+  animation: popCheck 0.4s ease-out;
+}
+
+@keyframes popCheck {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1.1); }
+}
+
+.btnReject {
+  background: white;
+  border: 2px solid #ee5d50;
+  color: #ee5d50;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btnReject:hover {
+  background: #ee5d50;
+  color: white;
+}
+
+/* Add to existing candidateProfile.module.css */
+
+.actionFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 2px solid #f4f7fe;
+}
+
+.statusActions { display: flex; gap: 15px; }
+.managementActions { display: flex; gap: 15px; }
+
+.btnSelect {
+  background: white;
+  border: 2px solid #01b574;
+  color: #01b574;
+  padding: 12px 25px;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnSelectedActive {
+  background: #0a9400;
+  color: white;
+  box-shadow: 0 10px 20px rgba(1, 181, 116, 0.2);
+  transform: scale(1.05);
+}
+
+.btnReject {
+  background: white;
+  border: 2px solid #ee5d50;
+  color: #ff4938;
+  padding: 12px 25px;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btnReject:hover {
+  background: #ff4231;
+  color: white;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.fullWidthGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+/* --- The Main Name Heading --- */
+.candidateName {
+  color: #1b254b; /* Deep Navy for maximum readability */
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* --- The Status & Job Sub-heading Row --- */
+.badgeRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+/* --- SELECTED Status Label --- */
+.statusBadgeSelected {
+  color: #01b574; /* Success Green */
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding: 4px 0;
+}
+
+/* --- REJECTED Status Label --- */
+.statusBadgeRejected {
+  color: #ee5d50; /* Error Red */
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding: 4px 0;
+}
+
+/* --- "Applied for: Software Development" Text --- */
+.appliedFor {
+  color: #a3aed0; /* Soft Blue-Gray */
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.appliedFor b {
+  color: #707eae; /* Slightly darker for the role name */
+  font-weight: 600;
+}
+
+/* --- Section Titles (Contact Information, etc.) --- */
+.sectionTitle {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #4318ff; /* Your Brand Blue */
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  margin: 30px 0 15px;
+  display: flex;
+  align-items: center;
+}
+
+/* Adding a subtle line after the section title for structure */
+.sectionTitle::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e0e7ff;
+  margin-left: 15px;
+}
+
+.statusBadge {
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.status_applied { background: #e0e7ff; color: #4318ff; }
+.status_selected { background: #e2f9eb; color: #01b574; }
+.status_rejected { background: #fff1f0; color: #ee5d50; }
+
+.actionFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  border-top: 2px solid #f4f7fe;
+  padding-top: 30px;
+}
+
+.statusActions, .managementActions {
+  display: flex;
+  gap: 15px;
+}
+
+/* Ensure buttons are uniform size */
+.btnSelect, .btnReject {
+  min-width: 160px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

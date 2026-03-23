@@ -1,0 +1,3203 @@
+/*DESKTOP*/
+@media (min-width: 1921px){
+  .sec1{
+    width: 100%;
+    height: 70rem;
+    position: relative;   /* 🔥 IMPORTANT */
+  overflow: hidden;
+}
+.txtfvd{
+    text-align: center;
+    font-size: 2.2rem;
+    width: 80%;
+    font-weight: 700;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+.sec1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 300px; /* Adjust blur height */
+  
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  background: linear-gradient(
+    to top,
+    rgba(225, 250, 255, 0.9),
+    rgba(225, 250, 255, 0.6),
+    rgba(225, 250, 255, 0)
+  );
+
+  z-index: 4;
+  pointer-events: none;
+}
+.sec1vid1{
+    width: 100%;
+    height: 100%;
+}
+.bgVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  
+}
+.sec2Overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 229, 255, 0.2);
+  z-index: 3;
+}
+
+/* ========================= */
+/* TITLE BASE */
+/* ========================= */
+
+.sec1title {
+  font-size: 5rem;
+  font-weight: 900;
+  position: absolute;
+    white-space: nowrap;
+  z-index: 8;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #001a4d;
+  text-align: center;  /* 👈 important */
+  line-height: 1.1;    /* spacing between lines */
+  animation: floatText 2s ease-in-out infinite alternate;
+  animation-delay: 2.8s; /* starts after letters finish */
+}
+
+/* ========================= */
+/* LETTER REVEAL */
+/* ========================= */
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(60px);
+
+  animation: letterReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes letterReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================= */
+/* FLOATING ANIMATION */
+/* ========================= */
+
+@keyframes floatText {
+  0% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(-15px);
+  }
+}
+
+.bgVideo1 {
+  position: absolute;
+  width: 25rem;
+  height: auto;
+  top: 41%;
+  left: 49.5%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+  z-index: 10;
+  filter: drop-shadow(0 40px 60px rgba(0, 55, 255, .8));
+
+  /* 👇 Bottom fade */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    black 90%,
+    transparent 100%
+  );
+}
+
+
+.wrapper {
+  width: 700px;
+  height: 700px;
+  position: absolute;
+  top: 57%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.show {
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+}
+
+
+.wrapper.active {
+  opacity: 1;
+}
+.hide .logo {
+  animation-play-state: paused;
+}
+.orbitRing {
+  position: absolute;
+  top: 55%;
+  left: 55%;
+
+  width: 520px;
+  height: 520px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+
+  /* Main thick ring */
+  border: 100px solid rgba(255, 255, 255, 0.2);
+
+  /* Outer + Inner white borders */
+  box-shadow:
+    /* Outer 4px white border */
+    0 0 0 2px white,
+
+    /* Inner 4px white border */
+    inset 0 0 0 2px white,
+
+    /* Optional soft depth */
+    inset 0 10px 30px rgba(0,0,0,0.15),
+    0 20px 40px rgba(0,0,0,0.12);
+
+  z-index: -1;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  animation: orbit 20s linear infinite;
+}
+
+.inner {
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.49);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* Only logo moves */
+@keyframes orbit {
+  from {
+    transform: rotate(var(--angle)) translate(210px) rotate(calc(-1 * var(--angle)));
+  }
+  to {
+    transform: rotate(calc(var(--angle) + 360deg))
+               translate(210px)
+               rotate(calc(-1 * (var(--angle) + 360deg)));
+  }
+}
+
+
+
+
+.loaderOverlay {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.6);
+  z-index: 100;
+
+}
+
+.loaderCircle {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border-radius: 50%;
+}
+
+/* ===== OUTER RING ===== */
+.loaderCircle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+
+  background: conic-gradient(
+    #0028ff 0deg 60deg,
+    transparent 60deg 180deg,
+    #0028ff 180deg 240deg,
+    transparent 240deg 360deg
+  );
+
+  /* thinner arc */
+  -webkit-mask: radial-gradient(farthest-side, transparent 88%, black 89%);
+  mask: radial-gradient(farthest-side, transparent 88%, black 89%);
+
+  animation: spinOuter 1.6s linear infinite;
+}
+
+/* ===== INNER RING ===== */
+.loaderCircle::after {
+  content: "";
+  position: absolute;
+
+  inset: 18px;  /* 🔥 reduced gap (was 28px) */
+
+  border-radius: 50%;
+
+  background: conic-gradient(
+    #00c8ff 0deg 60deg,
+    transparent 60deg 180deg,
+    #00c8ff 180deg 240deg,
+    transparent 240deg 360deg
+  );
+
+  -webkit-mask: radial-gradient(farthest-side, transparent 88%, black 89%);
+  mask: radial-gradient(farthest-side, transparent 88%, black 89%);
+
+  animation: spinInner 1.2s linear infinite reverse;
+}
+
+@keyframes spinOuter {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spinInner {
+  100% { transform: rotate(360deg); }
+}
+.loaderZoomIn {
+  animation: loaderZoomIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.loaderZoomOut {
+  animation: loaderZoomOut 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes loaderZoomIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes loaderZoomOut {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+
+/* Smooth zoom from center */
+.wrapper,
+.bgVideo1 {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.6);
+}
+
+.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.hide {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.6);
+}
+
+
+
+
+
+
+.sec222 {
+    position: absolute; /* Change from relative to overlay correctly */
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Visibility classes used in the JSX */
+.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+}
+
+.hide {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.6);
+    visibility: hidden;
+}
+
+/* ================= 5 CONCENTRIC RINGS ================= */
+
+.illusionWrapper {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.multiRing {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 70, 255, 0.8);
+
+  animation: ripple 4s linear infinite;
+  opacity: 0;
+}
+
+/* Small starting size for all */
+.multiRing {
+  width: 120px;
+  height: 120px;
+}
+
+/* Stagger delay */
+.r1 { animation-delay: 0s; }
+.r2 { animation-delay: 0.8s; }
+.r3 { animation-delay: 1.6s; }
+.r4 { animation-delay: 2.4s; }
+.r5 { animation-delay: 3.2s; }
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.3);
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(4.5);
+    opacity: 0;
+  }
+}
+
+.centerlogo1 {
+  position: absolute;
+  z-index: 10;
+  height: 10rem;
+  width: 10rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+  background: rgba(255, 255, 255, 0.49);
+  border: 2px solid white;
+  border-radius: 50%;
+  border: 2px solid wite;
+  animation: floatCenter 2.5s ease-in-out infinite alternate;
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centerLogo {
+  width: 80%;
+}
+
+/* Glow circle behind logo */
+.centerLogo::before {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 119, 255, 0.4) 0%,
+    rgba(0, 119, 255, 0.2) 40%,
+    transparent 70%
+  );
+  z-index: -1;
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* Floating */
+@keyframes floatCenter {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    transform: translateY(-15px) scale(1.05);
+  }
+}
+
+/* Glow breathing effect */
+@keyframes glowPulse {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* ================= ZOOM TRANSITION ================= */
+
+.zoomTransition {
+  animation: zoomInOut 8s ease-in-out forwards;
+}
+
+/* The logo animation: stays hidden for 1s, then zooms in */
+.logoEntrance {
+  opacity: 0;
+  animation: logoZoomIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation-delay: 1s; /* 🔥 This creates the 1-second gap */
+}
+
+@keyframes logoZoomIn {
+  0% {
+    opacity: 0;
+    transform: translateY(0px) scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  5% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  90% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+
+
+
+.buttonContainer {
+  display: flex;
+  gap: 1.5rem; /* Increased gap slightly */
+  margin-top: 11rem; 
+  pointer-events: auto;
+  justify-content: center;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1.2rem;
+  border-radius: 2rem; /* Slightly more squared like your reference */
+  border: none;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  min-width: 160px; /* Ensures consistent button size */
+  width: auto;
+}
+
+/* Icon Section (The X or Tick) */
+.btnIcon {
+  padding: 0rem 0rem;
+  margin-right: 1rem;
+  margin-left: 0rem; /* Aligns box to the left edge of button */
+  border-radius: 8px 0 0 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btnText {
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+/* Colors */
+.btnRed {
+  background-color: #ff0800; /* Flat red style */
+}
+
+.btnBlue {
+  background-color: #002aff; /* Flat blue style */
+}
+
+.btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
+/* Container that holds Logo, Title, and Buttons */
+.centerContentWrapper {
+  display: flex;
+  width: 80rem;
+  height: 30rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  gap: 1.5rem; /* Space between each element */
+  position: relative;
+  top: 12%;
+  /* Remove the margin-top that was pushing it down into the buttons */
+}
+
+/* 1. THE LOGO WRAPPER */
+.centerlogo1 {
+  position: relative; /* Changed from absolute to relative */
+  z-index: 10;
+  height: 10rem;
+  width: 10rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+  background: rgba(255, 255, 255, 0.49);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: floatCenter 2.5s ease-in-out infinite alternate;
+}
+
+/* 2. THE TITLE */
+.logoTitle {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  /* Add a shadow so it's readable against the background */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  margin: 0; /* Remove default margins */
+  z-index: 11;
+  width: 100%;
+  white-space: nowrap;      /* Prevents text from wrapping to a second line */
+  width: max-content;       /* Ensures the container expands to fit the text */
+  max-width: 120vw;
+}
+
+/* 3. THE BUTTON CONTAINER */
+.buttonContainer {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0; /* Let flex gap handle the spacing */
+  pointer-events: auto;
+  justify-content: center;
+}
+}
+
+/*LAPTOP*/
+@media (min-width: 1281px) and (max-width: 1920px){
+  .sec1{
+    width: 100%;
+    height: 55rem;
+    position: relative;   /* 🔥 IMPORTANT */
+  overflow: hidden;
+}
+.txtfvd{
+    text-align: center;
+    font-size: 2.2rem;
+    width: 80%;
+    font-weight: 700;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+.sec1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 300px; /* Adjust blur height */
+  
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  background: linear-gradient(
+    to top,
+    rgba(225, 250, 255, 0.9),
+    rgba(225, 250, 255, 0.6),
+    rgba(225, 250, 255, 0)
+  );
+
+  z-index: 4;
+  pointer-events: none;
+}
+.sec1vid1{
+    width: 100%;
+    height: 100%;
+}
+.bgVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  
+}
+.sec2Overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 229, 255, 0.2);
+  z-index: 3;
+}
+
+/* ========================= */
+/* TITLE BASE */
+/* ========================= */
+
+.sec1title {
+  font-size: 5rem;
+  font-weight: 900;
+  position: absolute;
+    white-space: nowrap;
+  z-index: 8;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #001a4d;
+  text-align: center;  /* 👈 important */
+  line-height: 1.1;    /* spacing between lines */
+  animation: floatText 2s ease-in-out infinite alternate;
+  animation-delay: 2.8s; /* starts after letters finish */
+}
+
+/* ========================= */
+/* LETTER REVEAL */
+/* ========================= */
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(60px);
+
+  animation: letterReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes letterReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================= */
+/* FLOATING ANIMATION */
+/* ========================= */
+
+@keyframes floatText {
+  0% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(-15px);
+  }
+}
+
+.bgVideo1 {
+  position: absolute;
+  width: 25rem;
+  height: auto;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+  z-index: 10;
+  filter: drop-shadow(0 40px 60px rgba(0, 55, 255, .8));
+
+  /* 👇 Bottom fade */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    black 90%,
+    transparent 100%
+  );
+}
+
+
+.wrapper {
+  width: 700px;
+  height: 700px;
+  position: absolute;
+  top: 57%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.show {
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+}
+
+
+.wrapper.active {
+  opacity: 1;
+}
+.hide .logo {
+  animation-play-state: paused;
+}
+.orbitRing {
+  position: absolute;
+  top: 55%;
+  left: 55%;
+
+  width: 520px;
+  height: 520px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+
+  /* Main thick ring */
+  border: 100px solid rgba(255, 255, 255, 0.2);
+
+  /* Outer + Inner white borders */
+  box-shadow:
+    /* Outer 4px white border */
+    0 0 0 2px white,
+
+    /* Inner 4px white border */
+    inset 0 0 0 2px white,
+
+    /* Optional soft depth */
+    inset 0 10px 30px rgba(0,0,0,0.15),
+    0 20px 40px rgba(0,0,0,0.12);
+
+  z-index: -1;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  animation: orbit 20s linear infinite;
+}
+
+.inner {
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.49);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* Only logo moves */
+@keyframes orbit {
+  from {
+    transform: rotate(var(--angle)) translate(210px) rotate(calc(-1 * var(--angle)));
+  }
+  to {
+    transform: rotate(calc(var(--angle) + 360deg))
+               translate(210px)
+               rotate(calc(-1 * (var(--angle) + 360deg)));
+  }
+}
+
+
+
+
+.loaderOverlay {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.6);
+  z-index: 100;
+
+}
+
+.loaderCircle {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border-radius: 50%;
+}
+
+/* ===== OUTER RING ===== */
+.loaderCircle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+
+  background: conic-gradient(
+    #0028ff 0deg 60deg,
+    transparent 60deg 180deg,
+    #0028ff 180deg 240deg,
+    transparent 240deg 360deg
+  );
+
+  /* thinner arc */
+  -webkit-mask: radial-gradient(farthest-side, transparent 88%, black 89%);
+  mask: radial-gradient(farthest-side, transparent 88%, black 89%);
+
+  animation: spinOuter 1.6s linear infinite;
+}
+
+/* ===== INNER RING ===== */
+.loaderCircle::after {
+  content: "";
+  position: absolute;
+
+  inset: 18px;  /* 🔥 reduced gap (was 28px) */
+
+  border-radius: 50%;
+
+  background: conic-gradient(
+    #00c8ff 0deg 60deg,
+    transparent 60deg 180deg,
+    #00c8ff 180deg 240deg,
+    transparent 240deg 360deg
+  );
+
+  -webkit-mask: radial-gradient(farthest-side, transparent 88%, black 89%);
+  mask: radial-gradient(farthest-side, transparent 88%, black 89%);
+
+  animation: spinInner 1.2s linear infinite reverse;
+}
+
+@keyframes spinOuter {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spinInner {
+  100% { transform: rotate(360deg); }
+}
+.loaderZoomIn {
+  animation: loaderZoomIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.loaderZoomOut {
+  animation: loaderZoomOut 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes loaderZoomIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes loaderZoomOut {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+
+/* Smooth zoom from center */
+.wrapper,
+.bgVideo1 {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.6);
+}
+
+.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.hide {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.6);
+}
+
+
+
+
+
+
+.sec222 {
+    position: absolute; /* Change from relative to overlay correctly */
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Visibility classes used in the JSX */
+.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+}
+
+.hide {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.6);
+    visibility: hidden;
+}
+
+/* ================= 5 CONCENTRIC RINGS ================= */
+
+.illusionWrapper {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.multiRing {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 70, 255, 0.8);
+
+  animation: ripple 4s linear infinite;
+  opacity: 0;
+}
+
+/* Small starting size for all */
+.multiRing {
+  width: 120px;
+  height: 120px;
+}
+
+/* Stagger delay */
+.r1 { animation-delay: 0s; }
+.r2 { animation-delay: 0.8s; }
+.r3 { animation-delay: 1.6s; }
+.r4 { animation-delay: 2.4s; }
+.r5 { animation-delay: 3.2s; }
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.3);
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(4.5);
+    opacity: 0;
+  }
+}
+
+.centerlogo1 {
+  position: absolute;
+  z-index: 10;
+  height: 10rem;
+  width: 10rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+  background: rgba(255, 255, 255, 0.49);
+  border: 2px solid white;
+  border-radius: 50%;
+  border: 2px solid wite;
+  animation: floatCenter 2.5s ease-in-out infinite alternate;
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centerLogo {
+  width: 80%;
+}
+
+/* Glow circle behind logo */
+.centerLogo::before {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 119, 255, 0.4) 0%,
+    rgba(0, 119, 255, 0.2) 40%,
+    transparent 70%
+  );
+  z-index: -1;
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* Floating */
+@keyframes floatCenter {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    transform: translateY(-15px) scale(1.05);
+  }
+}
+
+/* Glow breathing effect */
+@keyframes glowPulse {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* ================= ZOOM TRANSITION ================= */
+
+.zoomTransition {
+  animation: zoomInOut 8s ease-in-out forwards;
+}
+
+/* The logo animation: stays hidden for 1s, then zooms in */
+.logoEntrance {
+  opacity: 0;
+  animation: logoZoomIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation-delay: 1s; /* 🔥 This creates the 1-second gap */
+}
+
+@keyframes logoZoomIn {
+  0% {
+    opacity: 0;
+    transform: translateY(0px) scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  5% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  90% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+
+
+
+.buttonContainer {
+  display: flex;
+  gap: 1.5rem; /* Increased gap slightly */
+  margin-top: 11rem; 
+  pointer-events: auto;
+  justify-content: center;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1.2rem;
+  border-radius: 2rem; /* Slightly more squared like your reference */
+  border: none;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  min-width: 160px; /* Ensures consistent button size */
+  width: auto;
+}
+
+/* Icon Section (The X or Tick) */
+.btnIcon {
+  padding: 0rem 0rem;
+  margin-right: 1rem;
+  margin-left: 0rem; /* Aligns box to the left edge of button */
+  border-radius: 8px 0 0 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btnText {
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+/* Colors */
+.btnRed {
+  background-color: #ff0800; /* Flat red style */
+}
+
+.btnBlue {
+  background-color: #002aff; /* Flat blue style */
+}
+
+.btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
+/* Container that holds Logo, Title, and Buttons */
+.centerContentWrapper {
+  display: flex;
+  width: 80rem;
+  height: 30rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  gap: 1.5rem; /* Space between each element */
+  position: relative;
+  top: 12%;
+  /* Remove the margin-top that was pushing it down into the buttons */
+}
+
+/* 1. THE LOGO WRAPPER */
+.centerlogo1 {
+  position: relative; /* Changed from absolute to relative */
+  z-index: 10;
+  height: 10rem;
+  width: 10rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+  background: rgba(255, 255, 255, 0.49);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: floatCenter 2.5s ease-in-out infinite alternate;
+}
+
+/* 2. THE TITLE */
+.logoTitle {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  /* Add a shadow so it's readable against the background */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  margin: 0; /* Remove default margins */
+  z-index: 11;
+  width: 100%;
+  white-space: nowrap;      /* Prevents text from wrapping to a second line */
+  width: max-content;       /* Ensures the container expands to fit the text */
+  max-width: 120vw;
+}
+
+/* 3. THE BUTTON CONTAINER */
+.buttonContainer {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0; /* Let flex gap handle the spacing */
+  pointer-events: auto;
+  justify-content: center;
+}
+}
+
+/*MAX-TABLET*/
+@media (min-width: 1025px) and (max-width: 1280px){
+    .sec1{
+    width: 100%;
+    height: 55rem;
+    position: relative;   /* 🔥 IMPORTANT */
+  overflow: hidden;
+}
+.txtfvd{
+    text-align: center;
+    font-size: 2.2rem;
+    width: 80%;
+    font-weight: 700;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+.sec1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 300px; /* Adjust blur height */
+  
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  background: linear-gradient(
+    to top,
+    rgba(225, 250, 255, 0.9),
+    rgba(225, 250, 255, 0.6),
+    rgba(225, 250, 255, 0)
+  );
+
+  z-index: 4;
+  pointer-events: none;
+}
+.sec1vid1{
+    width: 100%;
+    height: 100%;
+}
+.bgVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  
+}
+.sec2Overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 229, 255, 0.2);
+  z-index: 3;
+}
+
+/* ========================= */
+/* TITLE BASE */
+/* ========================= */
+
+.sec1title {
+  font-size: 5rem;
+  font-weight: 900;
+  position: absolute;
+    white-space: nowrap;
+  z-index: 8;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #001a4d;
+  text-align: center;  /* 👈 important */
+  line-height: 1.1;    /* spacing between lines */
+  animation: floatText 2s ease-in-out infinite alternate;
+  animation-delay: 2.8s; /* starts after letters finish */
+}
+
+/* ========================= */
+/* LETTER REVEAL */
+/* ========================= */
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(60px);
+
+  animation: letterReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes letterReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================= */
+/* FLOATING ANIMATION */
+/* ========================= */
+
+@keyframes floatText {
+  0% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(-15px);
+  }
+}
+
+.bgVideo1 {
+  position: absolute;
+  width: 25rem;
+  height: auto;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+  z-index: 10;
+  filter: drop-shadow(0 40px 60px rgba(0, 55, 255, .8));
+
+  /* 👇 Bottom fade */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    black 90%,
+    transparent 100%
+  );
+}
+
+
+.wrapper {
+  width: 700px;
+  height: 700px;
+  position: absolute;
+  top: 57%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.show {
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+}
+
+
+.wrapper.active {
+  opacity: 1;
+}
+.hide .logo {
+  animation-play-state: paused;
+}
+.orbitRing {
+  position: absolute;
+  top: 55%;
+  left: 55%;
+
+  width: 520px;
+  height: 520px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+
+  /* Main thick ring */
+  border: 100px solid rgba(255, 255, 255, 0.2);
+
+  /* Outer + Inner white borders */
+  box-shadow:
+    /* Outer 4px white border */
+    0 0 0 2px white,
+
+    /* Inner 4px white border */
+    inset 0 0 0 2px white,
+
+    /* Optional soft depth */
+    inset 0 10px 30px rgba(0,0,0,0.15),
+    0 20px 40px rgba(0,0,0,0.12);
+
+  z-index: -1;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  animation: orbit 20s linear infinite;
+}
+
+.inner {
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.49);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* Only logo moves */
+@keyframes orbit {
+  from {
+    transform: rotate(var(--angle)) translate(210px) rotate(calc(-1 * var(--angle)));
+  }
+  to {
+    transform: rotate(calc(var(--angle) + 360deg))
+               translate(210px)
+               rotate(calc(-1 * (var(--angle) + 360deg)));
+  }
+}
+
+
+
+
+.loaderOverlay {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.6);
+  z-index: 100;
+
+}
+
+.loaderCircle {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border-radius: 50%;
+}
+
+/* ===== OUTER RING ===== */
+.loaderCircle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+
+  background: conic-gradient(
+    #0028ff 0deg 60deg,
+    transparent 60deg 180deg,
+    #0028ff 180deg 240deg,
+    transparent 240deg 360deg
+  );
+
+  /* thinner arc */
+  -webkit-mask: radial-gradient(farthest-side, transparent 88%, black 89%);
+  mask: radial-gradient(farthest-side, transparent 88%, black 89%);
+
+  animation: spinOuter 1.6s linear infinite;
+}
+
+/* ===== INNER RING ===== */
+.loaderCircle::after {
+  content: "";
+  position: absolute;
+
+  inset: 18px;  /* 🔥 reduced gap (was 28px) */
+
+  border-radius: 50%;
+
+  background: conic-gradient(
+    #00c8ff 0deg 60deg,
+    transparent 60deg 180deg,
+    #00c8ff 180deg 240deg,
+    transparent 240deg 360deg
+  );
+
+  -webkit-mask: radial-gradient(farthest-side, transparent 88%, black 89%);
+  mask: radial-gradient(farthest-side, transparent 88%, black 89%);
+
+  animation: spinInner 1.2s linear infinite reverse;
+}
+
+@keyframes spinOuter {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spinInner {
+  100% { transform: rotate(360deg); }
+}
+.loaderZoomIn {
+  animation: loaderZoomIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.loaderZoomOut {
+  animation: loaderZoomOut 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes loaderZoomIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes loaderZoomOut {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+
+/* Smooth zoom from center */
+.wrapper,
+.bgVideo1 {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.6);
+}
+
+.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.hide {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.6);
+}
+
+
+
+
+
+
+.sec222 {
+    position: absolute; /* Change from relative to overlay correctly */
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Visibility classes used in the JSX */
+.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+}
+
+.hide {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.6);
+    visibility: hidden;
+}
+
+/* ================= 5 CONCENTRIC RINGS ================= */
+
+.illusionWrapper {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.multiRing {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 70, 255, 0.8);
+
+  animation: ripple 4s linear infinite;
+  opacity: 0;
+}
+
+/* Small starting size for all */
+.multiRing {
+  width: 120px;
+  height: 120px;
+}
+
+/* Stagger delay */
+.r1 { animation-delay: 0s; }
+.r2 { animation-delay: 0.8s; }
+.r3 { animation-delay: 1.6s; }
+.r4 { animation-delay: 2.4s; }
+.r5 { animation-delay: 3.2s; }
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.3);
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(4.5);
+    opacity: 0;
+  }
+}
+
+.centerlogo1 {
+  position: absolute;
+  z-index: 10;
+  height: 10rem;
+  width: 10rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+  background: rgba(255, 255, 255, 0.49);
+  border: 2px solid white;
+  border-radius: 50%;
+  border: 2px solid wite;
+  animation: floatCenter 2.5s ease-in-out infinite alternate;
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centerLogo {
+  width: 80%;
+}
+
+/* Glow circle behind logo */
+.centerLogo::before {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 119, 255, 0.4) 0%,
+    rgba(0, 119, 255, 0.2) 40%,
+    transparent 70%
+  );
+  z-index: -1;
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* Floating */
+@keyframes floatCenter {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    transform: translateY(-15px) scale(1.05);
+  }
+}
+
+/* Glow breathing effect */
+@keyframes glowPulse {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* ================= ZOOM TRANSITION ================= */
+
+.zoomTransition {
+  animation: zoomInOut 8s ease-in-out forwards;
+}
+
+/* The logo animation: stays hidden for 1s, then zooms in */
+.logoEntrance {
+  opacity: 0;
+  animation: logoZoomIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation-delay: 1s; /* 🔥 This creates the 1-second gap */
+}
+
+@keyframes logoZoomIn {
+  0% {
+    opacity: 0;
+    transform: translateY(0px) scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  5% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  90% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+
+
+
+.buttonContainer {
+  display: flex;
+  gap: 1.5rem; /* Increased gap slightly */
+  margin-top: 11rem; 
+  pointer-events: auto;
+  justify-content: center;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1.2rem;
+  border-radius: 2rem; /* Slightly more squared like your reference */
+  border: none;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  min-width: 160px; /* Ensures consistent button size */
+  width: auto;
+}
+
+/* Icon Section (The X or Tick) */
+.btnIcon {
+  padding: 0rem 0rem;
+  margin-right: 1rem;
+  margin-left: 0rem; /* Aligns box to the left edge of button */
+  border-radius: 8px 0 0 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btnText {
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+/* Colors */
+.btnRed {
+  background-color: #ff0800; /* Flat red style */
+}
+
+.btnBlue {
+  background-color: #002aff; /* Flat blue style */
+}
+
+.btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
+/* Container that holds Logo, Title, and Buttons */
+.centerContentWrapper {
+  display: flex;
+  width: 80rem;
+  height: 30rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  gap: 1.5rem; /* Space between each element */
+  position: relative;
+  top: 12%;
+  /* Remove the margin-top that was pushing it down into the buttons */
+}
+
+/* 1. THE LOGO WRAPPER */
+.centerlogo1 {
+  position: relative; /* Changed from absolute to relative */
+  z-index: 10;
+  height: 10rem;
+  width: 10rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+  background: rgba(255, 255, 255, 0.49);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: floatCenter 2.5s ease-in-out infinite alternate;
+}
+
+/* 2. THE TITLE */
+.logoTitle {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  /* Add a shadow so it's readable against the background */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  margin: 0; /* Remove default margins */
+  z-index: 11;
+  width: 100%;
+  white-space: nowrap;      /* Prevents text from wrapping to a second line */
+  width: max-content;       /* Ensures the container expands to fit the text */
+  max-width: 120vw;
+}
+
+/* 3. THE BUTTON CONTAINER */
+.buttonContainer {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0; /* Let flex gap handle the spacing */
+  pointer-events: auto;
+  justify-content: center;
+}
+}
+
+/*TABLET*/
+@media (min-width: 769px) and (max-width: 1024px){
+  .sec1{
+    width: 100%;
+    height: 55rem;
+    position: relative;   /* 🔥 IMPORTANT */
+  overflow: hidden;
+}
+.txtfvd{
+    text-align: center;
+    font-size: 2.2rem;
+    width: 80%;
+    font-weight: 700;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+.sec1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 300px; /* Adjust blur height */
+  
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  background: linear-gradient(
+    to top,
+    rgba(225, 250, 255, 0.9),
+    rgba(225, 250, 255, 0.6),
+    rgba(225, 250, 255, 0)
+  );
+
+  z-index: 4;
+  pointer-events: none;
+}
+.sec1vid1{
+    width: 100%;
+    height: 100%;
+}
+.bgVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  
+}
+.sec2Overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 229, 255, 0.2);
+  z-index: 3;
+}
+
+/* ========================= */
+/* TITLE BASE */
+/* ========================= */
+
+.sec1title {
+  font-size: 5rem;
+  font-weight: 900;
+  position: absolute;
+    white-space: nowrap;
+  z-index: 8;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #001a4d;
+  text-align: center;  /* 👈 important */
+  line-height: 1.1;    /* spacing between lines */
+  animation: floatText 2s ease-in-out infinite alternate;
+  animation-delay: 2.8s; /* starts after letters finish */
+}
+
+/* ========================= */
+/* LETTER REVEAL */
+/* ========================= */
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(60px);
+
+  animation: letterReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes letterReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================= */
+/* FLOATING ANIMATION */
+/* ========================= */
+
+@keyframes floatText {
+  0% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(-15px);
+  }
+}
+
+.bgVideo1 {
+  position: absolute;
+  width: 25rem;
+  height: auto;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+  z-index: 10;
+  filter: drop-shadow(0 40px 60px rgba(0, 55, 255, .8));
+
+  /* 👇 Bottom fade */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    black 90%,
+    transparent 100%
+  );
+}
+
+
+.wrapper {
+  width: 700px;
+  height: 700px;
+  position: absolute;
+  top: 57%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.show {
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+}
+
+
+.wrapper.active {
+  opacity: 1;
+}
+.hide .logo {
+  animation-play-state: paused;
+}
+.orbitRing {
+  position: absolute;
+  top: 55%;
+  left: 55%;
+
+  width: 520px;
+  height: 520px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+
+  /* Main thick ring */
+  border: 100px solid rgba(255, 255, 255, 0.2);
+
+  /* Outer + Inner white borders */
+  box-shadow:
+    /* Outer 4px white border */
+    0 0 0 2px white,
+
+    /* Inner 4px white border */
+    inset 0 0 0 2px white,
+
+    /* Optional soft depth */
+    inset 0 10px 30px rgba(0,0,0,0.15),
+    0 20px 40px rgba(0,0,0,0.12);
+
+  z-index: -1;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  animation: orbit 20s linear infinite;
+}
+
+.inner {
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.49);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* Only logo moves */
+@keyframes orbit {
+  from {
+    transform: rotate(var(--angle)) translate(210px) rotate(calc(-1 * var(--angle)));
+  }
+  to {
+    transform: rotate(calc(var(--angle) + 360deg))
+               translate(210px)
+               rotate(calc(-1 * (var(--angle) + 360deg)));
+  }
+}
+
+
+
+
+.loaderOverlay {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.6);
+  z-index: 100;
+
+}
+
+.loaderCircle {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border-radius: 50%;
+}
+
+/* ===== OUTER RING ===== */
+.loaderCircle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+
+  background: conic-gradient(
+    #0028ff 0deg 60deg,
+    transparent 60deg 180deg,
+    #0028ff 180deg 240deg,
+    transparent 240deg 360deg
+  );
+
+  /* thinner arc */
+  -webkit-mask: radial-gradient(farthest-side, transparent 88%, black 89%);
+  mask: radial-gradient(farthest-side, transparent 88%, black 89%);
+
+  animation: spinOuter 1.6s linear infinite;
+}
+
+/* ===== INNER RING ===== */
+.loaderCircle::after {
+  content: "";
+  position: absolute;
+
+  inset: 18px;  /* 🔥 reduced gap (was 28px) */
+
+  border-radius: 50%;
+
+  background: conic-gradient(
+    #00c8ff 0deg 60deg,
+    transparent 60deg 180deg,
+    #00c8ff 180deg 240deg,
+    transparent 240deg 360deg
+  );
+
+  -webkit-mask: radial-gradient(farthest-side, transparent 88%, black 89%);
+  mask: radial-gradient(farthest-side, transparent 88%, black 89%);
+
+  animation: spinInner 1.2s linear infinite reverse;
+}
+
+@keyframes spinOuter {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spinInner {
+  100% { transform: rotate(360deg); }
+}
+.loaderZoomIn {
+  animation: loaderZoomIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.loaderZoomOut {
+  animation: loaderZoomOut 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes loaderZoomIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes loaderZoomOut {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+
+/* Smooth zoom from center */
+.wrapper,
+.bgVideo1 {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.6);
+}
+
+.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.hide {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.6);
+}
+
+
+
+
+
+
+.sec222 {
+    position: absolute; /* Change from relative to overlay correctly */
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Visibility classes used in the JSX */
+.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+}
+
+.hide {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.6);
+    visibility: hidden;
+}
+
+/* ================= 5 CONCENTRIC RINGS ================= */
+
+.illusionWrapper {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.multiRing {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 70, 255, 0.8);
+
+  animation: ripple 4s linear infinite;
+  opacity: 0;
+}
+
+/* Small starting size for all */
+.multiRing {
+  width: 120px;
+  height: 120px;
+}
+
+/* Stagger delay */
+.r1 { animation-delay: 0s; }
+.r2 { animation-delay: 0.8s; }
+.r3 { animation-delay: 1.6s; }
+.r4 { animation-delay: 2.4s; }
+.r5 { animation-delay: 3.2s; }
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.3);
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(4.5);
+    opacity: 0;
+  }
+}
+
+.centerlogo1 {
+  position: absolute;
+  z-index: 10;
+  height: 10rem;
+  width: 10rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+  background: rgba(255, 255, 255, 0.49);
+  border: 2px solid white;
+  border-radius: 50%;
+  border: 2px solid wite;
+  animation: floatCenter 2.5s ease-in-out infinite alternate;
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centerLogo {
+  width: 80%;
+}
+
+/* Glow circle behind logo */
+.centerLogo::before {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 119, 255, 0.4) 0%,
+    rgba(0, 119, 255, 0.2) 40%,
+    transparent 70%
+  );
+  z-index: -1;
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* Floating */
+@keyframes floatCenter {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    transform: translateY(-15px) scale(1.05);
+  }
+}
+
+/* Glow breathing effect */
+@keyframes glowPulse {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* ================= ZOOM TRANSITION ================= */
+
+.zoomTransition {
+  animation: zoomInOut 8s ease-in-out forwards;
+}
+
+/* The logo animation: stays hidden for 1s, then zooms in */
+.logoEntrance {
+  opacity: 0;
+  animation: logoZoomIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation-delay: 1s; /* 🔥 This creates the 1-second gap */
+}
+
+@keyframes logoZoomIn {
+  0% {
+    opacity: 0;
+    transform: translateY(0px) scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  5% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  90% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+
+
+
+.buttonContainer {
+  display: flex;
+  gap: 1.5rem; /* Increased gap slightly */
+  margin-top: 11rem; 
+  pointer-events: auto;
+  justify-content: center;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1.2rem;
+  border-radius: 2rem; /* Slightly more squared like your reference */
+  border: none;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  min-width: 160px; /* Ensures consistent button size */
+  width: auto;
+}
+
+/* Icon Section (The X or Tick) */
+.btnIcon {
+  padding: 0rem 0rem;
+  margin-right: 1rem;
+  margin-left: 0rem; /* Aligns box to the left edge of button */
+  border-radius: 8px 0 0 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btnText {
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+/* Colors */
+.btnRed {
+  background-color: #ff0800; /* Flat red style */
+}
+
+.btnBlue {
+  background-color: #002aff; /* Flat blue style */
+}
+
+.btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
+/* Container that holds Logo, Title, and Buttons */
+.centerContentWrapper {
+  display: flex;
+  width: 80rem;
+  height: 30rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  gap: 1.5rem; /* Space between each element */
+  position: relative;
+  top: 12%;
+  /* Remove the margin-top that was pushing it down into the buttons */
+}
+
+/* 1. THE LOGO WRAPPER */
+.centerlogo1 {
+  position: relative; /* Changed from absolute to relative */
+  z-index: 10;
+  height: 10rem;
+  width: 10rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+  background: rgba(255, 255, 255, 0.49);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: floatCenter 2.5s ease-in-out infinite alternate;
+}
+
+/* 2. THE TITLE */
+.logoTitle {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  /* Add a shadow so it's readable against the background */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  margin: 0; /* Remove default margins */
+  z-index: 11;
+  width: 100%;
+  white-space: nowrap;      /* Prevents text from wrapping to a second line */
+  width: max-content;       /* Ensures the container expands to fit the text */
+  max-width: 120vw;
+}
+
+/* 3. THE BUTTON CONTAINER */
+.buttonContainer {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0; /* Let flex gap handle the spacing */
+  pointer-events: auto;
+  justify-content: center;
+}
+}
+
+/*PHONE*/
+@media (max-width: 769px){
+  .sec1{
+    width: 100%;
+    height: 45rem;
+    position: relative;   /* 🔥 IMPORTANT */
+  overflow: hidden;
+}
+.txtfvd{
+    text-align: center;
+    font-size: 1.5rem;
+    width: 80%;
+    font-weight: 500;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+
+
+.sec1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 300px; /* Adjust blur height */
+  
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  background: linear-gradient(
+    to top,
+    rgba(225, 250, 255, 0.9),
+    rgba(225, 250, 255, 0.6),
+    rgba(225, 250, 255, 0)
+  );
+
+  z-index: 4;
+  pointer-events: none;
+}
+.sec1vid1{
+    width: 100%;
+    height: 100%;
+}
+.bgVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  
+}
+.sec2Overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 229, 255, 0.2);
+  z-index: 3;
+}
+
+/* ========================= */
+/* TITLE BASE */
+/* ========================= */
+
+.sec1title {
+  font-size: 2rem;
+  font-weight: 900;
+  position: absolute;
+    white-space: nowrap;
+  z-index: 8;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #001a4d;
+  text-align: center;  /* 👈 important */
+  line-height: 1.1;    /* spacing between lines */
+  animation: floatText 2s ease-in-out infinite alternate;
+  animation-delay: 2.8s; /* starts after letters finish */
+}
+
+/* ========================= */
+/* LETTER REVEAL */
+/* ========================= */
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(60px);
+
+  animation: letterReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes letterReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================= */
+/* FLOATING ANIMATION */
+/* ========================= */
+
+@keyframes floatText {
+  0% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(-15px);
+  }
+}
+
+.bgVideo1 {
+  position: absolute;
+  width: 12rem;
+  height: auto;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+  z-index: 10;
+  filter: drop-shadow(0 0px 10px rgba(0, 55, 255, .2));
+
+  /* 👇 Bottom fade */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    black 90%,
+    transparent 100%
+  );
+}
+
+
+.wrapper {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.show {
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+}
+
+
+.wrapper.active {
+  opacity: 1;
+}
+.hide .logo {
+  animation-play-state: paused;
+}
+.orbitRing {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+
+  width: 310px;
+  height: 310px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+
+  /* Main thick ring */
+  border: 70px solid rgba(255, 255, 255, 0.2);
+
+  /* Outer + Inner white borders */
+  box-shadow:
+    /* Outer 4px white border */
+    0 0 0 2px white,
+
+    /* Inner 4px white border */
+    inset 0 0 0 2px white,
+
+    /* Optional soft depth */
+    inset 0 10px 30px rgba(0,0,0,0.15),
+    0 20px 40px rgba(0,0,0,0.12);
+
+  z-index: -1;
+}
+
+.logo {
+  position: absolute;
+  top: 47%;
+  left: 42%;
+  transform-origin: center;
+  animation: orbit 20s linear infinite;
+}
+
+.inner {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.49);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+.minner{
+  width: 20px;
+}
+
+/* Only logo moves */
+@keyframes orbit {
+  from {
+    transform: rotate(var(--angle)) translate(120px) rotate(calc(-1 * var(--angle)));
+  }
+  to {
+    transform: rotate(calc(var(--angle) + 360deg))
+               translate(120px)
+               rotate(calc(-1 * (var(--angle) + 360deg)));
+  }
+}
+
+
+
+
+.loaderOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.6);
+  z-index: 100;
+
+}
+
+.loaderCircle {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border-radius: 50%;
+}
+
+/* ===== OUTER RING ===== */
+.loaderCircle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+
+  background: conic-gradient(
+    #0028ff 0deg 60deg,
+    transparent 60deg 180deg,
+    #0028ff 180deg 240deg,
+    transparent 240deg 360deg
+  );
+
+  /* thinner arc */
+  -webkit-mask: radial-gradient(farthest-side, transparent 88%, black 89%);
+  mask: radial-gradient(farthest-side, transparent 88%, black 89%);
+
+  animation: spinOuter 1.6s linear infinite;
+}
+
+/* ===== INNER RING ===== */
+.loaderCircle::after {
+  content: "";
+  position: absolute;
+
+  inset: 18px;  /* 🔥 reduced gap (was 28px) */
+
+  border-radius: 50%;
+
+  background: conic-gradient(
+    #00c8ff 0deg 60deg,
+    transparent 60deg 180deg,
+    #00c8ff 180deg 240deg,
+    transparent 240deg 360deg
+  );
+
+  -webkit-mask: radial-gradient(farthest-side, transparent 88%, black 89%);
+  mask: radial-gradient(farthest-side, transparent 88%, black 89%);
+
+  animation: spinInner 1.2s linear infinite reverse;
+}
+
+@keyframes spinOuter {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spinInner {
+  100% { transform: rotate(360deg); }
+}
+.loaderZoomIn {
+  animation: loaderZoomIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.loaderZoomOut {
+  animation: loaderZoomOut 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes loaderZoomIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes loaderZoomOut {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+
+/* Smooth zoom from center */
+.wrapper,
+.bgVideo1 {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.6);
+}
+
+.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.hide {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.6);
+}
+
+
+
+
+
+
+.sec222 {
+    position: absolute; /* Change from relative to overlay correctly */
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Visibility classes used in the JSX */
+.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+}
+
+.hide {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.6);
+    visibility: hidden;
+}
+
+/* ================= 5 CONCENTRIC RINGS ================= */
+
+.illusionWrapper {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.multiRing {
+  position: absolute;
+  border-radius: 50%;
+  border: .8px solid rgba(0, 70, 255, 0.8);
+
+  animation: ripple 4s linear infinite;
+  opacity: 0;
+}
+
+/* Small starting size for all */
+.multiRing {
+  width: 70px;
+  height: 70px;
+}
+
+/* Stagger delay */
+.r1 { animation-delay: 0s; }
+.r2 { animation-delay: 0.8s; }
+.r3 { animation-delay: 1.6s; }
+.r4 { animation-delay: 2.4s; }
+.r5 { animation-delay: 3.2s; }
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.3);
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(4.5);
+    opacity: 0;
+  }
+}
+
+.centerlogo1 {
+  position: absolute;
+  z-index: 10;
+  height: 5rem;
+  width: 5rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+  background: rgba(255, 255, 255, 0.49);
+  border: 2px solid white;
+  border-radius: 50%;
+  border: 2px solid wite;
+  animation: floatCenter 2.5s ease-in-out infinite alternate;
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centerLogo {
+  width: 80%;
+}
+
+/* Glow circle behind logo */
+.centerLogo::before {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 119, 255, 0.4) 0%,
+    rgba(0, 119, 255, 0.2) 40%,
+    transparent 70%
+  );
+  z-index: -1;
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* Floating */
+@keyframes floatCenter {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    transform: translateY(-15px) scale(1.05);
+  }
+}
+
+/* Glow breathing effect */
+@keyframes glowPulse {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* ================= ZOOM TRANSITION ================= */
+
+.zoomTransition {
+  animation: zoomInOut 8s ease-in-out forwards;
+}
+
+/* The logo animation: stays hidden for 1s, then zooms in */
+.logoEntrance {
+  opacity: 0;
+  animation: logoZoomIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation-delay: 1s; /* 🔥 This creates the 1-second gap */
+}
+
+@keyframes logoZoomIn {
+  0% {
+    opacity: 0;
+    transform: translateY(0px) scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  5% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  90% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+
+
+
+.buttonContainer {
+  display: flex;
+  gap: .5rem; /* Increased gap slightly */
+  pointer-events: auto;
+  justify-content: center;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  padding: 0.2rem .5rem;
+  border-radius: 2rem; /* Slightly more squared like your reference */
+  border: none;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  width: auto;
+}
+
+/* Icon Section (The X or Tick) */
+.btnIcon {
+  padding: 0rem 0rem;
+  margin-right: .5rem;
+  margin-left: 0rem; /* Aligns box to the left edge of button */
+  border-radius: 8px 0 0 8px;
+  font-size: .8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btnText {
+  font-weight: 600;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+}
+
+/* Colors */
+.btnRed {
+  background-color: #ff0800; /* Flat red style */
+}
+
+.btnBlue {
+  background-color: #002aff; /* Flat blue style */
+}
+
+.btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
+/* Container that holds Logo, Title, and Buttons */
+.centerContentWrapper {
+  display: flex;
+  width: 80rem;
+  height: 30rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  gap: .5rem; /* Space between each element */
+  position: relative;
+  top: 5%;
+  /* Remove the margin-top that was pushing it down into the buttons */
+}
+
+/* 1. THE LOGO WRAPPER */
+.centerlogo1 {
+  position: relative; /* Changed from absolute to relative */
+  z-index: 10;
+  height: 7rem;
+  width: 7rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+  background: rgba(255, 255, 255, 0.49);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: floatCenter 2.5s ease-in-out infinite alternate;
+}
+
+/* 2. THE TITLE */
+.logoTitle {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  /* Add a shadow so it's readable against the background */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  margin: 0; /* Remove default margins */
+  z-index: 11;
+  width: 100%;
+  white-space: nowrap;      /* Prevents text from wrapping to a second line */
+  width: max-content;       /* Ensures the container expands to fit the text */
+  max-width: 120vw;
+}
+
+/* 3. THE BUTTON CONTAINER */
+.buttonContainer {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0; /* Let flex gap handle the spacing */
+  pointer-events: auto;
+  justify-content: center;
+}
+}

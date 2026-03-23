@@ -1,0 +1,326 @@
+.topBar {
+  height: 90px;
+  background: #A3D1FF;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 8px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.topBarRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.iconButton {
+  position: relative;
+  background: #ffffff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8E9AB5;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.iconButton:hover {
+  background: #f8fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  color: #4318FF; /* Turns the icon purple on hover */
+}
+
+.iconButton:active {
+  transform: translateY(0);
+}
+
+/* Logout specific hover (Red tint) */
+.logoutBtn:hover {
+  background: #FFF1F0 !important;
+  color: #FF4D4F !important;
+}
+
+.notificationDot {
+  position: absolute;
+  top: 9px;
+  right: 13px;
+  width: 8px;
+  height: 8px;
+  background: #FF4D4F;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+/* FIXED SECTION */
+.userProfile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 8px 15px 8px 25px;
+  background: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  height: 42px; /* Matches icon buttons height */
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.userProfile:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  background: #fafafa;
+}
+
+.userProfile:hover .userIcon {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Aligns text to the left */
+  line-height: 1.2;
+}
+
+.userName {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0B1437;
+  white-space: nowrap;
+}
+
+.userRole {
+  font-size: 9px;
+  font-weight: 700;
+  color: #A3AED0;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.userIcon { 
+  color: #4318FF; 
+  flex-shrink: 0;
+}
+/* END FIXED SECTION */
+
+/* Mini Popup Styling */
+.notificationPopup {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 340px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  overflow: hidden;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.popupHeader {
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+
+.popupHeader h3 { font-size: 15px; margin: 0; font-weight: 800; color: #1B254B; }
+
+.markReadBtn {
+  background: none;
+  border: none;
+  color: #4318FF;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.notificationItem {
+  display: flex;
+  gap: 15px;
+  padding: 15px 20px;
+  border-bottom: 1px solid #f8fafc;
+  transition: background 0.2s;
+  cursor: pointer;
+  transition: background 0.2s ease, padding-left 0.2s ease;
+}
+
+.notificationItem:hover {
+  background: rgba(67, 24, 255, 0.04);
+  padding-left: 25px; /* Slight horizontal slide effect */
+}
+
+.itemIcon {
+  width: 36px;
+  height: 36px;
+  background: #f0f5ff;
+  color: #4318FF;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.itemContent { flex: 1; }
+
+.itemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.itemTitle { font-size: 13px; font-weight: 700; color: #1B254B; margin: 0; }
+.itemTime { font-size: 11px; color: #A3AED0; font-weight: 500; }
+.itemDesc { font-size: 12px; color: #718096; margin: 0; line-height: 1.4; }
+
+.viewAll {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background: #fff;
+  color: #4318FF;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* Full Screen Blur Effect */
+.fullScreenOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(15px);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullScreenContent {
+  width: 90%;
+  max-width: 600px;
+  background: white;
+  border-radius: 28px;
+  padding: 30px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.fullHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.fullHeader h2 { font-size: 22px; font-weight: 800; color: #1B254B; margin: 0; }
+
+.closeModal {
+  background: #f4f7fe;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #A3AED0;
+}
+
+.fullList { overflow-y: auto; }
+
+.fullNotificationItem {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 18px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+.fullNotificationItem:hover {
+  background: #ffffff;
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.fullNotificationItem:hover .itemIconLarge {
+  background: #4318FF;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.itemIconLarge {
+  width: 48px;
+  height: 48px;
+  background: white;
+  color: #4318FF;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.fullItemText { flex: 1; }
+.fullItemText h4 { font-size: 16px; margin: 0; color: #1B254B; }
+.fullItemText p { font-size: 14px; color: #718096; margin: 5px 0 0 0; }
+.fullItemTime { font-size: 12px; color: #A3AED0; }
+
+
+.markReadBtn:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.viewAll:hover {
+  background: #f0f5ff;
+  color: #1B254B;
+  transition: all 0.2s ease;
+}
+
+.closeModal:hover {
+  background: #fee2e2;
+  color: #ff4d4f;
+  transform: rotate(90deg); /* Modern spin-out effect */
+}
+
+.spin {
+  animation: rotate 1s linear infinite;
+  color: #ff4d4d; /* Optional: make logout loader red */
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

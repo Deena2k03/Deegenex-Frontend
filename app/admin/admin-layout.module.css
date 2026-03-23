@@ -1,0 +1,166 @@
+.layoutContainer {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f7fe;
+}
+
+.sidebar {
+  width: 280px;
+  background: #0b1437;
+  color: white;
+  padding: 80px 20px;
+  padding-bottom: 20px;
+  position: fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 0 25px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-top-right-radius: 8rem;
+  border-bottom-right-radius: 8rem;
+}
+
+/* --- Attractive Brand Section --- */
+.brandContainer {
+  display: flex;
+  flex-direction: column; /* Stacks text on top of logo */
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.brandName {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.logoWrapper {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  width: 100px; /* Increased size for visual impact */
+  height: 100px;
+  object-fit: contain;
+}
+
+.divider {
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(112, 126, 174, 0.5), transparent);
+  margin-top: 25px;
+}
+
+/* --- Navigation --- */
+.navScroll {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.navScroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.navScroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.navSection {
+  margin-top: 30px;
+}
+
+.sectionHeader {
+  font-size: 11px;
+  color: #707eae;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+  padding-left: 12px;
+  text-transform: uppercase;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 16px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 6px;
+  color: #a3aed0;
+}
+
+.navLink:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  transform: translateX(5px);
+}
+
+.activeLink {
+  background: linear-gradient(135deg, #4318ff 0%, #707eae 100%);
+  color: #ffffff !important;
+  font-weight: 600;
+  box-shadow: 0px 10px 20px rgba(67, 24, 255, 0.3);
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainContent {
+  flex: 1;
+  margin-left: 280px;
+  padding: 0;
+  min-height: 100vh;
+}
+
+
+
+.layoutContainer {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 280px;
+  background-color: #0b1437; /* Match your dark blue */
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.contentWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Stacks Topbar on top of Content */
+  height: 100vh;
+  overflow: hidden;
+}
+
+.mainContent {
+  flex: 1;
+  overflow-y: auto; /* Scroll only the page content, not the Topbar */
+  padding: 40px;
+}
+
+/* Add your existing NavLink and Brand styles below... */

@@ -1,0 +1,658 @@
+/*DESKTOP*/
+@media (min-width: 1921px){
+    .sec1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 7rem;
+}
+.contactimg{
+    width: 70%;
+}
+/* ========================= */
+/* HERO IMAGE REVEAL */
+/* ========================= */
+
+.contactimg {
+    width: 70%;
+    opacity: 0;
+    transform: scale(0.9) translateY(50px);
+    animation: imageReveal 1.2s ease forwards,
+               floatAnimation 3s ease-in-out infinite 1.2s;
+}
+
+/* Reveal Animation */
+@keyframes imageReveal {
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Floating Animation (continuous) */
+@keyframes floatAnimation {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+.sec1txt1{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 1rem;
+}
+.sec1txt1 span{color: blue;}
+
+.sec1txt2{
+    font-size: 1rem;
+    font-weight: 500;
+    width: 60%;
+    margin-top: 2rem;
+    text-align: center;
+}
+.sec1txt21{
+    font-size: 1rem;
+    font-weight: 500;
+    width: 60%;
+    margin-top: 1rem;
+    text-align: center;
+}
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: revealUp 0.8s ease forwards;
+}
+
+.revealDelay1 { animation-delay: 0.2s; }
+.revealDelay2 { animation-delay: 0.5s; }
+.revealDelay3 { animation-delay: 0.8s; }
+.revealDelay4 { animation-delay: 1.1s; }
+
+@keyframes revealUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================= */
+/* BUTTON ANIMATION */
+/* ========================= */
+
+.sec1txt3 {
+    width: 13rem;
+    height: 3rem;
+    background: linear-gradient(135deg, #001eff, #003dff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect */
+.sec1txt3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 30, 255, 0.4);
+}
+
+/* Button shine effect */
+.sec1txt3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    transform: skewX(-25deg);
+    transition: 0.5s;
+}
+
+.sec1txt3:hover::before {
+    left: 125%;
+}
+
+.sec1txt3 a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+}
+
+
+/*LAPTOP*/
+@media (min-width: 1281px) and (max-width: 1920px){
+    .sec1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 5rem;
+}
+.contactimg{
+    width: 70%;
+}
+/* ========================= */
+/* HERO IMAGE REVEAL */
+/* ========================= */
+
+.contactimg {
+    width: 70%;
+    opacity: 0;
+    transform: scale(0.9) translateY(50px);
+    animation: imageReveal 1.2s ease forwards,
+               floatAnimation 3s ease-in-out infinite 1.2s;
+}
+
+/* Reveal Animation */
+@keyframes imageReveal {
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Floating Animation (continuous) */
+@keyframes floatAnimation {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+.sec1txt1{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 1rem;
+}
+.sec1txt1 span{color: blue;}
+
+.sec1txt2{
+    font-size: 1rem;
+    font-weight: 500;
+    width: 60%;
+    margin-top: 2rem;
+    text-align: center;
+}
+.sec1txt21{
+    font-size: 1rem;
+    font-weight: 500;
+    width: 60%;
+    margin-top: 1rem;
+    text-align: center;
+}
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: revealUp 0.8s ease forwards;
+}
+
+.revealDelay1 { animation-delay: 0.2s; }
+.revealDelay2 { animation-delay: 0.5s; }
+.revealDelay3 { animation-delay: 0.8s; }
+.revealDelay4 { animation-delay: 1.1s; }
+
+@keyframes revealUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================= */
+/* BUTTON ANIMATION */
+/* ========================= */
+
+.sec1txt3 {
+    width: 13rem;
+    height: 3rem;
+    background: linear-gradient(135deg, #001eff, #003dff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect */
+.sec1txt3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 30, 255, 0.4);
+}
+
+/* Button shine effect */
+.sec1txt3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    transform: skewX(-25deg);
+    transition: 0.5s;
+}
+
+.sec1txt3:hover::before {
+    left: 125%;
+}
+
+.sec1txt3 a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+}
+
+
+/*MAX-TABLET*/
+@media (min-width: 1025px) and (max-width: 1280px){
+    .sec1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 5rem;
+}
+.contactimg{
+    width: 70%;
+}
+/* ========================= */
+/* HERO IMAGE REVEAL */
+/* ========================= */
+
+.contactimg {
+    width: 70%;
+    opacity: 0;
+    transform: scale(0.9) translateY(50px);
+    animation: imageReveal 1.2s ease forwards,
+               floatAnimation 3s ease-in-out infinite 1.2s;
+}
+
+/* Reveal Animation */
+@keyframes imageReveal {
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Floating Animation (continuous) */
+@keyframes floatAnimation {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+.sec1txt1{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 1rem;
+}
+.sec1txt1 span{color: blue;}
+
+.sec1txt2{
+    font-size: 1rem;
+    font-weight: 500;
+    width: 60%;
+    margin-top: 2rem;
+    text-align: center;
+}
+.sec1txt21{
+    font-size: 1rem;
+    font-weight: 500;
+    width: 60%;
+    margin-top: 1rem;
+    text-align: center;
+}
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: revealUp 0.8s ease forwards;
+}
+
+.revealDelay1 { animation-delay: 0.2s; }
+.revealDelay2 { animation-delay: 0.5s; }
+.revealDelay3 { animation-delay: 0.8s; }
+.revealDelay4 { animation-delay: 1.1s; }
+
+@keyframes revealUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================= */
+/* BUTTON ANIMATION */
+/* ========================= */
+
+.sec1txt3 {
+    width: 13rem;
+    height: 3rem;
+    background: linear-gradient(135deg, #001eff, #003dff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect */
+.sec1txt3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 30, 255, 0.4);
+}
+
+/* Button shine effect */
+.sec1txt3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    transform: skewX(-25deg);
+    transition: 0.5s;
+}
+
+.sec1txt3:hover::before {
+    left: 125%;
+}
+
+.sec1txt3 a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+}
+
+
+/*TABLET*/
+@media (min-width: 769px) and (max-width: 1024px){
+    .sec1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 5rem;
+
+}
+.contactimg{
+    width: 70%;
+}
+/* ========================= */
+/* HERO IMAGE REVEAL */
+/* ========================= */
+
+.contactimg {
+    width: 70%;
+    opacity: 0;
+    transform: scale(0.9) translateY(50px);
+    animation: imageReveal 1.2s ease forwards,
+               floatAnimation 3s ease-in-out infinite 1.2s;
+}
+
+/* Reveal Animation */
+@keyframes imageReveal {
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Floating Animation (continuous) */
+@keyframes floatAnimation {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+.sec1txt1{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 1rem;
+}
+.sec1txt1 span{color: blue;}
+
+.sec1txt2{
+    font-size: 1rem;
+    font-weight: 500;
+    width: 60%;
+    margin-top: 2rem;
+    text-align: center;
+}
+.sec1txt21{
+    font-size: 1rem;
+    font-weight: 500;
+    width: 60%;
+    margin-top: 1rem;
+    text-align: center;
+}
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: revealUp 0.8s ease forwards;
+}
+
+.revealDelay1 { animation-delay: 0.2s; }
+.revealDelay2 { animation-delay: 0.5s; }
+.revealDelay3 { animation-delay: 0.8s; }
+.revealDelay4 { animation-delay: 1.1s; }
+
+@keyframes revealUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================= */
+/* BUTTON ANIMATION */
+/* ========================= */
+
+.sec1txt3 {
+    width: 13rem;
+    height: 3rem;
+    background: linear-gradient(135deg, #001eff, #003dff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect */
+.sec1txt3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 30, 255, 0.4);
+}
+
+/* Button shine effect */
+.sec1txt3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    transform: skewX(-25deg);
+    transition: 0.5s;
+}
+
+.sec1txt3:hover::before {
+    left: 125%;
+}
+
+.sec1txt3 a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}}
+
+
+/*PHONE*/
+@media (max-width: 769px){
+    .sec1{
+    width: 100%;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+
+}
+
+/* ========================= */
+/* HERO IMAGE REVEAL */
+/* ========================= */
+
+.contactimg {
+    width: 95%;
+    opacity: 0;
+    transform: scale(0.9) translateY(50px);
+    animation: imageReveal 1.2s ease forwards,
+               floatAnimation 3s ease-in-out infinite 1.2s;
+}
+
+/* Reveal Animation */
+@keyframes imageReveal {
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Floating Animation (continuous) */
+@keyframes floatAnimation {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+.sec1txt1{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 1rem;
+}
+.sec1txt1 span{color: blue;}
+
+.sec1txt2{
+    font-size: .8rem;
+    font-weight: 400;
+    width: 90%;
+    margin-top: 2rem;
+    text-align: center;
+}
+.sec1txt21{
+    font-size: .8rem;
+    font-weight: 400;
+    width: 90%;
+    margin-top: 1rem;
+    text-align: center;
+}
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: revealUp 0.8s ease forwards;
+}
+
+.revealDelay1 { animation-delay: 0.2s; }
+.revealDelay2 { animation-delay: 0.5s; }
+.revealDelay3 { animation-delay: 0.8s; }
+.revealDelay4 { animation-delay: 1.1s; }
+
+@keyframes revealUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================= */
+/* BUTTON ANIMATION */
+/* ========================= */
+
+.sec1txt3 {
+    width: 10rem;
+    height: 2rem;
+    background: linear-gradient(135deg, #001eff, #003dff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect */
+.sec1txt3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 30, 255, 0.4);
+}
+
+/* Button shine effect */
+.sec1txt3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    transform: skewX(-25deg);
+    transition: 0.5s;
+}
+
+.sec1txt3:hover::before {
+    left: 125%;
+}
+
+.sec1txt3 a {
+    font-size: .8rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+}
+
+

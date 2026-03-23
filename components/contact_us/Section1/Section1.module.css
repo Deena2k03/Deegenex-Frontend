@@ -1,0 +1,816 @@
+
+/*DESKTOP*/
+@media (min-width: 1921px){
+    .main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+.sec1{
+    width: 60%;
+    height: 42rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    border-top-left-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    padding: 2rem;
+    border: 2px solid rgba(0, 136, 255, 0.229);
+    display: flex;
+    flex-direction: column;
+}
+.sec1tit{
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(0, 0, 128);
+    margin-bottom: 1rem;
+}
+.sec1cont{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.sec1_1{
+    width: 60%;
+    height: auto;
+    padding: 2rem;
+    padding-right: 0;
+}
+
+.sec1tit1{
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+.sec1tit2{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+.sec1tit21{
+    font-size: .9rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: .8rem;
+}
+
+.sec2blk1parapoint{
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 1.2rem 2rem;  transition: transform 0.5s ease, text-shadow 0.3s ease;}
+
+.tick {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0px 10px rgba(0,0,0,0.2);
+  margin: 0 1rem 0 0;
+   transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.tick::before {
+  content: "✓";
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  transition: color 0.3s ease;
+}
+.sec2blk1parapoint:hover {
+  transform: translateY(-3px);
+  color: blue;
+}
+
+.sec2blk1parapoint:hover .tick {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.sec2blk1parapoint:hover .tick::before {
+  color: rgb(255, 255, 255);
+}
+.sec2blk1parapoint:hover .tick {
+  background: blue;
+}
+
+.sec1btn{
+    width: 10rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: blue;
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Fill Layer */
+.sec1btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    transition: width 0.4s ease;
+    z-index: 0;
+    border: 2px solid blue;
+}
+
+/* Hover Fill Effect */
+.sec1btn:hover::before{
+    width: 100%;
+}
+
+/* Text Styling */
+.sec1btn a{
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+/* Text turns white on hover */
+.sec1btn:hover a{
+    color: rgb(0, 0, 0);
+}
+
+.sec1_2{
+    width: 60%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.meet{
+    width: 60%;
+}
+}
+
+
+/*LAPTOP*/
+@media (min-width: 1281px) and (max-width: 1920px){
+    .main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+.sec1{
+    width: 80%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    border-top-left-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    padding: 2rem;
+    border: 2px solid rgba(0, 136, 255, 0.229);
+    display: flex;
+    flex-direction: column;
+}
+.sec1tit{
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(0, 0, 128);
+    margin-bottom: 1rem;
+}
+.sec1cont{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.sec1_1{
+    width: 60%;
+    height: auto;
+    padding: 2rem;
+    padding-right: 0;
+}
+
+.sec1tit1{
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+.sec1tit2{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+.sec1tit21{
+    font-size: .9rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: .8rem;
+}
+
+.sec2blk1parapoint{
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 1.2rem 2rem;  transition: transform 0.5s ease, text-shadow 0.3s ease;}
+
+.tick {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0px 10px rgba(0,0,0,0.2);
+  margin: 0 1rem 0 0;
+   transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.tick::before {
+  content: "✓";
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  transition: color 0.3s ease;
+}
+.sec2blk1parapoint:hover {
+  transform: translateY(-3px);
+  color: blue;
+}
+
+.sec2blk1parapoint:hover .tick {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.sec2blk1parapoint:hover .tick::before {
+  color: rgb(255, 255, 255);
+}
+.sec2blk1parapoint:hover .tick {
+  background: blue;
+}
+
+.sec1btn{
+    width: 10rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: blue;
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Fill Layer */
+.sec1btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    transition: width 0.4s ease;
+    z-index: 0;
+    border: 2px solid blue;
+}
+
+/* Hover Fill Effect */
+.sec1btn:hover::before{
+    width: 100%;
+}
+
+/* Text Styling */
+.sec1btn a{
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+/* Text turns white on hover */
+.sec1btn:hover a{
+    color: rgb(0, 0, 0);
+}
+
+.sec1_2{
+    width: 60%;
+    height: auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.meet{
+    width: 100%;
+}
+}
+
+
+/*MAX-TABLET*/
+@media (min-width: 1025px) and (max-width: 1280px){
+    .main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+.sec1{
+    width: 80%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    border-top-left-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    padding: 2rem;
+    border: 2px solid rgba(0, 136, 255, 0.229);
+    display: flex;
+    flex-direction: column;
+}
+.sec1tit{
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(0, 0, 128);
+    margin-bottom: 1rem;
+}
+.sec1cont{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.sec1_1{
+    width: 60%;
+    height: auto;
+    padding: 2rem;
+    padding-right: 0;
+}
+
+.sec1tit1{
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+.sec1tit2{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+.sec1tit21{
+    font-size: .9rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: .8rem;
+}
+
+.sec2blk1parapoint{
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 1.2rem 2rem;  transition: transform 0.5s ease, text-shadow 0.3s ease;}
+
+.tick {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0px 10px rgba(0,0,0,0.2);
+  margin: 0 1rem 0 0;
+   transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.tick::before {
+  content: "✓";
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  transition: color 0.3s ease;
+}
+.sec2blk1parapoint:hover {
+  transform: translateY(-3px);
+  color: blue;
+}
+
+.sec2blk1parapoint:hover .tick {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.sec2blk1parapoint:hover .tick::before {
+  color: rgb(255, 255, 255);
+}
+.sec2blk1parapoint:hover .tick {
+  background: blue;
+}
+
+.sec1btn{
+    width: 10rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: blue;
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Fill Layer */
+.sec1btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    transition: width 0.4s ease;
+    z-index: 0;
+    border: 2px solid blue;
+}
+
+/* Hover Fill Effect */
+.sec1btn:hover::before{
+    width: 100%;
+}
+
+/* Text Styling */
+.sec1btn a{
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+/* Text turns white on hover */
+.sec1btn:hover a{
+    color: rgb(0, 0, 0);
+}
+
+.sec1_2{
+    width: 60%;
+    height: auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.meet{
+    width: 100%;
+}
+}
+
+
+/*TABLET*/
+@media (min-width: 769px) and (max-width: 1024px){
+    .main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+.sec1{
+    width: 90%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    border-top-left-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    padding: 2rem;
+    border: 2px solid rgba(0, 136, 255, 0.229);
+    display: flex;
+    flex-direction: column;
+}
+.sec1tit{
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(0, 0, 128);
+    margin-bottom: 1rem;
+}
+.sec1cont{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.sec1_1{
+    width: 60%;
+    height: auto;
+    padding: 2rem;
+    padding-right: 0;
+}
+
+.sec1tit1{
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+.sec1tit2{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+.sec1tit21{
+    font-size: .9rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: .8rem;
+}
+
+.sec2blk1parapoint{
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 1.2rem 2rem;  transition: transform 0.5s ease, text-shadow 0.3s ease;}
+
+.tick {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0px 10px rgba(0,0,0,0.2);
+  margin: 0 1rem 0 0;
+   transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.tick::before {
+  content: "✓";
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  transition: color 0.3s ease;
+}
+.sec2blk1parapoint:hover {
+  transform: translateY(-3px);
+  color: blue;
+}
+
+.sec2blk1parapoint:hover .tick {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.sec2blk1parapoint:hover .tick::before {
+  color: rgb(255, 255, 255);
+}
+.sec2blk1parapoint:hover .tick {
+  background: blue;
+}
+
+.sec1btn{
+    width: 10rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: blue;
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Fill Layer */
+.sec1btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    transition: width 0.4s ease;
+    z-index: 0;
+    border: 2px solid blue;
+}
+
+/* Hover Fill Effect */
+.sec1btn:hover::before{
+    width: 100%;
+}
+
+/* Text Styling */
+.sec1btn a{
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+/* Text turns white on hover */
+.sec1btn:hover a{
+    color: rgb(0, 0, 0);
+}
+
+.sec1_2{
+    width: 60%;
+    height: auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.meet{
+    width: 100%;
+}
+}
+
+
+/*PHONE*/
+@media (max-width: 769px){
+    .main{
+    width: 96%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+.sec1{
+    width: 100%;
+    height: 50rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    border-top-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    padding: 2rem;
+    border: 2px solid rgba(0, 136, 255, 0.229);
+    display: flex;
+    flex-direction: column;
+}
+.sec1tit{
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(0, 0, 128);
+    margin-bottom: 1rem;
+}
+.sec1cont{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.sec1_1{
+    width: 100%;
+    height: auto;
+}
+
+.sec1tit1{
+    font-size: .8rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.sec1tit2{
+    font-size: .8rem;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+.sec1tit21{
+    font-size: .8rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: .8rem;
+}
+
+.sec2blk1parapoint{
+  font-size: .8rem;
+  font-weight: 400;
+  margin: 0 0 1.2rem 1rem;  transition: transform 0.5s ease, text-shadow 0.3s ease;}
+
+.tick {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0px 10px rgba(0,0,0,0.2);
+  margin: 0 1rem 0 0;
+   transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.tick::before {
+  content: "✓";
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  transition: color 0.3s ease;
+}
+.sec2blk1parapoint:hover {
+  transform: translateY(-3px);
+  color: blue;
+}
+
+.sec2blk1parapoint:hover .tick {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.sec2blk1parapoint:hover .tick::before {
+  color: rgb(255, 255, 255);
+}
+.sec2blk1parapoint:hover .tick {
+  background: blue;
+}
+
+.sec1btn{
+    width: 8rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: blue;
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Fill Layer */
+.sec1btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    transition: width 0.4s ease;
+    z-index: 0;
+    border: 2px solid blue;
+}
+
+/* Hover Fill Effect */
+.sec1btn:hover::before{
+    width: 100%;
+}
+
+/* Text Styling */
+.sec1btn a{
+    font-size: .8rem;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+/* Text turns white on hover */
+.sec1btn:hover a{
+    color: rgb(0, 0, 0);
+}
+
+.sec1_2{
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.meet{
+    width: 100%;
+}
+}
+
+

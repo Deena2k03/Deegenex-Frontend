@@ -1,0 +1,1190 @@
+/*DESKTOP*/
+@media (min-width: 1921px){
+    .sec1 {
+    width: 100%;
+    height: 16rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Global hidden state */
+.hidden {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+    filter: blur(8px);
+    transition: all 0.9s cubic-bezier(.19,1,.22,1);
+}
+
+/* When visible */
+.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+
+.sec1txt1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 60%;
+    text-align: center;
+}
+
+.sec1txt2 {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.sec1txt2 span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    /* space between dot & text */
+
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ffffff;
+
+    background: rgb(8, 0, 255);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(0, 255, 255, 0.4);
+
+    transition: all 0.3s ease;
+}
+
+/* 🔵 Dot */
+.sec1txt2 span::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+/* Button Group */
+.sec1btnGroup {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Base Button */
+.sec1btnGroup a {
+    position: relative;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    overflow: hidden;
+    transition: all 0.35s ease;
+    background: white;
+}
+
+/* Primary Button */
+.primaryBtn {
+    color: #004aad;
+    border: 2px solid #004aad;
+}
+
+.primaryBtn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #004aad;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+    z-index: 0;
+}
+
+.primaryBtn:hover::before {
+    transform: scaleX(1);
+}
+
+.primaryBtn:hover {
+    color: white;
+}
+
+.primaryBtn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Secondary Button */
+.secondaryBtn {
+    color: #00b4d8;
+    border: 2px solid #00b4d8;
+}
+
+.secondaryBtn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #00b4d8;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+    z-index: 0;
+}
+
+.secondaryBtn:hover::before {
+    transform: scaleX(1);
+}
+
+.secondaryBtn:hover {
+    color: white;
+}
+
+.secondaryBtn span {
+    position: relative;
+    z-index: 1;
+}
+
+
+.sec2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.sec2tit {
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec2txt1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.sec2txt2 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.sec2cd {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.sec2_1 {
+    width: 20rem;
+    height: 24rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    padding-top: 3rem;
+    border-radius: 1rem;
+    background-color: rgba(242, 251, 255, 0.4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 3px solid white;
+    transition: .5s ease;
+}
+
+.sec2_1:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 10px 20px rgba(0, 102, 255, 0.3);
+}
+
+.sec2label {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 2px solid white;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.sec2_1tit {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.sec2_1cont {
+    font-size: 1rem;
+    font-weight: 400;
+}
+}
+
+
+/*LAPTOP*/
+@media (min-width: 1281px) and (max-width: 1920px){
+    .sec1 {
+    width: 100%;
+    height: 16rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Global hidden state */
+.hidden {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+    filter: blur(8px);
+    transition: all 0.9s cubic-bezier(.19,1,.22,1);
+}
+
+/* When visible */
+.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+
+.sec1txt1 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    width: 60%;
+    text-align: center;
+}
+
+.sec1txt2 {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.sec1txt2 span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    /* space between dot & text */
+
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ffffff;
+
+    background: rgb(8, 0, 255);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(0, 255, 255, 0.4);
+
+    transition: all 0.3s ease;
+}
+
+/* 🔵 Dot */
+.sec1txt2 span::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+/* Button Group */
+.sec1btnGroup {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Base Button */
+.sec1btnGroup a {
+    position: relative;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    overflow: hidden;
+    transition: all 0.35s ease;
+    background: white;
+}
+
+/* Primary Button */
+.primaryBtn {
+    color: #004aad;
+    border: 2px solid #004aad;
+}
+
+.primaryBtn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #004aad;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+    z-index: 0;
+}
+
+.primaryBtn:hover::before {
+    transform: scaleX(1);
+}
+
+.primaryBtn:hover {
+    color: white;
+}
+
+.primaryBtn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Secondary Button */
+.secondaryBtn {
+    color: #00b4d8;
+    border: 2px solid #00b4d8;
+}
+
+.secondaryBtn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #00b4d8;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+    z-index: 0;
+}
+
+.secondaryBtn:hover::before {
+    transform: scaleX(1);
+}
+
+.secondaryBtn:hover {
+    color: white;
+}
+
+.secondaryBtn span {
+    position: relative;
+    z-index: 1;
+}
+
+
+.sec2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.sec2tit {
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec2txt1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.sec2txt2 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.sec2cd {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.sec2_1 {
+    width: 20rem;
+    height: 24rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    padding-top: 3rem;
+    border-radius: 1rem;
+    background-color: rgba(242, 251, 255, 0.4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 3px solid white;
+    transition: .5s ease;
+}
+
+.sec2_1:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 10px 20px rgba(0, 102, 255, 0.3);
+}
+
+.sec2label {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 2px solid white;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.sec2_1tit {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.sec2_1cont {
+    font-size: 1rem;
+    font-weight: 400;
+}
+}
+
+
+/*MAX-TABLET*/
+@media (min-width: 1025px) and (max-width: 1280px){
+    .sec1 {
+    width: 100%;
+    height: 16rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Global hidden state */
+.hidden {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+    filter: blur(8px);
+    transition: all 0.9s cubic-bezier(.19,1,.22,1);
+}
+
+/* When visible */
+.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+
+.sec1txt1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 60%;
+    text-align: center;
+}
+
+.sec1txt2 {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.sec1txt2 span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    /* space between dot & text */
+
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ffffff;
+
+    background: rgb(8, 0, 255);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(0, 255, 255, 0.4);
+
+    transition: all 0.3s ease;
+}
+
+/* 🔵 Dot */
+.sec1txt2 span::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+/* Button Group */
+.sec1btnGroup {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Base Button */
+.sec1btnGroup a {
+    position: relative;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    overflow: hidden;
+    transition: all 0.35s ease;
+    background: white;
+}
+
+/* Primary Button */
+.primaryBtn {
+    color: #004aad;
+    border: 2px solid #004aad;
+}
+
+.primaryBtn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #004aad;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+    z-index: 0;
+}
+
+.primaryBtn:hover::before {
+    transform: scaleX(1);
+}
+
+.primaryBtn:hover {
+    color: white;
+}
+
+.primaryBtn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Secondary Button */
+.secondaryBtn {
+    color: #00b4d8;
+    border: 2px solid #00b4d8;
+}
+
+.secondaryBtn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #00b4d8;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+    z-index: 0;
+}
+
+.secondaryBtn:hover::before {
+    transform: scaleX(1);
+}
+
+.secondaryBtn:hover {
+    color: white;
+}
+
+.secondaryBtn span {
+    position: relative;
+    z-index: 1;
+}
+
+
+.sec2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.sec2tit {
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec2txt1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.sec2txt2 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.sec2cd {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.sec2_1 {
+    width: 20rem;
+    height: 24rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    padding-top: 3rem;
+    border-radius: 1rem;
+    background-color: rgba(242, 251, 255, 0.4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 3px solid white;
+    transition: .5s ease;
+}
+
+.sec2_1:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 10px 20px rgba(0, 102, 255, 0.3);
+}
+
+.sec2label {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 2px solid white;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.sec2_1tit {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.sec2_1cont {
+    font-size: 1rem;
+    font-weight: 400;
+}
+}
+
+
+/*TABLET*/
+@media (min-width: 769px) and (max-width: 1024px){
+    .sec1 {
+    width: 100%;
+    height: 16rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Global hidden state */
+.hidden {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+    filter: blur(8px);
+    transition: all 0.9s cubic-bezier(.19,1,.22,1);
+}
+
+/* When visible */
+.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+
+.sec1txt1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 60%;
+    text-align: center;
+}
+
+.sec1txt2 {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.sec1txt2 span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    /* space between dot & text */
+
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ffffff;
+
+    background: rgb(8, 0, 255);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(0, 255, 255, 0.4);
+
+    transition: all 0.3s ease;
+}
+
+/* 🔵 Dot */
+.sec1txt2 span::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+/* Button Group */
+.sec1btnGroup {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Base Button */
+.sec1btnGroup a {
+    position: relative;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    overflow: hidden;
+    transition: all 0.35s ease;
+    background: white;
+}
+
+/* Primary Button */
+.primaryBtn {
+    color: #004aad;
+    border: 2px solid #004aad;
+}
+
+.primaryBtn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #004aad;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+    z-index: 0;
+}
+
+.primaryBtn:hover::before {
+    transform: scaleX(1);
+}
+
+.primaryBtn:hover {
+    color: white;
+}
+
+.primaryBtn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Secondary Button */
+.secondaryBtn {
+    color: #00b4d8;
+    border: 2px solid #00b4d8;
+}
+
+.secondaryBtn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #00b4d8;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+    z-index: 0;
+}
+
+.secondaryBtn:hover::before {
+    transform: scaleX(1);
+}
+
+.secondaryBtn:hover {
+    color: white;
+}
+
+.secondaryBtn span {
+    position: relative;
+    z-index: 1;
+}
+
+
+.sec2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.sec2tit {
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec2txt1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.sec2txt2 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.sec2cd {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.sec2_1 {
+    width: 20rem;
+    height: 24rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    padding-top: 3rem;
+    border-radius: 1rem;
+    background-color: rgba(242, 251, 255, 0.4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 3px solid white;
+    transition: .5s ease;
+}
+
+.sec2_1:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 10px 20px rgba(0, 102, 255, 0.3);
+}
+
+.sec2label {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 2px solid white;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.sec2_1tit {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.sec2_1cont {
+    font-size: 1rem;
+    font-weight: 400;
+}
+}
+
+
+/*PHONE*/
+@media (max-width: 769px){
+    .sec1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Global hidden state */
+.hidden {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+    filter: blur(8px);
+    transition: all 0.9s cubic-bezier(.19,1,.22,1);
+}
+
+/* When visible */
+.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+
+.sec1txt1 {
+    font-size: 1rem;
+    font-weight: 400;
+    width: 90%;
+    text-align: center;
+}
+
+.sec1txt2 {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    flex-wrap: nowrap;
+    width: 95%;
+}
+
+.sec1txt2 span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    /* space between dot & text */
+
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+
+    font-size: 0.5rem;
+    font-weight: 500;
+    color: #ffffff;
+
+    background: rgb(8, 0, 255);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(0, 255, 255, 0.4);
+
+    transition: all 0.3s ease;
+}
+
+/* 🔵 Dot */
+.sec1txt2 span::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+/* Button Group */
+.sec1btnGroup {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Base Button */
+.sec1btnGroup a {
+    position: relative;
+    padding: 0.5rem 1rem;
+    font-size: .7rem;
+    font-weight: 600;
+    text-decoration: none;
+    overflow: hidden;
+    transition: all 0.35s ease;
+    background: white;
+}
+
+/* Primary Button */
+.primaryBtn {
+    color: #004aad;
+    border: 2px solid #004aad;
+}
+
+.primaryBtn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #004aad;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+    z-index: 0;
+}
+
+.primaryBtn:hover::before {
+    transform: scaleX(1);
+}
+
+.primaryBtn:hover {
+    color: white;
+}
+
+.primaryBtn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Secondary Button */
+.secondaryBtn {
+    color: #00b4d8;
+    border: 2px solid #00b4d8;
+}
+
+.secondaryBtn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #00b4d8;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+    z-index: 0;
+}
+
+.secondaryBtn:hover::before {
+    transform: scaleX(1);
+}
+
+.secondaryBtn:hover {
+    color: white;
+}
+
+.secondaryBtn span {
+    position: relative;
+    z-index: 1;
+}
+
+
+.sec2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.sec2tit {
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec2txt1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.sec2txt2 {
+    font-size: .8rem;
+    font-weight: 500;
+    text-align: center;
+    width: 90%;
+}
+
+.sec2cd {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.sec2_1 {
+    width: 20rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: rgba(242, 251, 255, 0.4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 3px solid white;
+    transition: .5s ease;
+}
+
+.sec2_1:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 10px 20px rgba(0, 102, 255, 0.3);
+}
+
+.sec2label {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 2px solid white;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.sec2_1tit {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.sec2_1cont {
+    font-size: .8rem;
+    font-weight: 400;
+}
+}
+

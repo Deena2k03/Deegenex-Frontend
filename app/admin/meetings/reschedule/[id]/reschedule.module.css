@@ -1,0 +1,276 @@
+.container {
+  padding: 40px;
+  background-color: #f4f7fe;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: 'Inter', sans-serif;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  color: #4318ff;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.formCard {
+  background: white;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 550px;
+}
+
+.title {
+  color: #1b254b;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.infoSection {
+  background: #f8faff;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  border: 1px solid #e9edf7;
+}
+
+.label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #a3aed0;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.inputGroup {
+  margin-bottom: 24px;
+}
+
+.inputField {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #e9edf7;
+  font-size: 15px;
+  color: #1b254b;
+  outline: none;
+  background-color: #fff;
+}
+
+.textareaField {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #e9edf7;
+  font-size: 15px;
+  min-height: 120px;
+  resize: none;
+  outline: none;
+}
+
+.submitBtn {
+  width: 100%;
+  background: #4318ff;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* --- GLOBAL PORTAL STYLES --- */
+/* These styles must use :global to target the portal at the body level */
+
+:global(.react-datepicker-popper) {
+  z-index: 9999 !important;
+}
+
+:global(.react-datepicker--time-only) {
+  width: 320px !important;
+  background: white !important;
+  border-radius: 16px !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+:global(.react-datepicker__time-container) {
+  width: 100% !important;
+}
+
+:global(.react-datepicker__header--time) {
+  background: white !important;
+  padding: 12px !important;
+  border-radius: 16px 16px 0 0 !important;
+}
+
+:global(.react-datepicker__time-list) {
+  padding: 10px !important;
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important; /* 4 Boxes per line */
+  gap: 8px !important;
+  height: auto !important;
+  max-height: 200px !important;
+}
+
+:global(.react-datepicker__time-list-item) {
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 8px !important;
+  background: #f8faff !important;
+  border: 1px solid #edf2f7 !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+:global(.react-datepicker__time-list-item--selected) {
+  background: #4318ff !important;
+  color: white !important;
+}
+
+
+
+/* --- THE FIX FOR THE GRID --- */
+
+/* 1. Force the popup container to be wide enough to hold 4 boxes */
+:global(.react-datepicker--time-only) {
+  width: 320px !important; 
+  padding: 10px !important;
+  border-radius: 16px !important;
+  background: white !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) !important;
+  border: none !important;
+}
+
+/* 2. Target the time box specifically */
+:global(.react-datepicker__time-container) {
+  width: 100% !important;
+}
+
+:global(.react-datepicker__time-box) {
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+/* 3. The Grid Layout Fix */
+:global(.react-datepicker__time-list) {
+  padding: 10px !important;
+  display: grid !important;
+  /* This forces exactly 4 boxes per row */
+  grid-template-columns: repeat(4, 1fr) !important; 
+  gap: 8px !important;
+  height: auto !important;
+  max-height: 250px !important;
+  overflow-y: auto !important;
+  /* This prevents the items from shifting to the left */
+  list-style: none !important;
+}
+
+/* 4. Style the Individual Rectangles */
+:global(.react-datepicker__time-list-item) {
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: #f8faff !important;
+  border: 1px solid #e9edf7 !important;
+  border-radius: 8px !important;
+  font-size: 11px !important; /* Smaller font to fit 4 per row */
+  font-weight: 600 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transition: 0.2s !important;
+}
+
+:global(.react-datepicker__time-list-item:hover) {
+  background: #f0f3ff !important;
+  color: #4318ff !important;
+  border-color: #4318ff !important;
+}
+
+:global(.react-datepicker__time-list-item--selected) {
+  background: #4318ff !important;
+  color: white !important;
+  border-color: #4318ff !important;
+}
+
+.submitBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Spinner Animation */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Success State Styling */
+.successState {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.successIcon {
+  width: 60px;
+  height: 60px;
+  background: #01b574; /* Matches your 'Selected' green */
+  color: white;
+  font-size: 30px;
+  line-height: 60px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+
+.successText {
+  color: #a3aed0;
+  margin-bottom: 30px;
+}

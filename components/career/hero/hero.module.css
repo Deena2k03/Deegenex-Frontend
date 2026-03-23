@@ -1,0 +1,1135 @@
+/*DESKTOP*/
+@media (min-width: 1921px){
+    .sec1 {
+  width: 100%;
+  height: 50rem;
+  position: relative;   /* ✅ REQUIRED */
+  overflow: hidden;
+}
+.sec1vid1{
+    width: 100%;
+    height: 100%;
+}
+.bgVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.sec2Overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 229, 255, 0.2);
+  z-index: 3;
+}
+.bottomBlur {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px; /* adjust height */
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  background: linear-gradient(
+    to top,
+    rgb(225, 250, 255) 0%,
+    rgba(225, 250, 255, 0.9) 30%,
+    rgba(225, 250, 255, 0.6) 60%,
+    rgba(225, 250, 255, 0.2) 85%,
+    rgba(225, 250, 255, 0) 100%
+  );
+
+  z-index: 4;
+  pointer-events: none;
+}
+.seccont{
+    width: 100%;
+    height: 50rem;
+    position: absolute;
+    z-index: 5;
+    top: 0%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.seccont1 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Boy Image */
+.carboy {
+    width: 35rem;
+    transform-origin: bottom center;
+    filter: drop-shadow(0 0px 10px rgba(0, 187, 255, 0.4));
+    animation:
+        boyEntrance 1.2s ease-out forwards,
+        boySwing 4s ease-in-out 1.2s infinite;
+}
+
+/* Smooth Entry */
+@keyframes boyEntrance {
+    0% {
+        transform: translateX(-80px) scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Swing + breathing */
+@keyframes boySwing {
+    0% {
+        transform: rotate(-3deg) scale(1);
+    }
+    50% {
+        transform: rotate(3deg) scale(1.03);
+    }
+    100% {
+        transform: rotate(-3deg) scale(1);
+    }
+}
+
+.boyWrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🤍 White Circle */
+.boyWrapper::before {
+    content: "";
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+    background: rgb(255, 255, 255,.8);
+    border-radius: 50%;
+    z-index: 0;
+
+    box-shadow:
+        0 0 60px rgba(255, 255, 255, 0.6),
+        0 0 120px rgba(255, 255, 255, 0.4);
+
+    animation: circleBreath 4s ease-in-out infinite;
+}
+/* ✨ Breathing Animation */
+@keyframes circleBreath {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.95;
+    }
+    50% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+}
+
+.seccont2{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding-right: 2rem;
+}
+.sec2txt1{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: right;
+}
+.sec2txt1 span{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: right;
+    color: blue;
+}
+.sec2txt2{
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    font-weight: 500;
+    text-align: right;
+    width: 80%;
+}
+.sec2txt21{
+    font-size: 1rem;
+    margin-top: 2rem;
+    font-weight: 500;
+    text-align: right;
+}
+/* ================= TEXT REVEAL ================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: textReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Stagger delays */
+.delay1 {
+  animation-delay: 0.3s;
+}
+
+.delay2 {
+  animation-delay: 0.6s;
+}
+
+@keyframes textReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* ================= TYPING STYLE ================= */
+
+.typing {
+  color: blue;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 3px;
+  animation: blink 1s infinite;
+  font-weight: 600;
+  color: blue;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+}
+
+
+/*LAPTOP*/
+@media (min-width: 1281px) and (max-width: 1920px){
+    .sec1 {
+  width: 100%;
+  height: 50rem;
+  position: relative;   /* ✅ REQUIRED */
+  overflow: hidden;
+}
+.sec1vid1{
+    width: 100%;
+    height: 100%;
+}
+.bgVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.sec2Overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 229, 255, 0.2);
+  z-index: 3;
+}
+.bottomBlur {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px; /* adjust height */
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  background: linear-gradient(
+    to top,
+    rgb(225, 250, 255) 0%,
+    rgba(225, 250, 255, 0.9) 30%,
+    rgba(225, 250, 255, 0.6) 60%,
+    rgba(225, 250, 255, 0.2) 85%,
+    rgba(225, 250, 255, 0) 100%
+  );
+
+  z-index: 4;
+  pointer-events: none;
+}
+.seccont{
+    width: 100%;
+    height: 50rem;
+    position: absolute;
+    z-index: 5;
+    top: 0%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.seccont1 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Boy Image */
+.carboy {
+    width: 35rem;
+    transform-origin: bottom center;
+    filter: drop-shadow(0 0px 10px rgba(0, 187, 255, 0.4));
+    animation:
+        boyEntrance 1.2s ease-out forwards,
+        boySwing 4s ease-in-out 1.2s infinite;
+}
+
+/* Smooth Entry */
+@keyframes boyEntrance {
+    0% {
+        transform: translateX(-80px) scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Swing + breathing */
+@keyframes boySwing {
+    0% {
+        transform: rotate(-3deg) scale(1);
+    }
+    50% {
+        transform: rotate(3deg) scale(1.03);
+    }
+    100% {
+        transform: rotate(-3deg) scale(1);
+    }
+}
+
+.boyWrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🤍 White Circle */
+.boyWrapper::before {
+    content: "";
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+    background: rgb(255, 255, 255,.8);
+    border-radius: 50%;
+    z-index: 0;
+
+    box-shadow:
+        0 0 60px rgba(255, 255, 255, 0.6),
+        0 0 120px rgba(255, 255, 255, 0.4);
+
+    animation: circleBreath 4s ease-in-out infinite;
+}
+/* ✨ Breathing Animation */
+@keyframes circleBreath {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.95;
+    }
+    50% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+}
+
+.seccont2{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding-right: 2rem;
+}
+.sec2txt1{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: right;
+}
+.sec2txt1 span{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: right;
+    color: blue;
+}
+.sec2txt2{
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    font-weight: 500;
+    text-align: right;
+    width: 80%;
+}
+.sec2txt21{
+    font-size: 1rem;
+    margin-top: 2rem;
+    font-weight: 500;
+    text-align: right;
+}
+/* ================= TEXT REVEAL ================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: textReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Stagger delays */
+.delay1 {
+  animation-delay: 0.3s;
+}
+
+.delay2 {
+  animation-delay: 0.6s;
+}
+
+@keyframes textReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* ================= TYPING STYLE ================= */
+
+.typing {
+  color: blue;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 3px;
+  animation: blink 1s infinite;
+  font-weight: 600;
+  color: blue;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+}
+
+/*MAX-TABLET*/
+@media (min-width: 1025px) and (max-width: 1280px){
+    .sec1 {
+  width: 100%;
+  height: 50rem;
+  position: relative;   /* ✅ REQUIRED */
+  overflow: hidden;
+}
+.sec1vid1{
+    width: 100%;
+    height: 100%;
+}
+.bgVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.sec2Overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 229, 255, 0.2);
+  z-index: 3;
+}
+.bottomBlur {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px; /* adjust height */
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  background: linear-gradient(
+    to top,
+    rgb(225, 250, 255) 0%,
+    rgba(225, 250, 255, 0.9) 30%,
+    rgba(225, 250, 255, 0.6) 60%,
+    rgba(225, 250, 255, 0.2) 85%,
+    rgba(225, 250, 255, 0) 100%
+  );
+
+  z-index: 4;
+  pointer-events: none;
+}
+.seccont{
+    width: 100%;
+    height: 50rem;
+    position: absolute;
+    z-index: 5;
+    top: 0%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.seccont1 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Boy Image */
+.carboy {
+    width: 35rem;
+    transform-origin: bottom center;
+    filter: drop-shadow(0 0px 10px rgba(0, 187, 255, 0.4));
+    animation:
+        boyEntrance 1.2s ease-out forwards,
+        boySwing 4s ease-in-out 1.2s infinite;
+}
+
+/* Smooth Entry */
+@keyframes boyEntrance {
+    0% {
+        transform: translateX(-80px) scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Swing + breathing */
+@keyframes boySwing {
+    0% {
+        transform: rotate(-3deg) scale(1);
+    }
+    50% {
+        transform: rotate(3deg) scale(1.03);
+    }
+    100% {
+        transform: rotate(-3deg) scale(1);
+    }
+}
+
+.boyWrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🤍 White Circle */
+.boyWrapper::before {
+    content: "";
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+    background: rgb(255, 255, 255,.8);
+    border-radius: 50%;
+    z-index: 0;
+
+    box-shadow:
+        0 0 60px rgba(255, 255, 255, 0.6),
+        0 0 120px rgba(255, 255, 255, 0.4);
+
+    animation: circleBreath 4s ease-in-out infinite;
+}
+/* ✨ Breathing Animation */
+@keyframes circleBreath {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.95;
+    }
+    50% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+}
+
+.seccont2{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding-right: 2rem;
+}
+.sec2txt1{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: right;
+}
+.sec2txt1 span{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: right;
+    color: blue;
+}
+.sec2txt2{
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    font-weight: 500;
+    text-align: right;
+    width: 80%;
+}
+.sec2txt21{
+    font-size: 1rem;
+    margin-top: 2rem;
+    font-weight: 500;
+    text-align: right;
+}
+/* ================= TEXT REVEAL ================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: textReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Stagger delays */
+.delay1 {
+  animation-delay: 0.3s;
+}
+
+.delay2 {
+  animation-delay: 0.6s;
+}
+
+@keyframes textReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* ================= TYPING STYLE ================= */
+
+.typing {
+  color: blue;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 3px;
+  animation: blink 1s infinite;
+  font-weight: 600;
+  color: blue;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+}
+
+/*TABLET*/
+@media (min-width: 769px) and (max-width: 1024px){
+    .sec1 {
+  width: 100%;
+  height: 50rem;
+  position: relative;   /* ✅ REQUIRED */
+  overflow: hidden;
+}
+.sec1vid1{
+    width: 100%;
+    height: 100%;
+}
+.bgVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.sec2Overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 229, 255, 0.2);
+  z-index: 3;
+}
+.bottomBlur {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px; /* adjust height */
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  background: linear-gradient(
+    to top,
+    rgb(225, 250, 255) 0%,
+    rgba(225, 250, 255, 0.9) 30%,
+    rgba(225, 250, 255, 0.6) 60%,
+    rgba(225, 250, 255, 0.2) 85%,
+    rgba(225, 250, 255, 0) 100%
+  );
+
+  z-index: 4;
+  pointer-events: none;
+}
+.seccont{
+    width: 100%;
+    height: 50rem;
+    position: absolute;
+    z-index: 5;
+    top: 0%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.seccont1 {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Boy Image */
+.carboy {
+    width: 30rem;
+    transform-origin: bottom center;
+    filter: drop-shadow(0 0px 10px rgba(0, 187, 255, 0.4));
+    animation:
+        boyEntrance 1.2s ease-out forwards,
+        boySwing 4s ease-in-out 1.2s infinite;
+}
+
+/* Smooth Entry */
+@keyframes boyEntrance {
+    0% {
+        transform: translateX(-80px) scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Swing + breathing */
+@keyframes boySwing {
+    0% {
+        transform: rotate(-3deg) scale(1);
+    }
+    50% {
+        transform: rotate(3deg) scale(1.03);
+    }
+    100% {
+        transform: rotate(-3deg) scale(1);
+    }
+}
+
+.boyWrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🤍 White Circle */
+.boyWrapper::before {
+    content: "";
+    position: absolute;
+    width: 25rem;
+    height: 25rem;
+    background: rgb(255, 255, 255,.8);
+    border-radius: 50%;
+    z-index: 0;
+
+    box-shadow:
+        0 0 60px rgba(255, 255, 255, 0.6),
+        0 0 120px rgba(255, 255, 255, 0.4);
+
+    animation: circleBreath 4s ease-in-out infinite;
+}
+/* ✨ Breathing Animation */
+@keyframes circleBreath {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.95;
+    }
+    50% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+}
+
+.seccont2{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding-right: 2rem;
+}
+.sec2txt1{
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: right;
+}
+.sec2txt1 span{
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: right;
+    color: blue;
+}
+.sec2txt2{
+    font-size: .8rem;
+    margin-top: 1.5rem;
+    font-weight: 500;
+    text-align: right;
+    width: 80%;
+}
+.sec2txt21{
+    font-size: .8rem;
+    margin-top: 2rem;
+    font-weight: 500;
+    text-align: right;
+}
+/* ================= TEXT REVEAL ================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: textReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Stagger delays */
+.delay1 {
+  animation-delay: 0.3s;
+}
+
+.delay2 {
+  animation-delay: 0.6s;
+}
+
+@keyframes textReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* ================= TYPING STYLE ================= */
+
+.typing {
+  color: blue;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 3px;
+  animation: blink 1s infinite;
+  font-weight: 600;
+  color: blue;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+}
+
+/*PHONE*/
+@media (max-width: 769px){
+    .sec1 {
+  width: 100%;
+  height: 50rem;
+  position: relative;   /* ✅ REQUIRED */
+  overflow: hidden;
+}
+.sec1vid1{
+    width: 100%;
+    height: 100%;
+}
+.bgVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.sec2Overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 229, 255, 0.2);
+  z-index: 3;
+}
+.bottomBlur {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px; /* adjust height */
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  background: linear-gradient(
+    to top,
+    rgb(225, 250, 255) 0%,
+    rgba(225, 250, 255, 0.9) 30%,
+    rgba(225, 250, 255, 0.6) 60%,
+    rgba(225, 250, 255, 0.2) 85%,
+    rgba(225, 250, 255, 0) 100%
+  );
+
+  z-index: 4;
+  pointer-events: none;
+}
+.seccont{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 5;
+    top: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+.seccont1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 4rem;
+
+}
+
+/* Boy Image */
+.carboy {
+    width: 20rem;
+    margin-top: 4rem;
+
+    transform-origin: bottom center;
+    filter: drop-shadow(0 0px 20px rgba(0, 187, 255, 0.2));
+    animation:
+        boyEntrance 1.2s ease-out forwards,
+        boySwing 4s ease-in-out 1.2s infinite;
+}
+
+/* Smooth Entry */
+@keyframes boyEntrance {
+    0% {
+        transform: translateX(-80px) scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Swing + breathing */
+@keyframes boySwing {
+    0% {
+        transform: rotate(-3deg) scale(1);
+    }
+    50% {
+        transform: rotate(3deg) scale(1.03);
+    }
+    100% {
+        transform: rotate(-3deg) scale(1);
+    }
+}
+
+.boyWrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🤍 White Circle */
+.boyWrapper::before {
+    content: "";
+    position: absolute;
+    width: 17rem;
+    height: 17rem;
+    background: rgb(255, 255, 255,.8);
+    border-radius: 50%;
+    z-index: 0;
+
+    box-shadow:
+        0 0 30px rgba(255, 255, 255, 0.6),
+        0 0 60px rgba(255, 255, 255, 0.4);
+
+    animation: circleBreath 4s ease-in-out infinite;
+}
+/* ✨ Breathing Animation */
+@keyframes circleBreath {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.95;
+    }
+    50% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+}
+
+.seccont2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.sec2txt1{
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+}
+.sec2txt1 span{
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    color: blue;
+}
+.sec2txt2{
+    font-size: .8rem;
+    margin-top: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    width: 80%;
+}
+.sec2txt21{
+    font-size: .8rem;
+    margin-top: .5rem;
+    font-weight: 400;
+    text-align: center;
+    width: 85%;
+
+}
+/* ================= TEXT REVEAL ================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: textReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Stagger delays */
+.delay1 {
+  animation-delay: 0.3s;
+}
+
+.delay2 {
+  animation-delay: 0.6s;
+}
+
+@keyframes textReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* ================= TYPING STYLE ================= */
+
+.typing {
+  color: blue;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 3px;
+  animation: blink 1s infinite;
+  font-weight: 600;
+  color: blue;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+
+  /* Keep typing text + cursor in one line */
+  .sec2txt1 .typing {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  .sec2txt1 .cursor {
+    display: inline-block;   /* IMPORTANT */
+    white-space: nowrap;
+    margin-left: 2px;
+  }
+}
+

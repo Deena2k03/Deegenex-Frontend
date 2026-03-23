@@ -1,0 +1,289 @@
+/* reschedule.module.css */
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.iconWrapper {
+  background: #4318ff;
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: white;
+  font-size: 24px;
+  box-shadow: 0 10px 15px -3px rgba(67, 24, 255, 0.3);
+}
+
+.title {
+  color: #1b2559;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #a3aed0;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.formGroup {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2b3674;
+  margin-bottom: 8px;
+  margin-left: 4px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #e0e5f2;
+  background: #f4f7fe;
+  color: #2b3674;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input:focus {
+  border-color: #4318ff;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(67, 24, 255, 0.1);
+}
+
+.button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: #4318ff;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.button:hover {
+  background: #3311cc;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(67, 24, 255, 0.2);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+/* reschedule.module.css */
+
+/* ... (Keep your existing container and card styles) ... */
+
+/* Modal Overlay */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+/* Modal Content */
+.modalContent {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modalHeader h3 {
+  color: #2b3674;
+  margin: 0;
+  font-size: 18px;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #a3aed0;
+  cursor: pointer;
+}
+
+/* Time Grid inside Popup */
+.timeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.timeSlot {
+  padding: 12px 5px;
+  border-radius: 10px;
+  border: 1px solid #e0e5f2;
+  background: #fff;
+  color: #2b3674;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.timeSlot:hover {
+  background: #f4f7fe;
+  border-color: #4318ff;
+}
+
+.selectedTime {
+  background: #4318ff !important;
+  color: #fff !important;
+  border-color: #4318ff !important;
+}
+
+/* Read-only time display in main card */
+.timeDisplayInput {
+  cursor: pointer;
+  background: #f4f7fe;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* reschedule.module.css additions */
+
+/* Custom Calendar Styling */
+.calendarWrapper {
+  width: 100%;
+  border: none !important;
+  font-family: 'Inter', sans-serif;
+  background: white;
+  border-radius: 12px;
+}
+
+/* Global overrides for react-calendar to match your blue theme */
+:global(.react-calendar) {
+  width: 100% !important;
+  border: none !important;
+}
+
+:global(.react-calendar__tile--active) {
+  background: #4318ff !important;
+  color: white !important;
+  border-radius: 8px;
+}
+
+:global(.react-calendar__tile--now) {
+  background: #f4f7fe !important;
+  color: #4318ff !important;
+  border-radius: 8px;
+}
+
+:global(.react-calendar__navigation button) {
+  color: #2b3674;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+:global(.react-calendar__month-view__weekdays__weekday) {
+  color: #a3aed0;
+  text-decoration: none !important;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Modal specific for Calendar */
+.calendarModalContent {
+  max-width: 350px;
+}
+/* reschedule.module.css additions */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.successBox {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f0fff4;
+  border-radius: 12px;
+  border: 1px solid #c6f6d5;
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.successIcon {
+  font-size: 30px;
+  color: #38a169;
+  margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .card {
+    padding: 30px 20px;
+  }
+}

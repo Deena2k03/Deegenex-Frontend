@@ -168,7 +168,7 @@ export default function EditJob() {
             <div className="image-upload-zone">
               {job?.image && !image && (
                 <div className="current-image-preview">
-                  <img src={`${process.env.NEXT_PUBLIC_API_URL}${job.image}`} alt="Current" />
+                  <img src={job.image} alt="Current" />
                   <span className="badge">Current Banner</span>
                 </div>
               )}

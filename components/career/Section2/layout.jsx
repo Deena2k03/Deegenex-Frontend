@@ -50,7 +50,7 @@ export default function Section() {
                   <div className={style.cardsec1}>
                     <div className={style.cardsec1round}>
                       <img
-  src={`${process.env.NEXT_PUBLIC_API_URL}${job.image}`}
+  src={job.image}
   alt={job.title}
   className={style.cardimg}
 />

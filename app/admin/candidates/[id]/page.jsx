@@ -182,7 +182,7 @@ export default function CandidateProfile() {
           <span className={`${styles.value} ${styles.aiText}`}>{candidate.ai_extracted_skills || "No matching skills found"}</span>
         </div>
         <div className={styles.fullWidthGroup}>
-           <a href={`${API_URL}${candidate.resume}`} target="_blank" rel="noreferrer" className={styles.resumeLink}>
+           <a href={candidate.resume} target="_blank" rel="noreferrer" className={styles.resumeLink}>
              📄 View Full Resume
            </a>
         </div>

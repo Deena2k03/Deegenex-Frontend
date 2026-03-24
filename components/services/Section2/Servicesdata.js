@@ -137,7 +137,7 @@ const departments = [
       {
         title: "Design Systems & Prototyping",
         description: "At DEEGENEX, we build scalable design systems and interactive prototypes that bring clarity, consistency, and speed to product development. Our approach ensures every component, layout, and interaction follows a unified design language — reducing development friction and accelerating product launches.",
-        image: "/Design Systems & Prototyping-Photoroom.png",
+        image: "/design-systems-prototyping.png",
         highlights: [
           "Scalable component-based design systems",
           "UI libraries & reusable design frameworks",

@@ -21,8 +21,8 @@ export default function EditJob() {
     technical: "",
     experience: ""
   })
-
   const [image, setImage] = useState(null)
+  const [saving, setSaving] = useState(false)
 
   function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value })
@@ -32,39 +32,37 @@ export default function EditJob() {
     setImage(e.target.files[0])
   }
 
+  async function loadJob() {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/jobs/${id}/`)
+    const data = await res.json()
+    setJob(data)
+    setForm({
+      slug: data.slug,
+      title: data.title,
+      subtitle: data.subtitle,
+      overview: data.overview,
+      description: data.description,
+      responsibilities: data.responsibilities.join("\n"),
+      qualifications: data.qualifications.join("\n"),
+      technical: data.technical.join("\n"),
+      experience: data.experience.join("\n")
+    })
+  }
+
   useEffect(() => {
-    async function loadJob() {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/jobs/${id}/`)
-      const data = await res.json()
-
-      setJob(data)
-
-      setForm({
-        slug: data.slug,
-        title: data.title,
-        subtitle: data.subtitle,
-        overview: data.overview,
-        description: data.description,
-        responsibilities: data.responsibilities.join("\n"),
-        qualifications: data.qualifications.join("\n"),
-        technical: data.technical.join("\n"),
-        experience: data.experience.join("\n")
-      })
-    }
-
     loadJob()
   }, [id])
 
   async function updateJob() {
-    const token = localStorage.getItem('accessToken');
-  
+    const token = localStorage.getItem('accessToken')
+    setSaving(true)
+
     const formData = new FormData()
     formData.append("slug", form.slug)
     formData.append("title", form.title)
     formData.append("subtitle", form.subtitle)
     formData.append("overview", form.overview)
     formData.append("description", form.description)
-
     formData.append("responsibilities", JSON.stringify(form.responsibilities.split("\n").map(i => i.trim()).filter(i => i !== "")))
     formData.append("qualifications", JSON.stringify(form.qualifications.split("\n").map(i => i.trim()).filter(i => i !== "")))
     formData.append("technical", JSON.stringify(form.technical.split("\n").map(i => i.trim()).filter(i => i !== "")))
@@ -75,18 +73,19 @@ export default function EditJob() {
     }
 
     try {
-      // FIX 1: URL matched to backend path "jobs/update/<int:id>/"
-      // FIX 2: Added Authorization Header
       const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/jobs/update/${id}/`, {
         method: "PUT",
         headers: {
           "Authorization": `Bearer ${token}`
-          // Note: Do NOT set 'Content-Type': 'application/json' when sending FormData
         },
         body: formData
       })
 
       if (res.ok) {
+        const updatedJob = await res.json()  // get fresh data from backend
+        setJob(updatedJob)                    // update image preview immediately
+        setImage(null)                        // clear selected file
+        alert("Saved successfully!")
         router.push("/admin/jobs")
       } else {
         const errorData = await res.json()
@@ -95,6 +94,9 @@ export default function EditJob() {
       }
     } catch (error) {
       console.error("Network error:", error)
+      alert("Network error.")
+    } finally {
+      setSaving(false)
     }
   }
 
@@ -113,21 +115,22 @@ export default function EditJob() {
         <div className="header-content">
           <h1 className="page-title">Edit Job Details</h1>
           <div className="page-breadcrumb">
-  <span onClick={() => router.push("/admin")}>Dashboard</span>
-  <span className="separator">/</span>
-  <span onClick={() => router.push("/admin/jobs")}>Manage Jobs</span>
-  <span className="separator">/</span>
-  <span className="current-page">{form.title || 'Edit'}</span>
-</div>
+            <span onClick={() => router.push("/admin")}>Dashboard</span>
+            <span className="separator">/</span>
+            <span onClick={() => router.push("/admin/jobs")}>Manage Jobs</span>
+            <span className="separator">/</span>
+            <span className="current-page">{form.title || 'Edit'}</span>
+          </div>
         </div>
         <div className="header-actions">
-           <button className="cancel-btn" onClick={() => router.push("/admin/jobs")}>Discard Changes</button>
-           <button className="update-btn" onClick={updateJob}>Save Changes</button>
+          <button className="cancel-btn" onClick={() => router.push("/admin/jobs")}>Discard Changes</button>
+          <button className="update-btn" onClick={updateJob} disabled={saving}>
+            {saving ? "Saving..." : "Save Changes"}
+          </button>
         </div>
       </div>
 
       <div className="job-form-grid">
-        {/* Left Column: Essential Info */}
         <div className="form-column main-info">
           <section className="form-card">
             <h2 className="section-title">General Information</h2>
@@ -135,7 +138,6 @@ export default function EditJob() {
               <label>Position Title</label>
               <input name="title" value={form.title} onChange={handleChange} placeholder="e.g. Senior Backend Developer" />
             </div>
-            
             <div className="input-row">
               <div className="form-group">
                 <label>URL Slug</label>
@@ -152,27 +154,32 @@ export default function EditJob() {
             <h2 className="section-title">Job Narrative</h2>
             <div className="form-group">
               <label>Job Overview</label>
-              <textarea name="overview" value={form.overview} onChange={handleChange} rows="3" placeholder="A brief hook for the job listing..." />
+              <textarea name="overview" value={form.overview} onChange={handleChange} rows="3" />
             </div>
             <div className="form-group">
               <label>Job Description</label>
-              <textarea name="description" value={form.description} onChange={handleChange} rows="10" placeholder="Detailed job description..." />
+              <textarea name="description" value={form.description} onChange={handleChange} rows="10" />
             </div>
           </section>
         </div>
 
-        {/* Right Column: Requirements & Media */}
         <div className="form-column side-info">
           <section className="form-card media-card">
             <h2 className="section-title">Visuals</h2>
             <div className="image-upload-zone">
-              {job?.image && !image && (
+              {/* Show selected file preview OR existing S3 image */}
+              {image ? (
                 <div className="current-image-preview">
-                  <img src={job.image} alt="Current" />
+                  <img src={URL.createObjectURL(image)} alt="New Banner Preview" />
+                  <span className="badge">New Image Selected</span>
+                </div>
+              ) : job?.image ? (
+                <div className="current-image-preview">
+                  <img src={job.image} alt="Current Banner" />
                   <span className="badge">Current Banner</span>
                 </div>
-              )}
-              <input type="file" id="job-image" onChange={handleImage} className="hidden-input" />
+              ) : null}
+              <input type="file" id="job-image" onChange={handleImage} className="hidden-input" accept="image/*" />
               <label htmlFor="job-image" className="file-label">
                 {image ? `Selected: ${image.name}` : "Upload New Banner Image"}
               </label>

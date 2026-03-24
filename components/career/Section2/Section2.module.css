@@ -1114,6 +1114,7 @@
   
   text-align: center;
   z-index: 1;
+  overflow-x: hidden;
 }
 
 .noJobsIcon {

@@ -4,11 +4,17 @@ on:
     branches: [ main ]
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Next.js
+        run: npm run build
 
       - name: Deploy to EC2 via SSH
         uses: appleboy/ssh-action@master
@@ -19,8 +25,6 @@ jobs:
           script: |
             cd ~/Deegenex-Frontend
             git pull origin main
-            npm install
-            # Building on the server uses a lot of RAM
-            # If this fails, we may need to build on GitHub instead
-            npm run build
+            # We don't run build here anymore! 
+            # We just restart the app to pick up changes.
             pm2 restart nextjs-frontend

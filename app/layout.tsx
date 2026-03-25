@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "Mobile App Development", "Digital Marketing Salem", 
     "Software Development", "Fullstack Development", "E-commerce Site Development"
   ],
-  metadataBase: new URL("https://www.deegenex.com"), // Change to your actual domain
+  metadataBase: new URL("https://www.deegenex.com"),
   alternates: {
     canonical: "/",
   },
@@ -43,6 +43,7 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
     },
+  }, // <--- Make sure these braces are closed correctly
 };
 
 export default function RootLayout({

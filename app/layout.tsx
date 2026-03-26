@@ -101,6 +101,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <head>
+        <meta 
+          name="norton-safeweb-site-verification" 
+          content="GVKJO6W3BL9Y9Y49PJ3WSYM6E5A32702O9XI4UY-2IQT0LHEFEFQMCUWZU1QPGYJPTM-I7A-PJ1FKU4Z4Q640DKEMVIDZPKHBKJ-0DP15L109C9Y7CUA029BYZ9BHO5XW" 
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

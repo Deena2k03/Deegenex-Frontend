@@ -11,7 +11,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Deegenex | #1 IT Company in Salem & Hosur | Web & App Development",
+  // 1. IMPROVED TITLE: Putting keywords first helps match the "Box of Tech" style
+  title: "Best Software Development Company in Salem | Deegenex",
   description: "Deegenex offers premium Web Development, Mobile App Development, and Digital Marketing in Salem and Hosur. Expert Fullstack and Software solutions for your business.",
   keywords: [
     "Deegenex", 
@@ -27,35 +28,28 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  // 2. ICON FIX: Ensure you have a 512x512px icon.png in your /public folder
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+    ],
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
     title: "Deegenex | Innovative IT & Software Solutions",
-    description: "Expert Web & Mobile App Development services in Salem and Hosur. Building the future of IT.",
+    description: "Expert Web & Mobile App Development services in Salem and Hosur.",
     url: "https://www.deegenex.com",
-    siteName: "Deegenex",
+    siteName: "Deegenex", // Crucial for Brand identity
     images: [
       {
-        url: "/og-image.png", // Ensure you have an OG image for social sharing
+        url: "/og-image.png",
         width: 1200,
         height: 630,
       },
     ],
     locale: "en_US",
     type: "website",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
   },
 };
 
@@ -64,51 +58,43 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // Advanced JSON-LD for Local SEO
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Deegenex",
-    "image": "https://www.deegenex.com/logo.png",
-    "url": "https://www.deegenex.com",
-    "telephone": "+916382141468",
-    "priceRange": "$$",
-    "address": [
-      {
-        "@type": "PostalAddress",
-        "addressLocality": "Salem",
-        "addressRegion": "Tamil Nadu",
-        "addressCountry": "IN"
+  // 3. MULTI-SCHEMA: Adding WebSite schema specifically fixes the "Unknown Link" name
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Deegenex",
+      "url": "https://www.deegenex.com",
+      "alternateName": ["DeeGenex", "Deegenex IT Solutions"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareCompany", // Changed from ProfessionalService to match "Tech" niche
+      "name": "Deegenex",
+      "image": "https://www.deegenex.com/logo.png",
+      "url": "https://www.deegenex.com",
+      "logo": "https://www.deegenex.com/logo.png",
+      "telephone": "+916382141468",
+      "priceRange": "$$",
+      "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "55,33, NGGO's Colony, Ramanasree Nagar",
+          "addressLocality": "Hosur",
+          "addressRegion": "Tamil Nadu",
+          "postalCode": "635109",
+          "addressCountry": "IN"
       },
-      {
-        "@type": "PostalAddress",
-        "addressLocality": "Hosur",
-        "addressRegion": "Tamil Nadu",
-        "addressCountry": "IN"
-      }
-    ],
-    "geo": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
+      "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "11.6643",
-        "longitude": "78.1460"
+        "latitude": "12.7409",
+        "longitude": "77.8253"
       },
-      "description": "Serving Salem, Hosur, and surrounding areas in Tamil Nadu"
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
-      ],
-      "opens": "09:00",
-      "closes": "18:00"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/company/deegenex/", // Add your actual social links
-      "https://www.instagram.com/deegenex/"
-    ]
-  };
+      "sameAs": [
+        "https://www.linkedin.com/company/deegenex/",
+        "https://www.instagram.com/deegenex/"
+      ]
+    }
+  ];
 
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>

@@ -41,13 +41,6 @@ export const metadata: Metadata = {
     description: "Expert Web & Mobile App Development services in Salem and Hosur.",
     url: "https://www.deegenex.com",
     siteName: "Deegenex", // Crucial for Brand identity
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
@@ -82,9 +75,7 @@ export default function RootLayout({
       "@context": "https://schema.org",
       "@type": "SoftwareCompany", // Changed from ProfessionalService to match "Tech" niche
       "name": "Deegenex",
-      "image": "https://www.deegenex.com/logo.png",
       "url": "https://www.deegenex.com",
-      "logo": "https://www.deegenex.com/logo.png",
       "telephone": "+916382141468",
       "priceRange": "$$",
       "address": {

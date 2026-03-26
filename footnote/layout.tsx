@@ -43,7 +43,7 @@ export default function footnote() {
                                 <div className={style.sec1link}>
                                     <div className={style.sec1link1}>
                                         <h1 className={style.sec1linklog}><TbBrandLinkedin /></h1>
-                                        <h1 className={style.sec1linktxt1}><a href='https://www.linkedin.com/company/110296280/admin/dashboard/' className={style.sec1linkAnchor}>Linkedin <span className={style.sec1linklog1}><MdArrowOutward /></span></a></h1>
+                                        <h1 className={style.sec1linktxt1}><a href='https://www.linkedin.com/company/deegenex/' className={style.sec1linkAnchor}>Linkedin <span className={style.sec1linklog1}><MdArrowOutward /></span></a></h1>
                                     </div>
                                     <div className={style.sec1link1}>
                                         <h1 className={style.sec1linklog}><FiInstagram /></h1>

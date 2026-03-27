@@ -80,7 +80,7 @@ export default function RootLayout({
       "priceRange": "$$",
       "address": {
           "@type": "PostalAddress",
-          "streetAddress": "55,33, NGGO's Colony, Ramanasree Nagar",
+          "streetAddress": "4/55,33, NGGO's Colony, First Cross, Bagalur Road",
           "addressLocality": "Hosur",
           "addressRegion": "Tamil Nadu",
           "postalCode": "635109",

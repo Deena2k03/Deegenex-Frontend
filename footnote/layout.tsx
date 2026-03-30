@@ -47,7 +47,7 @@ export default function footnote() {
                                     </div>
                                     <div className={style.sec1link1}>
                                         <h1 className={style.sec1linklog}><FiInstagram /></h1>
-                                        <h1 className={style.sec1linktxt1}><a href='https://www.instagram.com/deegenex/' className={style.sec1linkAnchor}>Instagram <span className={style.sec1linklog1}><MdArrowOutward /></span></a></h1>
+                                        <h1 className={style.sec1linktxt1}><a href='https://www.instagram.com/deegenex_official/' className={style.sec1linkAnchor}>Instagram <span className={style.sec1linklog1}><MdArrowOutward /></span></a></h1>
                                     </div>
                                 </div>
                                 <h1 className={style.sec1conttxt1}>4/55,33, First Cross, NGGOS Colony, Bagalur Road, <br/>Hosur - 635 109</h1>
@@ -82,14 +82,14 @@ export default function footnote() {
                     <div className={style.msec2}>
                         <div className={style.card}>
                             <TbBrandLinkedin className={style.logo} />
-                            <a href="https://www.linkedin.com/company/110296280/admin/dashboard/" className={style.linkRow} >
+                            <a href="https://www.linkedin.com/company/deegenex/" className={style.linkRow} >
                                 <span>Linkedin</span>
                                 <MdArrowOutward className={style.arrow} />
                             </a>
                         </div>
                         <div className={style.card}>
                             <FiInstagram className={style.logo} />
-                            <a href="https://www.instagram.com/deegenex/" className={style.linkRow} >
+                            <a href="https://www.instagram.com/deegenex_official/" className={style.linkRow} >
                                 <span>Instagram</span>
                                 <MdArrowOutward className={style.arrow} />
                             </a>

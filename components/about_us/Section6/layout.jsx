@@ -10,37 +10,37 @@ const reviews = [
     name: "Karthick N",
     role: "– HR Manager",
     image: "/karthi.png",
-    text: "“DEEGENEX provides an environment where learning and innovation go hand in hand. Every project helps me grow technically and professionally.”",
+    text: "“At DEEGENEX, we build a people-first culture focused on growth, collaboration, and employee success.”",
   },
   {
     name: "Shamina P",
     role: "– Project Manager",
     image: "/shamina.png",
-    text: "“Working at DEEGENEX has strengthened my problem-solving skills. The focus on scalable and clean architecture is excellent.”",
+    text: "“At DEEGENEX, we ensure efficient project execution through teamwork, planning, and delivering high-quality scalable solutions.”",
   },
   {
     name: "Siva Shanmugam J",
     role: "– Python Developer",
     image: "/jd.png",
-    text: "“Clear communication, strong teamwork, and transparency define the culture at DEEGENEX. It’s a great place to lead projects.”",
+    text: "“At DEEGENEX, we build scalable backend systems with clean code, collaboration, and continuous learning culture.”",
   },
   {
     name: "Harini R",
     role: "– UI/UX Designer",
     image: "/harini.png",
-    text: "“Performance and user experience are top priorities at DEEGENEX. I enjoy building modern, responsive interfaces here.”",
+    text: "“At DEEGENEX, we design intuitive user experiences focusing on usability, aesthetics, and modern responsive interfaces.”",
   },
   {
     name: "Aravind P",
     role: "– DevOps Engineer",
     image: "/aravindh.png",
-    text: "“Quality is never compromised. DEEGENEX believes in delivering reliable and well-tested solutions.”",
+    text: "“At DEEGENEX, we ensure automation, scalability, and reliable deployments with strong DevOps practices and collaboration.”",
   },
   {
     name: "Arun M",
     role: "– QA Engineer",
     image: "/arun.png",
-    text: "“The DevOps culture at DEEGENEX is strong. Automation, cloud scalability, and security are always a priority.”",
+    text: "“At DEEGENEX, we ensure product quality through testing, validation, and delivering reliable, bug-free software solutions.”",
   },
 ];
 

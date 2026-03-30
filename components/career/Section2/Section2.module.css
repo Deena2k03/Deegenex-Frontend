@@ -1026,6 +1026,7 @@
     height: 2.2rem;
     border-radius: 2rem;
     background-color: blue;
+    color: white;
 
     display: flex;
     justify-content: center;

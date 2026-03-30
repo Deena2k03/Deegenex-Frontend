@@ -1040,7 +1040,7 @@
     transition: 0.3s ease;
 }
 
-.sec1_1btn a {
+.sec1_1btn {
     font-size: 1rem;
     font-weight: 500;
     color: white;
